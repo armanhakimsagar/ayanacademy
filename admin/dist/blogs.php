@@ -15,15 +15,28 @@ $edit_data = [
     'id' => '',
     'blog_date' => '',
     'title' => '',
+    'image' => '',
     'description' => ''
 ];
 
 /* DELETE */
 if (isset($_GET['delete_id'])) {
     $delete_id = (int) $_GET['delete_id'];
+
+    $old_image = '';
+    $old_image_query = mysqli_query($conn, "SELECT image FROM blogs WHERE id = $delete_id LIMIT 1");
+    if ($old_image_query && mysqli_num_rows($old_image_query) > 0) {
+        $old_image_row = mysqli_fetch_assoc($old_image_query);
+        $old_image = $old_image_row['image'] ?? '';
+    }
+
     $delete_query = mysqli_query($conn, "DELETE FROM blogs WHERE id = $delete_id");
 
     if ($delete_query) {
+        if (!empty($old_image) && file_exists('../../' . $old_image)) {
+            unlink('../../' . $old_image);
+        }
+
         header("Location: blogs.php?deleted=1");
         exit;
     } else {
@@ -61,43 +74,78 @@ if (isset($_POST['submit_blog'])) {
     $blog_date = trim($_POST['blog_date']);
     $title = trim($_POST['title']);
     $description = trim($_POST['description']);
+    $existing_image = trim($_POST['existing_image'] ?? '');
+    $image = $existing_image;
 
     if ($blog_date === '' || $title === '' || $description === '') {
         $error = "All fields are required.";
     } else {
-        $blog_date = mysqli_real_escape_string($conn, $blog_date);
-        $title = mysqli_real_escape_string($conn, $title);
-        $description = mysqli_real_escape_string($conn, $description);
+        if (isset($_FILES['image']) && !empty($_FILES['image']['name'])) {
+            $upload_dir = '../../uploads/blogs/';
 
-        if ($id > 0) {
-            $update = "UPDATE blogs SET
-                blog_date = '$blog_date',
-                title = '$title',
-                description = '$description'
-                WHERE id = $id";
-
-            if (mysqli_query($conn, $update)) {
-                header("Location: blogs.php?updated=1");
-                exit;
-            } else {
-                $error = "Update failed.";
+            if (!is_dir($upload_dir)) {
+                mkdir($upload_dir, 0777, true);
             }
-        } else {
-            $insert = "INSERT INTO blogs (
-                blog_date,
-                title,
-                description
-            ) VALUES (
-                '$blog_date',
-                '$title',
-                '$description'
-            )";
 
-            if (mysqli_query($conn, $insert)) {
-                header("Location: blogs.php?added=1");
-                exit;
+            $file_name = time() . '_' . basename($_FILES['image']['name']);
+            $target_file = $upload_dir . $file_name;
+            $image_file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $allowed_types = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+            if (!in_array($image_file_type, $allowed_types)) {
+                $error = "Only JPG, JPEG, PNG, GIF, WEBP files are allowed.";
             } else {
-                $error = "Insert failed.";
+                if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
+                    $image = 'uploads/blogs/' . $file_name;
+
+                    if (!empty($existing_image) && file_exists('../../' . $existing_image)) {
+                        unlink('../../' . $existing_image);
+                    }
+                } else {
+                    $error = "Image upload failed.";
+                }
+            }
+        }
+
+        if ($error === '') {
+            $blog_date = mysqli_real_escape_string($conn, $blog_date);
+            $title = mysqli_real_escape_string($conn, $title);
+            $description = mysqli_real_escape_string($conn, $description);
+            $image = mysqli_real_escape_string($conn, $image);
+
+            if ($id > 0) {
+                $update = "UPDATE blogs SET
+                    blog_date = '$blog_date',
+                    title = '$title',
+                    image = '$image',
+                    description = '$description'
+                    WHERE id = $id";
+
+                if (mysqli_query($conn, $update)) {
+                    header("Location: blogs.php?updated=1");
+                    exit;
+                } else {
+                    $error = "Update failed.";
+                }
+            } else {
+                $insert = "INSERT INTO blogs (
+                    blog_date,
+                    title,
+                    image,
+                    description
+                ) VALUES (
+                    '$blog_date',
+                    '$title',
+                    '$image',
+                    '$description'
+                )";
+
+                if (mysqli_query($conn, $insert)) {
+                    header("Location: blogs.php?added=1");
+                    exit;
+                } else {
+                    $error = "Insert failed.";
+                }
             }
         }
     }
@@ -367,8 +415,9 @@ if (isset($_POST['submit_blog'])) {
                     </div>
                   </div>
 
-                  <form action="" method="post">
+                  <form action="" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo htmlspecialchars($edit_data['id']); ?>">
+                    <input type="hidden" name="existing_image" value="<?php echo htmlspecialchars($edit_data['image'] ?? ''); ?>">
 
                     <div class="card-body">
                       <div class="mb-3">
@@ -390,6 +439,22 @@ if (isset($_POST['submit_blog'])) {
                           value="<?php echo htmlspecialchars($edit_data['title']); ?>"
                         >
                       </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Image</label>
+                        <input
+                          type="file"
+                          name="image"
+                          class="form-control"
+                          accept="image/*"
+                        >
+                      </div>
+
+                      <?php if (!empty($edit_data['image'])) { ?>
+                        <div class="mb-3">
+                          <img src="../../<?php echo htmlspecialchars($edit_data['image']); ?>" alt="Blog Image" style="width: 80px; height: 60px; object-fit: cover;">
+                        </div>
+                      <?php } ?>
 
                       <div class="mb-3">
                         <label class="form-label">Description</label>
@@ -428,6 +493,7 @@ if (isset($_POST['submit_blog'])) {
                           <th style="width: 50px;">ID</th>
                           <th style="width: 120px;">Date</th>
                           <th style="width: 180px;">Title</th>
+                          <th style="width: 100px;">Image</th>
                           <th>Description</th>
                           <th style="width: 150px;">Action</th>
                         </tr>
@@ -442,6 +508,11 @@ if (isset($_POST['submit_blog'])) {
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo htmlspecialchars($row['blog_date']); ?></td>
                             <td><?php echo htmlspecialchars($row['title']); ?></td>
+                            <td>
+                              <?php if (!empty($row['image'])) { ?>
+                                <img src="../../<?php echo htmlspecialchars($row['image']); ?>" alt="Blog Image" style="width: 80px; height: 60px; object-fit: cover;">
+                              <?php } ?>
+                            </td>
                             <td class="description-preview">
                               <?php echo mb_strimwidth(strip_tags($row['description']), 0, 120, '...'); ?>
                             </td>
@@ -466,7 +537,7 @@ if (isset($_POST['submit_blog'])) {
                         } else {
                         ?>
                           <tr>
-                            <td colspan="5" class="text-center">No blog found.</td>
+                            <td colspan="6" class="text-center">No blog found.</td>
                           </tr>
                         <?php } ?>
                       </tbody>

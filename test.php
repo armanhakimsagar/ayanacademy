@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0019)https://pecpte.com/ -->
+
 <html prefix="og: http://ogp.me/ns#" class="no-js js_active  vc_desktop  vc_transform  vc_transform skrollr skrollr-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.3",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseenter","mouseout","mouseleave","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input","visibilitychange"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),this.F("domReady"),await this.T(),await this.j(),await this.I(),this.F("windowLoad"),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise((t=>setTimeout(t,500-Date.now()+this.lastTouchEnd))),this.H(),this.F("all"),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))}),{isRocket:!0})}o(){window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0}),{isRocket:!0}),window.addEventListener("pagehide",(()=>{this.onFirstUserAction=null}),{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",(function i(o){Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1})),event.preventDefault(),window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}))}),{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),this.savedUserEvents.length>0&&(t.stopPropagation(),t.stopImmediatePropagation()),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach((t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})))}U(){this.userEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0}))),this.savedUserEvents.forEach((t=>{t.target.dispatchEvent(new window[t.constructor.name](t.type,t))}))}m(){this.eventsMutationObserver=new MutationObserver((t=>{const e="return false";for(const i of t){if("attributes"===i.type){const t=i.target.getAttribute(i.attributeName);t&&t!==e&&(i.target.setAttribute("data-rocket-"+i.attributeName,t),i.target["rocket"+i.attributeName]=new Function("event",t),i.target.setAttribute(i.attributeName,e))}"childList"===i.type&&i.addedNodes.forEach((t=>{if(t.nodeType===Node.ELEMENT_NODE)for(const i of t.attributes)this.attributeEvents.includes(i.name)&&i.value&&""!==i.value&&(t.setAttribute("data-rocket-"+i.name,i.value),t["rocket"+i.name]=new Function("event",i.value),t.setAttribute(i.name,e))}))}})),this.eventsMutationObserver.observe(document,{subtree:!0,childList:!0,attributeFilter:this.attributeEvents})}H(){this.eventsMutationObserver.disconnect(),this.attributeEvents.forEach((t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach((e=>{e.setAttribute(t,e.getAttribute("data-rocket-"+t)),e.removeAttribute("data-rocket-"+t)}))}))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o})},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}F(t){"all"===t&&(EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener),this.savedEventListeners=this.savedEventListeners.filter((e=>{let i=e.type,o=e.target||window;return"domReady"===t&&"DOMContentLoaded"!==i&&"readystatechange"!==i||("windowLoad"===t&&"load"!==i&&"readystatechange"!==i&&"pageshow"!==i||(this.B(i,o)&&(i="rocket-"+i),e.remove?o.removeEventListener(i,e.func,e.options):o.addEventListener(i,e.func,e.options),!1))}))}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,(()=>{e[t].forEach((t=>t()))}),{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout((()=>i.bind(document)(o))):i.bind(document)(o)}return t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise((t=>{this.userActionTriggered?t():this.onFirstUserAction=t}))}async L(){return new Promise((t=>{document.addEventListener("DOMContentLoaded",(()=>{this.realDomReadyFired=!0,t()}),{isRocket:!0})}))}async I(){return this.realWindowLoadedFired?Promise.resolve():new Promise((t=>{window.addEventListener("load",t,{isRocket:!0})}))}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver((t=>{for(const e of t)e.addedNodes.forEach((t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise((e=>{const i=()=>{const i=this.pendingScripts.findIndex((e=>e.script===t));i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)}))})}))})),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async j(){await this.J(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.j()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.N(t,"preconnect")}async $(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",(()=>{i.setAttribute("data-rocket-status","failed-network"),e()}),{isRocket:!0}),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.$(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())}),{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.$(e),this.C(t)):Promise.resolve()}O(){this.N([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}N(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach((t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}})),document.head.appendChild(o)}W(){this.trash.forEach((t=>t.remove()))}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async G(){Date.now()-this.lastBreath>45&&(await this.J(),this.lastBreath=Date.now())}async J(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
         
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="pingback" href="https://pecpte.com/xmlrpc.php">
 	<meta name="facebook-domain-verification" content="n0134ytg3vlixio8ouysvnv1feiozj">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <script src="data:text/javascript;base64,d2luZG93Ll93Y2EgPSB3aW5kb3cuX3djYSB8fCBbXTs=" data-rocket-status="executed">window._wca = window._wca || [];</script>
@@ -22,7 +21,6 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="AyanAcademy">
 	<meta property="og:description" content="AyanAcademy">
-	<meta property="og:url" content="https://pecpte.com/">
 	<meta property="og:site_name" content="AyanAcademy">
 	<meta property="article:modified_time" content="2025-01-04T04:59:17+00:00">
 	<meta property="og:image" content="banner1.jpg">
@@ -30,10 +28,6 @@
 	<meta property="og:image:height" content="854">
 	<meta property="og:image:type" content="image/jpeg">
 	<meta name="twitter:card" content="summary_large_image">
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://pecpte.com/","url":"https://pecpte.com/","name":"PEC- Education - PTE Academic In Dhaka, Bangladesh","isPartOf":{"@id":"https://pecpte.com/#website"},"about":{"@id":"https://pecpte.com/#organization"},"primaryImageOfPage":{"@id":"https://pecpte.com/#primaryimage"},"image":{"@id":"https://pecpte.com/#primaryimage"},"thumbnailUrl":"banner1.jpg","datePublished":"2018-05-21T05:54:48+00:00","dateModified":"2025-01-04T04:59:17+00:00","description":"PEC-Education is the most experienced and reliable PTE Academic Coaching Centre In Dhaka, Bangladesh. Students get desired PTE Academic score","breadcrumb":{"@id":"https://pecpte.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://pecpte.com/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://pecpte.com/#primaryimage","url":"banner1.jpg","contentUrl":"banner1.jpg","width":1280,"height":854,"caption":"pecpte education banner hero image"},{"@type":"BreadcrumbList","@id":"https://pecpte.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://pecpte.com/#website","url":"https://pecpte.com/","name":"PEC-Education","description":"PTE COURSES IN BANGLADESH","publisher":{"@id":"https://pecpte.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://pecpte.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://pecpte.com/#organization","name":"PEC Education Consultants","url":"https://pecpte.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://pecpte.com/#/schema/logo/image/","url":"https://pecpte.com/wp-content/uploads/2020/02/open-graph.jpg","contentUrl":"https://pecpte.com/wp-content/uploads/2020/02/open-graph.jpg","width":200,"height":200,"caption":"PEC Education Consultants"},"image":{"@id":"https://pecpte.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/pecedcationenglish/","https://www.instagram.com/pec_education/?hl=en","https://www.linkedin.com/in/pec-education-67b999127/","https://www.youtube.com/channel/UCX_BUzcavkVMiLmvRlvTxzA"]}]}</script>
-	<meta name="msvalidate.01" content="FEF418FA094D398E37347434B0BC7BFF">
-	<meta name="google-site-verification" content="5A0Btyjk8rp0BEKLFnlRXH7ZO1yYFunZkKadcFkuSCM">
-	<meta name="p:domain_verify" content="e8101fe3f7c635a78fde5bef0203897c">
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -41,9 +35,6 @@
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 <link rel="dns-prefetch" href="https://i0.wp.com/">
 <link rel="dns-prefetch" href="https://c0.wp.com/">
-<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
-<link rel="alternate" type="application/rss+xml" title="PEC-Education » Feed" href="https://pecpte.com/feed/">
-<link rel="alternate" type="application/rss+xml" title="PEC-Education » Comments Feed" href="https://pecpte.com/comments/feed/">
 <link rel="stylesheet" id="masterstudy-bootstrap-css" href="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/bootstrap.min.css" type="text/css" media="all">
 <link data-minify="1" rel="stylesheet" id="masterstudy-bootstrap-custom-css" href="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ms-bootstrap-custom.css" type="text/css" media="all">
 <style id="wp-emoji-styles-inline-css" type="text/css">
@@ -203,12 +194,8 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 <script type="text/javascript" data-minify="1" id="wc-add-to-cart-js" data-rocket-defer="" defer="" fetchpriority="high" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/add-to-cart.min.js.download" data-rocket-status="executed"></script>
 <script type="text/javascript" data-minify="1" id="vc_woocommerce-add-to-cart-js-js" data-rocket-defer="" defer="" fetchpriority="high" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/woocommerce-add-to-cart.js.download" data-rocket-status="executed"></script>
 <script defer="" type="text/javascript" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/s-202611.js.download" id="woocommerce-analytics-js"></script>
-<link rel="https://api.w.org/" href="https://pecpte.com/wp-json/"><link rel="alternate" type="application/json" href="https://pecpte.com/wp-json/wp/v2/pages/7"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pecpte.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.4.8">
 <meta name="generator" content="WooCommerce 6.2.3">
-<link rel="shortlink" href="https://pecpte.com/">
-<link rel="alternate" type="application/json+oembed" href="https://pecpte.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpecpte.com%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://pecpte.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpecpte.com%2F&amp;format=xml">
         <script src="data:text/javascript;base64,CiAgICAgICAgICAgIHZhciBkYXlzU3RyID0gIkRheXMiOwogICAgICAgICAgICB2YXIgaG91cnNTdHIgPSAiSG91cnMiOwogICAgICAgICAgICB2YXIgbWludXRlc1N0ciA9ICJNaW51dGVzIjsKICAgICAgICAgICAgdmFyIHNlY29uZHNTdHIgPSAiU2Vjb25kcyI7CiAgICAgICAg" data-rocket-status="executed">
             var daysStr = "Days";
             var hoursStr = "Hours";
@@ -217,11 +204,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
         </script>
             <script src="data:text/javascript;base64,CiAgICAgICAgdmFyIHN0bV9sbXNfcHJvX25vbmNlcyA9IHsic3RtX2xtc19wcm9faW5zdGFsbF9iYXNlIjoiMjY3Yzg1YmM1NyIsInN0bV9sbXNfcHJvX3NlYXJjaF9jb3Vyc2VzIjoiOTU4MGMyMDQ1ZSIsInN0bV9sbXNfcHJvX3VkZW15X2ltcG9ydF9jb3Vyc2VzIjoiZDZmMmI1ZjZmMyIsInN0bV9sbXNfcHJvX3VkZW15X3B1Ymxpc2hfY291cnNlIjoiYTRiYTk3YjY1MSIsInN0bV9sbXNfcHJvX3VkZW15X2ltcG9ydF9jdXJyaWN1bHVtIjoiYzEzYTBlYTJiYSIsInN0bV9sbXNfcHJvX3NhdmVfYWRkb25zIjoiNGYxMDNhNDhhNyIsInN0bV9sbXNfY3JlYXRlX2Fubm91bmNlbWVudCI6ImE5NjczNmQ2YTgiLCJzdG1fbG1zX3Byb191cGxvYWRfaW1hZ2UiOiJmYzI5ODg0MDJhIiwic3RtX2xtc19wcm9fZ2V0X2ltYWdlX2RhdGEiOiIyYmZmNWU4OTczIiwic3RtX2xtc19wcm9fc2F2ZV9xdWl6IjoiMzg2NmJkOGE5MSIsInN0bV9sbXNfcHJvX3NhdmVfbGVzc29uIjoiYWEyYWEwMDE1MCIsInN0bV9sbXNfcHJvX3NhdmVfZnJvbnRfY291cnNlIjoiZGExNjhmZTZkNyIsInN0bV9sbXNfZ2V0X2NvdXJzZV9pbmZvIjoiMWM4NjhlMTU5MCIsInN0bV9sbXNfZ2V0X2NvdXJzZV9zdHVkZW50cyI6ImM0YzRiNjJkM2MifTsKICAgIA==" data-rocket-status="executed">
         var stm_lms_pro_nonces = {"stm_lms_pro_install_base":"267c85bc57","stm_lms_pro_search_courses":"9580c2045e","stm_lms_pro_udemy_import_courses":"d6f2b5f6f3","stm_lms_pro_udemy_publish_course":"a4ba97b651","stm_lms_pro_udemy_import_curriculum":"c13a0ea2ba","stm_lms_pro_save_addons":"4f103a48a7","stm_lms_create_announcement":"a96736d6a8","stm_lms_pro_upload_image":"fc2988402a","stm_lms_pro_get_image_data":"2bff5e8973","stm_lms_pro_save_quiz":"3866bd8a91","stm_lms_pro_save_lesson":"aa2aa00150","stm_lms_pro_save_front_course":"da168fe6d7","stm_lms_get_course_info":"1c868e1590","stm_lms_get_course_students":"c4c4b62d3c"};
-    </script>
-        <script type="text/javascript" src="data:text/javascript;base64,CiAgICAgICAgdmFyIHN0bV9sbXNfYWpheHVybCA9ICdodHRwczovL3BlY3B0ZS5jb20vd3AtYWRtaW4vYWRtaW4tYWpheC5waHAnOwogICAgICAgIHZhciBzdG1fbG1zX3Jlc3R1cmwgPSAnaHR0cHM6Ly9wZWNwdGUuY29tL3dwLWpzb24vc3RtLWxtcy92MSc7CiAgICA=" data-rocket-status="executed">
-        var stm_lms_ajaxurl = 'https://pecpte.com/wp-admin/admin-ajax.php';
-        var stm_lms_resturl = 'https://pecpte.com/wp-json/stm-lms/v1';
-    </script>
+    
 
     <style>
         .vue_is_disabled {
@@ -238,16 +221,13 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 <meta property="og:type" content="website">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:image" content="https://pecpte.com/wp-content/uploads/2020/03/PEC_LOGO.png">
 <meta property="og:title" content="">
 <meta property="og:url" content="https://pecpte.com">
 <meta property="og:description" content="">
 <meta prefix="fb: http://ogp.me/ns/fb#" property="fb:app_id" content="1383332401872481">
 <meta property="fb:admins" content="2298145213811760">
 <!-- /Open Graph Meta Data -->
-	<script type="text/javascript" src="data:text/javascript;base64,CgkJdmFyIHN0bV93cGNmdG9fYWpheHVybCA9ICdodHRwczovL3BlY3B0ZS5jb20vd3AtYWRtaW4vYWRtaW4tYWpheC5waHAnOwoJ" data-rocket-status="executed">
-		var stm_wpcfto_ajaxurl = 'https://pecpte.com/wp-admin/admin-ajax.php';
-	</script>
+	
 
 	<style>
 		.vue_is_disabled {
@@ -258,12 +238,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 		var stm_wpcfto_nonces = {"wpcfto_save_settings":"6c2fbf5207","get_image_url":"97b022af87","wpcfto_upload_file":"4765640185","wpcfto_search_posts":"13089eff46"};
 	</script>
 	<style>img#wpstats{display:none}</style>
-		<script src="data:text/javascript;base64,CgkJdmFyIGFqYXh1cmwgPSAnaHR0cHM6Ly9wZWNwdGUuY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwJzsKCQl2YXIgc3RtX2luc3RhbGxfcGx1Z2luID0gJzVmMDdlYmI5NWYnOwoJCXZhciBzdG1fYnVkZHlwcmVzc19ncm91cHMgPSAnMmI3YjAxNDU3Zic7CgkJdmFyIHN0bV9hamF4X2FkZF9yZXZpZXcgPSAnMWQyNGIxM2FiNSc7Cgk=" data-rocket-status="executed">
-		var ajaxurl = 'https://pecpte.com/wp-admin/admin-ajax.php';
-		var stm_install_plugin = '5f07ebb95f';
-		var stm_buddypress_groups = '2b7b01457f';
-		var stm_ajax_add_review = '1d24b13ab5';
-	</script>
+		
 	<link rel="shortcut icon" type="image/x-icon" href="thumbnail.png">
 	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
 	<link rel="preconnect" href="https://code.tidio.co/">		<style>
@@ -298,7 +273,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 }
 .block-main {
 	  color:white;
-	  background-color:#eab830;
+	  background-color:#FFA700;
 	  padding: 5px;
 	margin:5px;
     width: 224px;
@@ -344,7 +319,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 }
 
 .b1{
-	background-color:#eab830;
+	background-color:#FFA700;
 }
 .b2{
 	background-color:#0099;
@@ -438,7 +413,7 @@ body.skin_custom_color.udemy .btn-default,
 .stm_lms_course_sticky_panel .stm_lms_course_sticky_panel__button .btn,
 .stm_lms_course_sticky_panel .stm_lms_course_sticky_panel__button .btn:hover,
 body.skin_custom_color.language_center .btn-default
-{background-color:#eab830;}.icon_box.stm_icon_box_hover_none{border-left-color:#eab830;}
+{background-color:#FFA700;}.icon_box.stm_icon_box_hover_none{border-left-color:#FFA700;}
 body.skin_custom_color ul.page-numbers > li a.page-numbers:hover,
 body.skin_custom_color ul.page-numbers > li a.page-numbers.current,
 body.skin_custom_color ul.page-numbers > li span.page-numbers.current,
@@ -470,7 +445,7 @@ body.skin_custom_color .search-toggler:hover,
 body.skin_custom_color .search-toggler,
 .stm_lms_courses_carousel_wrapper .owl-dots .owl-dot.active,
 .triangled_colored_separator .triangle:before
-{border-color:#eab830;}
+{border-color:#FFA700;}
 body.skin_custom_color .icon_box .icon i,
 body.skin_custom_color .icon-btn:hover .icon_in_btn,
 body.skin_custom_color .icon-btn:hover .link-title,
@@ -540,10 +515,10 @@ body.classic_lms .header_top_bar a:hover,
 body.classic_lms .stm_lms_wishlist_button a:hover i,
 .classic_lms .post_list_main_section_wrapper .post_list_item_title:hover,
 .stm_lms_courses__single.style_2 .stm_lms_courses__single--title h5:hover
-{color:#eab830;}
+{color:#FFA700;}
 body.skin_custom_color .triangled_colored_separator .triangle,
 body.skin_custom_color .magic_line:after
-{border-bottom-color:#eab830;}body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content:after{border-left-color:#2c75e4;}
+{border-bottom-color:#FFA700;}body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content:after{border-left-color:#2c75e4;}
 body.skin_custom_color .blog_layout_grid .post_list_meta_unit .sticky_post,
 body.skin_custom_color .blog_layout_list .post_list_meta_unit .sticky_post,
 body.skin_custom_color .product_status.special,
@@ -684,7 +659,11 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 				.widget_nav_menu ul.style_1 li a .h6, 
 				.widget_pages ul.style_2 li a .h6,
 				#footer .stm_product_list_widget.widget_woo_stm_style_2 li a .meta .title,
-				.widget_pages ul.style_1 li a .h6{color:#ffffff;}.widget_pages ul.style_2 li a:after{background-color:#ffffff;}#footer_copyright{background-color:#5e676b;}#footer_copyright .copyright_text, #footer_copyright .copyright_text a{color:#ffffff;}#footer_copyright{border-color:#5e676b;}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1645950070151{background-image: url(banner1.jpg) !important;}.vc_custom_1645695539961{margin-bottom: 44px !important;}.vc_custom_1536836667813{margin-bottom: 0px !important;padding-top: 29px !important;padding-bottom: 60px !important;}.vc_custom_1645989356413{margin-bottom: 0px !important;background-image: url(https://pecpte.com/wp-content/uploads/2022/02/pecpte-background.jpg?id=5305) !important;}.vc_custom_1579768494906{margin-bottom: 0px !important;background-color: #e8e8e8 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1436164243861{margin-bottom: 28px !important;}.vc_custom_1579437107739{margin-top: !important;}.vc_custom_1645986912369{margin-top: -150px !important;}.vc_custom_1579595041823{margin-bottom: 51px !important;}.vc_custom_1436163882282{margin-bottom: 46px !important;}.vc_custom_1579595072581{margin-bottom: 11px !important;}.vc_custom_1646028687037{margin-right: 210px !important;}.vc_custom_1579416932851{margin-bottom: -13px !important;}.vc_custom_1536751636857{margin-bottom: 47px !important;}.vc_custom_1437023252855{margin-top: 7px !important;margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_preload_links wpr_desktop"><link rel="prefetch" href="https://pecpte.com/events/pte-exam-fee/"></head>
+				.widget_pages ul.style_1 li a .h6{color:#ffffff;}.widget_pages ul.style_2 li a:after{background-color:#ffffff;}#footer_copyright{background-color:#5e676b;}#footer_copyright .copyright_text, #footer_copyright .copyright_text a{color:#ffffff;}#footer_copyright{border-color:#5e676b;}</style>
+				
+				<style type="text/css" data-type="vc_shortcodes-custom-css">
+				.vc_custom_1645950070151{background-image: url(banner1.jpg) !important;}
+				.vc_custom_1645695539961{margin-bottom: 44px !important;}.vc_custom_1536836667813{margin-bottom: 0px !important;padding-top: 29px !important;padding-bottom: 60px !important;}.vc_custom_1645989356413{margin-bottom: 0px !important;background-image: url(https://pecpte.com/wp-content/uploads/2022/02/pecpte-background.jpg?id=5305) !important;}.vc_custom_1579768494906{margin-bottom: 0px !important;background-color: #e8e8e8 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1436164243861{margin-bottom: 28px !important;}.vc_custom_1579437107739{margin-top: !important;}.vc_custom_1645986912369{margin-top: -150px !important;}.vc_custom_1579595041823{margin-bottom: 51px !important;}.vc_custom_1436163882282{margin-bottom: 46px !important;}.vc_custom_1579595072581{margin-bottom: 11px !important;}.vc_custom_1646028687037{margin-right: 210px !important;}.vc_custom_1579416932851{margin-bottom: -13px !important;}.vc_custom_1536751636857{margin-bottom: 47px !important;}.vc_custom_1437023252855{margin-top: 7px !important;margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_preload_links wpr_desktop"><link rel="prefetch" href="https://pecpte.com/events/pte-exam-fee/"></head>
 <body class="home page-template-default page page-id-7 stm_lms_button theme-masterstudy woocommerce-js skin_custom_color classic_lms masterstudy-theme stm_preloader_0 wpb-js-composer js-comp-ver-6.8.0 vc_responsive" ontouchstart="" style="padding-bottom: 0px;">
 
 
@@ -775,48 +754,45 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 <ul class="sub-menu">
 	<li id="menu-item-3713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3713"><a href="study.php">Study Abroad</a>
 	<ul class="sub-menu">
-		<li id="menu-item-4251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251"><a href="https://pecpte.com/study-in-usa/">Study in Best Universities in USA</a></li>
-		<li id="menu-item-4252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4252"><a href="https://pecpte.com/study-abroad-in-canada/">Study in Canada</a></li>
-		<li id="menu-item-4250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="https://pecpte.com/study-in-the-uk/">Study in the UK</a></li>
-		<li id="menu-item-4247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4247"><a href="https://pecpte.com/study-in-australia/">Study in Australia</a></li>
-		<li id="menu-item-4249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4249"><a href="https://pecpte.com/study-in-sweden/">Study in Sweden</a></li>
-		<li id="menu-item-4248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="https://pecpte.com/study-in-germany/">Study in Germany</a></li>
+		<li id="menu-item-4251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251"><a href="study.php">Study in Best Universities in USA</a></li>
+		<li id="menu-item-4252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4252"><a href="study.php">Study in Canada</a></li>
+		<li id="menu-item-4250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="study.php">Study in the UK</a></li>
+		<li id="menu-item-4247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4247"><a href="study.php">Study in Australia</a></li>
+		<li id="menu-item-4249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4249"><a href="study.php">Study in Sweden</a></li>
+		<li id="menu-item-4248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php">Study in Germany</a></li>
 	</ul>
 </li>
-	<li id="menu-item-5442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5442"><a href="https://pecpte.com/pearson-vue-test-center/">Pearson VUE Test Center</a></li>
-	<li id="menu-item-3722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3722"><a href="https://pecpte.com/online-courses/">PTE Online Courses</a></li>
-	<li id="menu-item-5448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="https://pecpte.com/pte-mock-tests/">PTE Mock Tests</a></li>
-	<li id="menu-item-3758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3758"><a href="https://pecpte.com/pte-exam-registration/">PTE Exam Registration</a></li>
+	<li id="menu-item-5442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5442"><a href="study.php">Pearson VUE Test Center</a></li>
+	<li id="menu-item-3722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3722"><a href="study.php">PTE Online Courses</a></li>
+	<li id="menu-item-5448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php">PTE Mock Tests</a></li>
+	<li id="menu-item-3758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3758"><a href="study.php">PTE Exam Registration</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1873"><a href="https://pecpte.com/online-courses/pte-online/">Courses</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+<li id="menu-item-1873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1873"><a href="study.php">Courses</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
-	<li id="menu-item-3723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3723"><a href="https://pecpte.com/pte-academic-coaching/">PTE Academic</a>
+	<li id="menu-item-3723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3723"><a href="study.php">PTE Academic</a>
 	<ul class="sub-menu">
-		<li id="menu-item-5111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5111"><a href="https://pecpte.com/pte-home-test/">PTE Home Test</a></li>
+		<li id="menu-item-5111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5111"><a href="study.php">PTE Home Test</a></li>
 	</ul>
 </li>
-	<li id="menu-item-5497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5497"><a href="https://pecpte.com/pte-core-general-test/">PTE Core Exam</a></li>
-	<li id="menu-item-5845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5845"><a href="https://pecpte.com/services/toefl-ibt-test-preparation-support-in-dhaka/">TOEFL iBT Test</a></li>
-	<li id="menu-item-3724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724"><a href="https://pecpte.com/ielts-course-dhaka/">IELTS</a></li>
-	<li id="menu-item-4163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4163"><a href="https://pecpte.com/lean-sigma-executive-training/">Lean Sigma Project Management</a></li>
-	<li id="menu-item-3725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="https://pecpte.com/spoken-english-course/">Spoken English</a></li>
+	<li id="menu-item-5497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5497"><a href="study.php">PTE Core Exam</a></li>
+	<li id="menu-item-5845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5845"><a href="study.php">TOEFL iBT Test</a></li>
+	<li id="menu-item-3724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724"><a href="study.php">IELTS</a></li>
+	<li id="menu-item-4163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4163"><a href="study.php">Lean Sigma Project Management</a></li>
+	<li id="menu-item-3725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="study.php">Spoken English</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-3938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3938"><a href="https://pecpte.com/shop/">Shop</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+<li id="menu-item-3938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3938"></span>
+
+<div class="magic_line" style="max-width: 0px;"></div></li>
+<li id="menu-item-1492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1492"><a href="">Gallery</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
-	<li id="menu-item-3937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3937"><a href="https://pecpte.com/cart/">Cart</a></li>
-	<li id="menu-item-3936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3936"><a href="https://pecpte.com/checkout/">Checkout</a></li>
+	<li id="menu-item-3726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3726"><a href="">PTE Score Card</a></li>
+	<li id="menu-item-3757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3757"><a href="">Seminar Pics</a></li>
+	<li id="menu-item-1566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1566"><a href="">FAQ</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1492"><a href="https://pecpte.com/our-gallery/">Gallery</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
-<ul class="sub-menu">
-	<li id="menu-item-3726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3726"><a href="https://pecpte.com/pte-scorecard/">PTE Score Card</a></li>
-	<li id="menu-item-3757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3757"><a href="https://pecpte.com/seminar-pics/">Seminar Pics</a></li>
-	<li id="menu-item-1566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1566"><a href="https://pecpte.com/faq/">FAQ</a></li>
-</ul>
-<div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a href="https://pecpte.com/contact-us/">Contact Us</a><div class="magic_line" style="max-width: 0px;"></div></li>
+<li id="menu-item-1167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a href="">Contact Us</a><div class="magic_line" style="max-width: 0px;"></div></li>
 <li class="menu-item wpmenucartli wpmenucart-display-right menu-item empty-wpmenucart" id="wpmenucartli" style=""><a class="wpmenucart-contents empty-wpmenucart" style="display:none">&nbsp;</a><div class="magic_line" style="max-width: 0px;"></div></li>                    <li>
                     	
                     <div class="magic_line" style="max-width: 0px;"></div></li>
@@ -845,10 +821,10 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="" aria-current="page">Home</a><div class="magic_line line_visible" style="max-width: 42px;"></div></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="about.php">About Us</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.php">Our Team</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3719"><a href="about.php">Our Mission</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3720"><a href="about.php">Our Vision</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="about.php">Our Achievements</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.html">Our Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3719"><a href="mission.html">Our Mission</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3720"><a href="mission.html">Our Vision</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="certificates.html">Our Achievements</a></li>
 </ul>
 <div class="magic_line" style="max-width: 73.113px;"></div></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1176"><a href="study.php">Services</a>
@@ -903,48 +879,921 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 </div> <!-- id header -->
     <div id="main">
 
-	<style>
-		#wrapper #main{
-			min-height: 400px !important;
-		}
-		</style>
+	
 <!-- Breads -->
 <div class="stm_lms_breadcrumbs stm_lms_breadcrumbs__header_default">
 
 	
 	</div>
-           </div>
+
+    <div class="container">
+
+                    <div class="post_type_exist clearfix">
+                                    <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid pecpte-hero-area vc_custom_1645950070151 vc_row-has-fill vc_row-o-full-height vc_row-o-columns-middle vc_row-o-content-middle vc_row-flex" style="background-position: center top !important; position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px; min-height: 100vh;">
+        <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<h1 class="pecpte-heading" style="color:#fff; line-height:100px; margin-top:50px;"><strong><span class="pecpte-heading-span1" style="font-size:75px; background-color:rgba(0,0,0, .6); padding:10px">Take the first step</span></strong></h1>
+		</div>
+	</div>
+<style type="text/css">.vc_btn3-style-gradient.vc_btn-gradient-btn-69b5960c63730:hover{color: #fff;background-color: #f4524d;border: none;background-position: 100% 0;}</style><style type="text/css">.vc_btn3-style-gradient.vc_btn-gradient-btn-69b5960c63730{color: #fff;border: none;background-color: #fe6c61;background-image: -webkit-linear-gradient(left, #fe6c61 0%, #f4524d 50%,#fe6c61 100%);background-image: linear-gradient(to right, #fe6c61 0%, #f4524d 50%,#fe6c61 100%);-webkit-transition: all .2s ease-in-out;transition: all .2s ease-in-out;background-size: 200% 100%;}</style>
+</div></div></div></div>
+<div class="vc_row-full-width vc_clearfix"></div>
+<div class="vc_row wpb_row vc_row-fluid vc_custom_1645695539961">
+        <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1579437107739"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1645986912369">
+		<div class="wpb_wrapper">
+			<div class="block-scroll">
+    <a href="study.php">
+        <div class="block-main b1">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" class="block-image" alt="Study Abroad" width="90" height="90">
+            </div>
+            <div class="block-head">Study Abroad</div>
+        </div>
+    </a><!--Main Block End-->
+    <a href="course.php"><!--Main Block-->
+        <div class="block-main b3">
+            <div class="pte-block-img"><!--icon-->
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/pte-logo-1.png" class="block-image entered lazyloaded" alt="Person PTE Academy" width="190" height="63" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/pte-logo-1.png?resize=190%2C63&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/pte-logo-1.png?resize=190%2C63&#038;ssl=1" class="block-image" alt="Person PTE Academy" width="190" height="63"  data-recalc-dims="1"></noscript>
+            </div>
+        </div>
+    </a><!--Main Block End-->
+    <a href="course.php"><!--Main Block-->
+        <div class="block-main b2">
+            <div class="ielts-block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ielts-1.png" class="block-image" alt="IELTS" width="190" height="190">
+            </div>
+        </div>
+    </a><!--Main Block End-->
+    <a href="course.php">
+        <div class="block-main b4">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/speaking_sized.png" class="block-image" alt="Spoken English" width="90" height="90">
+            </div>
+            <div class="block-head">Spoken English</div>
+        </div>
+    </a><!--Main Block End-->
+    <a href="course.php" target="_blank">
+        <div class="block-main b5">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/online-course_sized.png" class="block-image" alt="Online Courses &amp; PTE Mock Test" width="90" height="90">
+            </div>
+            <div class="block-head">Online Courses &amp; PTE Mock Test</div>
+        </div>
+    </a><!--Main Block End-->
+</div>
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div>
+
+<div class="vc_row wpb_row vc_row-fluid overflowed_content">
+        <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<div class="stm_lms_courses_grid stm_lms_courses all_loaded">
+
+    <div class="stm_lms_courses_grid__top showing">
+        <div class="stm_lms_courses_grid__counter">
+                            <h2>PTE Courses(On Campus)</h2>
+                    </div>
+        <div class="stm_lms_courses_grid__sort heading_font stm_lms_grid_sort_module hidden" data-text="Sort by:">
+            <select class="no-search select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                <option value="date_high">Release date (newest first)</option>
+                <option value="date_low">Release date (oldest first)</option>
+                <option value="rating">Overall Rating</option>
+                <option value="popular">Popular (most viewed)</option>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-nyv7-container"><span class="select2-selection__rendered" id="select2-nyv7-container" title="Release date (newest first)">Release date (newest first)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+        </div>
+    </div>
+
+                    <div class="stm_lms_courses__grid stm_lms_courses__grid_4 stm_lms_courses__grid_center  stm_lms_courses__grid_found_4" data-pages="1">
+    
+    
+
+
+<div class="stm_lms_courses__single stm_lms_courses__single_animation no-sale style_1 ">
+
+    <div class="stm_lms_courses__single__inner">
+
+        
+<div class="stm_lms_courses__single--image">
+
+    
+    
+    
+    <a href="" class="heading_font" data-preview="Preview this course">
+        <div>
+            <div class="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded"><img data-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/02/1765-1-scaled-544x322.jpg 2x" class=" lazyloaded" data-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/02/1765-1-scaled-272x161.jpg" width="272" height="161" alt="Diverse adult students working in computer class. Line of man and women in casual sitting at table, using desktops, typing, looking at monitor. Training course concept" title="Diverse adult students working in computer class" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/02/1765-1-scaled-544x322.jpg 2x" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/1765-1-scaled-272x161.jpg"></div>        </div>
+    </a>
+
+</div>
+        <div class="stm_lms_courses__single--inner">
+
+            
+	<div class="stm_lms_courses__single--terms">
+		<div class="stm_lms_courses__single--term">
+			PTE 1 to 1 Long Course		</div>
+	</div>
+
+            <div class="stm_lms_courses__single--title">
+	<a href="">
+		<h5>PTE Short Course(Batch)</h5>
+	</a>
+</div>
+            <div class="stm_lms_courses__single--meta">
+
+                
+        <div class="stm_lms_courses__hours">
+            <i class="stmlms-lms-clocks"></i>
+            <span>15 hours Lecture</span>
+        </div>
+	
+
+                    <div class="stm_lms_courses__single--price heading_font">
+                    <strong>TK8,000</strong>
+            </div>
+
+            </div>
+
+        </div>
+
+        
+
+<div class="stm_lms_courses__single--info">
+            <div class="stm_lms_courses__single--info_author">
+            <div class="stm_lms_courses__single--info_author__avatar">
+                </noscript>            </div>
+            <div class="stm_lms_courses__single--info_author__login">
+                Ayan Academy            </div>
+        </div>
+    
+    <div class="stm_lms_courses__single--info_title">
+        <a href="">
+            <h4>PTE Short Course(Batch)</h4>
+        </a>
+    </div>
+
+    <div class="stm_lms_courses__single--info_rate">
+
+        
+        
+    </div>
+
+    <div class="stm_lms_courses__single--info_excerpt">
+            </div>
+
+    <div class="stm_lms_courses__single--info_meta">
+
+        	<div class="stm_lms_course__meta">
+		<i class="stmlms-level"></i>
+		Intermediate	</div>
+
+	<div class="stm_lms_course__meta">
+		<i class="stmlms-cats"></i>
+		1 Lectures	</div>
+
+	<div class="stm_lms_course__meta">
+		<i class="stmlms-lms-clocks"></i>
+		15 hours Lecture	</div>
+
+    </div>
+
+    <div class="stm_lms_courses__single--info_preview">
+        <a href="" title="PTE Short Course(Batch)" class="heading_font">
+            Preview this course        </a>
+    </div>
+
+    <div class="stm_lms_courses__single--info_bottom">
+        
+<div class="stm-lms-wishlist" data-add="Add to Wishlist" data-add-icon="far fa-heart" data-remove="Wishlisted" data-remove-icon="fa fa-heart" data-id="3050">
+	        <i class="far fa-heart"></i>
+        <span>Add to Wishlist</span>
+	</div>
+
+            <div class="stm_lms_courses__single--price heading_font">
+                    <strong>TK8,000</strong>
+            </div>
+    </div>
+
+
 </div>
 
-<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1>Our Team</h1>
-			</div>
-			<div class="col-md-12">	
-				
-				<div class="col-md-3">
-					<div class="team-member-image">
-						<img src="team-member-1.jpg" alt="Team Member 2">
-					</div>
-					<div class="team-member-name">
-						<h3>Jane Doe</h3>
-						<p>Test Test Test Test Test Test Test </p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="team-member-image">
-						<img src="team-member-1.jpg" alt="Team Member 3">
-					</div>
-					<div class="team-member-name">
-						<h3>John Doe</h3>
-						<p>Test Test Test Test Test Test Test Test </p>
-					</div>
-				</div>
-			</div>
+
+
+    </div>
+
+</div>        </div>
+
+    <div class="hidden">
+        
+<div class="text-center">
+    <a href="" class="btn btn-default stm_lms_load_more_courses" data-offset="1" data-template="courses/grid" data-url="" data-args="{&quot;per_row&quot;:&quot;4&quot;,&quot;include_link&quot;:true,&quot;posts_per_page&quot;:&quot;4&quot;,&quot;tax_query&quot;:[{&quot;taxonomy&quot;:&quot;stm_lms_course_taxonomy&quot;,&quot;field&quot;:&quot;term_id&quot;,&quot;terms&quot;:[&quot;154&quot;]}]}" style="display: none;">
+        <span>Load more</span>
+    </a>
+</div>    </div>
+
+</div>
+
+<div class="stm_lms_courses_grid stm_lms_courses all_loaded">
+
+    <div class="stm_lms_courses_grid__top showing">
+        <div class="stm_lms_courses_grid__counter">
+                            <h2>PTE COURSES(Online)</h2>
+                    </div>
+        <div class="stm_lms_courses_grid__sort heading_font stm_lms_grid_sort_module hidden" data-text="Sort by:">
+            <select class="no-search select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                <option value="date_high">Release date (newest first)</option>
+                <option value="date_low">Release date (oldest first)</option>
+                <option value="rating">Overall Rating</option>
+                <option value="popular">Popular (most viewed)</option>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-2sqi-container"><span class="select2-selection__rendered" id="select2-2sqi-container" title="Release date (newest first)">Release date (newest first)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+        </div>
+    </div>
+
+                    <div class="stm_lms_courses__grid stm_lms_courses__grid_4 stm_lms_courses__grid_center  stm_lms_courses__grid_found_4" data-pages="1">
+    
+    
+
+<div class="stm_lms_courses__single stm_lms_courses__single_animation no-sale style_1 ">
+
+    <div class="stm_lms_courses__single__inner">
+
+        
+<div class="stm_lms_courses__single--image">
+
+    
+    
+            <div class="stm_lms_post_status heading_font special">
+            Special        </div>
+    
+    <a href="" class="heading_font" data-preview="Preview this course">
+        <div>
+            <div class="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded"><img data-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/02/989-scaled-544x322.jpg 2x" class=" lazyloaded" data-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/02/989-scaled-272x161.jpg" width="272" height="161" alt="Five young people studying on white desk. Beautiful women and men working together wearing casual clothes. Multi-ethnic group." title="Multi-ethnic group of young men and women studying indoors." srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/02/989-scaled-544x322.jpg 2x" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/989-scaled-272x161.jpg"></div>        </div>
+    </a>
+
+</div>
+        <div class="stm_lms_courses__single--inner">
+
+            
+	<div class="stm_lms_courses__single--terms">
+		<div class="stm_lms_courses__single--term">
+			Online PTE Academic		</div>
+	</div>
+
+            <div class="stm_lms_courses__single--title">
+	<a href="">
+		<h5>PTE short course online(One On One)</h5>
+	</a>
+</div>
+            <div class="stm_lms_courses__single--meta">
+
+                
+
+
+                    <div class="stm_lms_courses__single--price heading_font">
+                    <strong>TK12,900</strong>
+            </div>
+
+            </div>
+
+        </div>
+
+        
+
+<div class="stm_lms_courses__single--info">
+            <div class="stm_lms_courses__single--info_author">
+            <div class="stm_lms_courses__single--info_author__avatar">
+                </noscript>            </div>
+            <div class="stm_lms_courses__single--info_author__login">
+                Ayan Academy        </div>
+        </div>
+    
+    <div class="stm_lms_courses__single--info_title">
+        <a href="">
+            <h4>PTE short course online(One On One)</h4>
+        </a>
+    </div>
+
+    <div class="stm_lms_courses__single--info_rate">
+
+        
+        
+    </div>
+
+    <div class="stm_lms_courses__single--info_excerpt">
+            </div>
+
+    <div class="stm_lms_courses__single--info_meta">
+
+        
+	<div class="stm_lms_course__meta">
+		<i class="stmlms-cats"></i>
+		2 Lectures	</div>
+
+
+    </div>
+
+    <div class="stm_lms_courses__single--info_preview">
+        <a href="" title="PTE short course online(One On One)" class="heading_font">
+            Preview this course        </a>
+    </div>
+
+    <div class="stm_lms_courses__single--info_bottom">
+            <div class="stm_lms_courses__single--price heading_font">
+                    <strong>TK12,900</strong>
+            </div>
+    </div>
+
+
+</div>
+    </div>
+
+</div>
+
+       </div>
+
+    <div class="hidden">
+        
+<div class="text-center">
+    <a href="" class="btn btn-default stm_lms_load_more_courses" data-offset="1" data-template="courses/grid" data-url="" data-args="{&quot;per_row&quot;:&quot;4&quot;,&quot;include_link&quot;:true,&quot;posts_per_page&quot;:&quot;4&quot;,&quot;tax_query&quot;:[{&quot;taxonomy&quot;:&quot;stm_lms_course_taxonomy&quot;,&quot;field&quot;:&quot;term_id&quot;,&quot;terms&quot;:[&quot;136&quot;]}]}" style="display: none;">
+        <span>Load more</span>
+    </a>
+</div>    </div>
+
+</div>
+
 		</div>
 	</div>
 
+
+
+
+</div></div></div></div>
+
+<div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.6" data-vc-parallax-image="https://i0.wp.com/pecpte.com/wp-content/uploads/2018/09/achivements.jpg?fit=1920%2C1000&amp;ssl=1" class="vc_row wpb_row vc_row-fluid stm_fixed_background vc_custom_1536836667813 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving" style="position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px;">
+        <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="aa5b84e1f5e48d81091fc279a089999c3 vc_empty_space" style="height: 42px">
+    <span class="vc_empty_space_inner"></span>
+</div>
+<div class="vc_custom_heading vc_custom_1579595041823 text_align_center"><h2 style="color: #ffffff;text-align: center" class="masterstudy-custom-title">OUR ACHIEVEMENTS</h2></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  vc_custom_1579595072581">
+		<div class="wpb_wrapper">
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1436163882282"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="stats_counter text-center" style="color:#ffffff" data-id="counter_module__e89daf6be8200b082ae717444152b7be" data-value="278" data-duration="2.5">
+			<div class="icon" style="height: 72px;
+                "></div>
+				<div class="h1" id="counter_module__e89daf6be8200b082ae717444152b7be" style="color:#FFA700">278</div>
+				<div class="stats_counter_title h5" style="color:#ffffff">
+            Oversease        </div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="stats_counter text-center" style="color:#fff" data-id="counter_module__c6d82503c8914e867e7af4b28d8aaf2c" data-value="470" data-duration="2.5">
+			<div class="icon" style="height: 72px;
+                "></div>
+				<div class="h1" id="counter_module__c6d82503c8914e867e7af4b28d8aaf2c" style="color:#FFA700">470</div>
+				<div class="stats_counter_title h5" style="color:#fff">
+            Classes complete        </div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="stats_counter text-center" style="color:#fff" data-id="counter_module__fb7a02ba72f3cb0933e3dfe976fff30f" data-value="830" data-duration="2.5">
+			<div class="icon" style="height: 72px;
+                "></div>
+				<div class="h1" id="counter_module__fb7a02ba72f3cb0933e3dfe976fff30f" style="color:#FFA700">830</div>
+				<div class="stats_counter_title h5" style="color:#fff">
+            Students enrolled        </div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="stats_counter text-center" style="color:#fff" data-id="counter_module__2f96813b4f5bf6dfbf58d8b006fb8192" data-value="06" data-duration="2.5">
+			<div class="icon" style="height: 72px;
+                "></div>
+				<div class="h1" id="counter_module__2f96813b4f5bf6dfbf58d8b006fb8192" style="color:#FFA700">6</div>
+				<div class="stats_counter_title h5" style="color:#fff">
+            Certified teachers        </div>
+	</div>
+</div></div></div></div>
+<div class="a224a9d1d2a5510525f714cdbecd1fd40 vc_empty_space" style="height: 48px">
+    <span class="vc_empty_space_inner"></span>
+</div>
+</div></div></div><div class="vc_parallax-inner skrollable skrollable-before" data-bottom-top="top: -60%;" data-top-bottom="top: 0%;" style="height: 160%; background-image: url(&quot;https://i0.wp.com/pecpte.com/wp-content/uploads/2018/09/achivements.jpg?fit=1920%2C1000&amp;ssl=1&quot;); top: -60%;"></div></div>
+<div class="vc_row-full-width vc_clearfix"></div>
+<div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid sbc vc_custom_1645989356413 vc_row-has-fill" style="position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px;">
+        <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-7 vc_col-md-7"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="450" height="450" src="PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png" class="vc_single_image-img attachment-full entered lazyloaded" alt="" title="student-image" data-lazy-srcset="PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?w=450&amp;ssl=1 450w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=300%2C300&amp;ssl=1 300w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=150%2C150&amp;ssl=1 150w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=75%2C75&amp;ssl=1 75w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=129%2C129&amp;ssl=1 129w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=69%2C69&amp;ssl=1 69w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=20%2C20&amp;ssl=1 20w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=100%2C100&amp;ssl=1 100w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?fit=450%2C450&amp;ssl=1" data-ll-status="loaded" sizes="(max-width: 450px) 100vw, 450px" srcset="PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?w=450&amp;ssl=1 450w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=300%2C300&amp;ssl=1 300w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=150%2C150&amp;ssl=1 150w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=75%2C75&amp;ssl=1 75w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=129%2C129&amp;ssl=1 129w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=69%2C69&amp;ssl=1 69w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=20%2C20&amp;ssl=1 20w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=100%2C100&amp;ssl=1 100w"><noscript><img decoding="async" width="450" height="450" src="PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?fit=450%2C450&amp;ssl=1" class="vc_single_image-img attachment-full" alt="" title="student-image" srcset="PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?w=450&amp;ssl=1 450w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=300%2C300&amp;ssl=1 300w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=150%2C150&amp;ssl=1 150w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=75%2C75&amp;ssl=1 75w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=129%2C129&amp;ssl=1 129w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=69%2C69&amp;ssl=1 69w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=20%2C20&amp;ssl=1 20w, PEC- Education - PTE Academic In Dhaka, Bangladesh_files/student-image.png?resize=100%2C100&amp;ssl=1 100w" sizes="(max-width: 450px) 100vw, 450px" /></noscript></div>
+		</figure>
+	</div>
+    <div class="text-center  vc_custom_1646028687037">
+        <div class="stm_countdown" id="countdown_364368"><div class="countdown_ended h2">Time is up, sorry!</div></div>
+    </div>
+
+    <script src="data:text/javascript;base64,d2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbigpIHsKICAgICAgICBqUXVlcnkoZnVuY3Rpb24gKCQpIHsKICAgICAgICAgICAgdmFyIGZsYXNoID0gZmFsc2U7CiAgICAgICAgICAgIHZhciB0cyA9IDE2NDg3MzE2MDAwMDA7CiAgICAgICAgICAgIHZhciB0aW1lVXAgPSAnVGltZSBpcyB1cCwgc29ycnkhJzsKICAgICAgICAgICAgaWYgKChuZXcgRGF0ZSgpKSA8IHRzKSB7CiAgICAgICAgICAgICAgICAkKCcjY291bnRkb3duXzM2NDM2OCcpLmNvdW50ZG93bih7CiAgICAgICAgICAgICAgICAgICAgdGltZXN0YW1wOiB0cywKICAgICAgICAgICAgICAgICAgICBjYWxsYmFjazogZnVuY3Rpb24gKGRheXMsIGhvdXJzLCBtaW51dGVzLCBzZWNvbmRzKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZhciBzdW1tYXJ5VGltZSA9IGRheXMgKyBob3VycyArIG1pbnV0ZXMgKyBzZWNvbmRzOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoc3VtbWFyeVRpbWUgPT0gMCkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgJCgnI2NvdW50ZG93bl8zNjQzNjgnKS5odG1sKCc8ZGl2IGNsYXNzPSJjb3VudGRvd25fZW5kZWQgaDIiPicgKyB0aW1lVXAgKyAnPC9kaXY+Jyk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICQoJyNjb3VudGRvd25fMzY0MzY4JykuaHRtbCgnPGRpdiBjbGFzcz0iY291bnRkb3duX2VuZGVkIGgyIj4nICsgdGltZVVwICsgJzwvZGl2PicpOwogICAgICAgICAgICB9CiAgICAgICAgfSk7CiAgICB9KTs=" data-rocket-status="executed">window.addEventListener('DOMContentLoaded', function() {
+        jQuery(function ($) {
+            var flash = false;
+            var ts = 1648731600000;
+            var timeUp = 'Time is up, sorry!';
+            if ((new Date()) < ts) {
+                $('#countdown_364368').countdown({
+                    timestamp: ts,
+                    callback: function (days, hours, minutes, seconds) {
+                        var summaryTime = days + hours + minutes + seconds;
+                        if (summaryTime == 0) {
+                            $('#countdown_364368').html('<div class="countdown_ended h2">' + timeUp + '</div>');
+                        }
+                    }
+                });
+            } else {
+                $('#countdown_364368').html('<div class="countdown_ended h2">' + timeUp + '</div>');
+            }
+        });
+    });</script>
+
+    <style>
+        .stm_countdown .countdown_label {
+            color: #eeee22 !important;
+        }
+    </style>
+<div class="vc_custom_heading text_align_left"></div>
+<div class="vc_custom_heading fwl text_align_left">
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-5 vc_col-md-5"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<div data-uniq="69b5960d6c0d2" class="uniq-69b5960d6c0d2 formcraft-css form-live align-left"><input type="hidden" id="formcraft3_wpnonce" name="formcraft3_wpnonce" value="9f0933d2ae"><input type="hidden" name="_wp_http_referer" value="/"><div class="fc-pagination-cover fc-pagination-1">
+				<div class="fc-pagination" style="width: 100%">
+					<div class="pagination-trigger active" data-index="0">
+						<span class="page-number"><span>1</span></span>
+						<span class="page-name ">Step 1</span>
+						
+					</div>
+				</div>
+			</div>
+			
+			<style scoped="scoped">
+			@media (max-width : 480px) {
+				.fc_modal-dialog-2 .fc-pagination-cover .fc-pagination
+				{
+					background-color: white !important;
+				}
+			}
+						.formcraft-css .fc-form.fc-form-2 .form-element .submit-cover .submit-button,
+			.formcraft-css .fc-form.fc-form-2 .form-element .fileupload-cover .button-file,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover .button,
+			.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-datepicker .ui-datepicker-title
+			{
+				background: #4488ee;
+				color: #fff;
+			}
+			.formcraft-datepicker td .ui-state-active,
+			.formcraft-datepicker td .ui-state-hover,
+			.formcraft-css .fc-form.fc-form-2 .form-element .slider-cover .ui-slider-range
+			{
+				background: #4488ee;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-css .fc-form .field-cover>div.full hr
+			{
+				border-color: #3b77d1;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-prev:hover,
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-next:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-month:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-year:hover
+			{
+				background-color: #3b77d1;
+			}
+			.formcraft-css .fc-pagination>div.active .page-number,
+			.formcraft-css .form-cover-builder .fc-pagination>div:first-child .page-number
+			{
+				background-color: #4488ee;
+				color: #fff;
+			}
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar th,
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar td.ui-datepicker-today a,
+			.formcraft-css .fc-form.fc-form-2 .form-element .star-cover label,
+			html .formcraft-css .fc-form.label-floating .form-element .field-cover.has-focus>span,
+			.formcraft-css .fc-form.fc-form-2 .form-element .customText-cover a,
+			.formcraft-css .prev-next>div span:hover
+			{
+				color: #4488ee;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .customText-cover a:hover
+			{
+				color: #3b77d1;
+			}
+			html .formcraft-css .fc-form.fc-form-2.label-floating .form-element .field-cover > span
+			{
+				color: #666666;
+			}
+			html .formcraft-css .fc-form .final-success .final-success-check {
+				border: 2px solid #666666;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover textarea,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover .time-fields-cover,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover .awesomplete ul
+			{
+				color: #777;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="checkbox"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover textarea
+			{
+				background-color: #fafafa;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"]:checked,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="checkbox"]:checked {
+				border-color: #3b77d1;
+				background: #4488ee;				
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .star-cover label .star
+			{
+				text-shadow: 0px 1px 0px #3b77d1;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .slider-cover .ui-slider-range
+			{
+				box-shadow: 0px 1px 1px #3b77d1 inset;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .fileupload-cover .button-file
+			{
+				border-color: #3b77d1;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="password"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="email"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="tel"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="text"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html textarea:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html select:focus
+			{
+				border-color: #4488ee;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html .field-cover .is-read-only:focus {
+				border-color: #ccc;
+			}
+			.formcraft-css .fc-form.fc-form-2			{
+				font-family: inherit;
+			}
+			@media (max-width : 480px) {
+				html .dedicated-page,
+				html .dedicated-page .formcraft-css .fc-pagination > div.active
+				{
+					background: white;
+				}
+			}
+		</style>
+		<div class="form-cover">
+			<form data-auto-scroll="" data-no-message-redirect="" data-thousand="" data-decimal="." data-delay="" data-id="2" class="fc-form fc-form-2 align- spin- save-form- dont-submit-hidden- remove-asterisk- icons-hide- disable-enter- label-block field-border-visible frame-visible field-alignment-left options-fade align-left" style="width: 580px; color: #666666; font-size: 100%; background: white">
+				<div class="form-page form-page-0 active" data-index="0">
+					
+					<div class="form-page-content     ">
+						<div data-identifier="field1" data-index="0" style="width: 50%" class=" form-element form-element-field1 options-false index-false form-element-0 default-false form-element-type-oneLineText is-required-true odd -handle">
+							<div class="form-element-html"><div><label class="oneLineText-cover field-cover"><span class="sub-label-true"><span class="main-label"><span>First Name</span></span><span class="sub-label"><span>Enter your First Name</span></span></span><div><span class="error"></span><input type="text" placeholder="" make-read-only="false" data-field-id="field1" name="field1[]" data-min-char="" data-max-char="" data-val-type="" data-regexp="" data-is-required="true" data-allow-spaces="" class="validation-lenient" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-input-mask="" data-mask-placeholder="" data-original-title=""></div></label></div></div>
+							
+						</div><div data-identifier="field2" data-index="1" style="width: 50%" class=" even form-element form-element-field2 options-false index-false form-element-1 default-false form-element-type-oneLineText is-required-true -handle">
+							<div class="form-element-html"><div><label class="oneLineText-cover field-cover"><span class="sub-label-true"><span class="main-label"><span>Last Name</span></span><span class="sub-label"><span>Enter Your Last Name</span></span></span><div><span class="error"></span><input type="text" placeholder="" make-read-only="false" data-field-id="field2" name="field2[]" data-min-char="" data-max-char="" data-val-type="" data-regexp="" data-is-required="true" data-allow-spaces="" class="validation-lenient" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-input-mask="" data-mask-placeholder="" data-original-title=""></div></label></div></div>
+							
+						</div><div data-identifier="field4" data-index="2" style="width: 100%" class=" form-element form-element-field4 options-false index-false form-element-2 default-false form-element-type-email is-required-false odd -handle">
+							<div class="form-element-html"><div><label class="email-cover field-cover"><span class="sub-label-true"><span class="main-label"><span>Email</span></span><span class="sub-label"><span>Enter valid email</span></span></span><div><span class="error"></span><input placeholder="" data-field-id="field4" type="text" data-val-type="email" make-read-only="" data-is-required="false" name="field4" class="validation-lenient" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-original-title=""></div></label></div></div>
+							
+						</div><div data-identifier="field5" data-index="3" style="width: 100%" class=" even form-element form-element-field5 options-false index-false form-element-3 default-false form-element-type-oneLineText is-required-true -handle">
+							<div class="form-element-html"><div><label class="oneLineText-cover field-cover has-input"><span class="sub-label-true"><span class="main-label"><span>Number</span></span><span class="sub-label"><span>Enter phone number</span></span></span><div><span class="error"></span><input type="text" placeholder="+880" make-read-only="false" data-field-id="field5" name="field5[]" data-min-char="" data-max-char="" data-val-type="" data-regexp="" data-is-required="true" data-allow-spaces="" class="validation-lenient" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-input-mask="" data-mask-placeholder="+880" data-original-title=""></div></label></div></div>
+							
+						</div>
+						<input type="submit" value="Submit" class="btn btn-primary" style="margin-bottom:20px;background-color: #4488ee; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+					</div>
+				</div>
+			</form>
+			<div class="prev-next prev-next-1" style="width: 580px; color: #666666; font-size: 100%; background: white">
+				<div><input type="text" class="  "><span class="inactive page-prev "><i class="formcraft-icon">keyboard_arrow_left</i>Previous</span></div>
+				<div><input type="text" class="  "><span class="page-next ">Next<i class="formcraft-icon">keyboard_arrow_right</i></span></div>
+			</div>
+		</div></div>
+		</div>
+	</div>
+</div></div></div></div>
+<div class="vc_row-full-width vc_clearfix"></div>
+
+<div class="vc_row-full-width vc_clearfix"></div>
+<div class="vc_row wpb_row vc_row-fluid vc_custom_1436164243861">
+        <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_custom_heading vc_custom_1579416932851 text_align_center"><h2 style="text-align: center" class="masterstudy-custom-title">Our Blogs</h2></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1536751636857"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="stm_colored_separatormasterstudy_color_separator_ module__cafc4ce9f11bc27b53b4b6553925c990">
+	<div class="triangled_colored_separator">
+		<div class="triangle"></div>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="post_list_main_section_wrapper post_list_1983">
+				<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="post_list_content_unit">
+													<div class="post_list_featured_image">
+								<a href="" title="View post details">
+									<div class="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded"><img width="370" height="193" data-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?resize=370%2C193&amp;ssl=1" class="img-responsive wp-post-image lazyloaded" alt="PTE Personalized Coaching" data-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?resize=370%2C193&amp;ssl=1 370w, https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?zoom=2&amp;resize=370%2C193&amp;ssl=1 740w, https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?zoom=3&amp;resize=370%2C193&amp;ssl=1 1110w" data-sizes="(max-width: 370px) 100vw, 370px" sizes="(max-width: 370px) 100vw, 370px" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?resize=370%2C193&amp;ssl=1 370w, https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?zoom=2&amp;resize=370%2C193&amp;ssl=1 740w, https://i0.wp.com/pecpte.com/wp-content/uploads/2025/05/PTE-Personalized_Coaching.jpg?zoom=3&amp;resize=370%2C193&amp;ssl=1 1110w" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/PTE-Personalized_Coaching.jpg"></div>								</a>
+							</div>
+												<div class="row">
+															<div class="col-md-3 col-sm-4 col-xs-12">
+									<div class="post_list_meta_unit">
+										<div class="date-d">26</div>
+										<div class="date-m">May</div>
+																																																													</div>
+								</div>
+														<div class="col-md-9 col-sm-8 col-xs-12 ">
+								<div class="post_list_inner_content_unit post_list_inner_content_unit_left">
+									<a href="" class="post_list_item_title h3">Boost Your PTE Score with PTE Personalized Coaching</a>
+									<div class="post_list_item_excerpt"><p>Boost Your PTE Score with Personalized Coaching Getting a high score on the Pearson Test of English (PTE) needs good preparation and PTE personalized coaching. With the right help, you can get better at taking the test and feel more confident. At PEC-Education, we know how key effective PTE coaching is. Our skilled trainers give […]</p>
+</div>
+									<div class="short_separator"></div>
+
+																			<!-- Post cats -->
+																					<div class="post_list_cats">
+																																						<a href="">Ayan Academy</a><span class="post_list_divider">,</span>
+																							</div>
+																			
+									<!-- Post tags -->
+																	</div> <!-- post_list_inner_content_unit -->
+							</div> <!-- inner col -->
+						</div> <!-- row -->
+					</div> <!-- post_list_content_unit -->
+				</div> <!-- col -->
+									
+									</div> <!-- close row to prevent blocks jumping -->
+					<div class="row">
+									</div> <!-- row -->
+	</div> <!-- post_list_main_section_wrapper -->
+	<div class="vc_btn3-container wpb_animate_when_almost_visible wpb_bounceIn bounceIn vc_btn3-inline wpb_start_animation animated">
+	<a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-modern vc_btn3-icon-left vc_btn3-color-primary" href="" title="" target="_blank"> Read More Blogs</a></div>
+</div></div></div></div></div></div></div></div>
+
+<div class="vc_row wpb_row vc_row-fluid">
+        <div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="testimonials_main_wrapper simple_carousel_wrapper">
+		<div class="clearfix testimonials_control_bar_top">
+
+							<div class="pull-left">
+					<h2 class="testimonials_main_title">Testimonials</h2>
+				</div>
+			
+			<div class="pull-right testimonials_control_bar">
+				<div class="clearfix">
+					
+				</div>
+			</div>
+
+		</div>
+		<div class="testimonials-carousel-unit">
+			<div class="testimonials-carousel-init simple_carousel_init clearfix owl-carousel stm_owl-theme owl-loaded owl-text-select-on" data-items="2">
+														
+														
+														
+														
+														
+														
+														
+														
+														
+							<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-800px, 0px, 0px); transition: all; width: 5200px;"><div class="owl-item cloned" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Ashique Al Ashraf</h4>
+																					<div class="testimonial_sphere">Zonal Sales Manager, Energypac Electronics Ltd</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>Several times i have taken Mock exam from there. PEC is the best institutions in Bangladesh for PTE..Especially honorable Md. Azizul Sir gives proper guidelines for PTE exam..You will get real test of exam here definitely.Personally I recommend everyone to take tuition from here.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item cloned" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Md Rezuanul Haque</h4>
+																					<div class="testimonial_sphere">Zurich, Switzerland</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>PEC Education is one of the very good Coaching Center for PTE Exam in Bangladesh. Their lectures and mock tests helped me lot to get good scores in my PTE Exam.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item active" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/12729070_10209416253182381_1696455717736670143_n-1.jpg" class="testimonial-media-unit-rounded wp-post-image entered lazyloaded" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?w=720&amp;ssl=1 720w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=20%2C20&amp;ssl=1 20w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=100%2C100&amp;ssl=1 100w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1" data-ll-status="loaded" sizes="(max-width: 69px) 100vw, 69px" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?w=720&amp;ssl=1 720w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=20%2C20&amp;ssl=1 20w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=100%2C100&amp;ssl=1 100w"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?w=720&amp;ssl=1 720w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=20%2C20&amp;ssl=1 20w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=100%2C100&amp;ssl=1 100w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Syed Twaseen Ahsan</h4>
+																					<div class="testimonial_sphere">Melbourne, Victoria, Australia</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>Gave my first PTE exam via PEC Education and received an overall score of 89. It would not have been possible without the personalised treatment that I received from each member of the PEC Education faculty. The institution consists of great exam preparation facilities and has staff who are really friendly and are eager to help you achieve your aim. Overall I had a great experience collaborating with the entire PEC Education team who helped me achieve my target score.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item active" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg" class="testimonial-media-unit-rounded wp-post-image entered lazyloaded" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=100%2C100&amp;ssl=1 100w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?zoom=3&amp;resize=69%2C69&amp;ssl=1 207w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1" data-ll-status="loaded" sizes="(max-width: 69px) 100vw, 69px" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=100%2C100&amp;ssl=1 100w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?zoom=3&amp;resize=69%2C69&amp;ssl=1 207w"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=100%2C100&amp;ssl=1 100w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?zoom=3&amp;resize=69%2C69&amp;ssl=1 207w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Jaynul Abedin</h4>
+																					<div class="testimonial_sphere">Cumilla, bangladesh</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>Forthrightly and honestly speaking as far as I am concerned about PEC, an excellent and incredible scope for getting various types of services for mastering on English language. I really acknowledge and appreciate their services because I have already benefited by their services. They are relentlessly working for students. To recapitulate, I will obviously say that, please get over here and justify the validity of my opinion completely </p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/sumaiya.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Sumaiya Majumder Nazia</h4>
+																					<div class="testimonial_sphere">BPTC, London, UK</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>It is one of the most organised institution in Bangladesh for PTE. They have excellent trainers who gives feedback upon every mock tests and these are really helpful. I have personally benefited from them a lot.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/wadud.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Rusho Refat Bin Wadud</h4>
+																					<div class="testimonial_sphere">North South University</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>In cpc(NSU) inform me about this institution(PEC-EDUCATION) PTE training center. Very short time i learn here and I think i learn a lot. The instructor is very helpful and this institution arrange good moc test facility.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/moynul.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Moynul Islam Khan</h4>
+																					<div class="testimonial_sphere">Dhaka, Bangladesh</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>PEC-Education provides service on PTE learning and training with dedication and help students to get their desired score. All their supporting staff and trainers are international standard and cooperative. Trainers are trained by the PTE test owner, “Pearson”. They provide high standard training and quality mock test’s assessment with score card which helped me a lot to improve myself in the final exam.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/milon.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Milon Mia</h4>
+																					<div class="testimonial_sphere">Jonkoping, Sweden</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>This is a very good environment for learning PTE course as well as to prepare for mock test before sit for real exam. Learning courses are structured, understandable. People are very much supportable in this organisation to get all sorts of help. This is absolutely the very excellent place for the beginner of PTE learning.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/a.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">M Aslamur Rahman Rajeeb</h4>
+																					<div class="testimonial_sphere">Dhaka, Bangladesh</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>I found it really helpful. Proper facilities for PTE preparation with updated PTE mock tests. If you are interested in PTE, you can take help of PEC-Education to achieve your desired score.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/ashike.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Ashique Al Ashraf</h4>
+																					<div class="testimonial_sphere">Zonal Sales Manager, Energypac Electronics Ltd</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>Several times i have taken Mock exam from there. PEC is the best institutions in Bangladesh for PTE..Especially honorable Md. Azizul Sir gives proper guidelines for PTE exam..You will get real test of exam here definitely.Personally I recommend everyone to take tuition from here.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=20%2C20&amp;ssl=1 20w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?w=85&amp;ssl=1 85w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/arif.jpg?resize=20%2C20&amp;ssl=1 20w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Md Rezuanul Haque</h4>
+																					<div class="testimonial_sphere">Zurich, Switzerland</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>PEC Education is one of the very good Coaching Center for PTE Exam in Bangladesh. Their lectures and mock tests helped me lot to get good scores in my PTE Exam.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item cloned" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?w=720&amp;ssl=1 720w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=20%2C20&amp;ssl=1 20w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=100%2C100&amp;ssl=1 100w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?w=720&amp;ssl=1 720w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=20%2C20&amp;ssl=1 20w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/12729070_10209416253182381_1696455717736670143_n-1.jpg?resize=100%2C100&amp;ssl=1 100w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Syed Twaseen Ahsan</h4>
+																					<div class="testimonial_sphere">Melbourne, Victoria, Australia</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>Gave my first PTE exam via PEC Education and received an overall score of 89. It would not have been possible without the personalised treatment that I received from each member of the PEC Education faculty. The institution consists of great exam preparation facilities and has staff who are really friendly and are eager to help you achieve your aim. Overall I had a great experience collaborating with the entire PEC Education team who helped me achieve my target score.</p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div><div class="owl-item cloned" style="width: 400px; margin-right: 0px;"><div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="testimonial_inner_wrapper">
+															<div class="media">
+									<div class="media-left media-top">
+										<div class="testimonial-media-unit">
+											<img decoding="async" width="69" height="69" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2069%2069&#39;%3E%3C/svg%3E" class="testimonial-media-unit-rounded wp-post-image" alt="" data-lazy-srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=100%2C100&amp;ssl=1 100w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?zoom=3&amp;resize=69%2C69&amp;ssl=1 207w" data-lazy-sizes="(max-width: 69px) 100vw, 69px" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1"><noscript><img decoding="async" width="69" height="69" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1" class="testimonial-media-unit-rounded wp-post-image" alt="" srcset="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=129%2C129&amp;ssl=1 129w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=122%2C120&amp;ssl=1 122w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=69%2C69&amp;ssl=1 69w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?resize=100%2C100&amp;ssl=1 100w, https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/afb14e4c-fa20-4199-95dd-1d05781529d0.jpg?zoom=3&amp;resize=69%2C69&amp;ssl=1 207w" sizes="(max-width: 69px) 100vw, 69px" /></noscript>										</div>
+									</div>
+									<div class="media-body">
+										<h4 class="testimonials-inner-title">Jaynul Abedin</h4>
+																					<div class="testimonial_sphere">Cumilla, bangladesh</div>
+																				<div class="short_separator"></div>
+									</div>
+								</div>
+														<div class="testimonial_inner_content" style="color:#aaaaaa"><p>Forthrightly and honestly speaking as far as I am concerned about PEC, an excellent and incredible scope for getting various types of services for mastering on English language. I really acknowledge and appreciate their services because I have already benefited by their services. They are relentlessly working for students. To recapitulate, I will obviously say that, please get over here and justify the validity of my opinion completely </p>
+</div>
+						</div> <!-- inner wrapper -->
+					</div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
+		</div>
+	</div> <!-- testimonials main wrapper -->
+	
+	
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div>
+
+<div class="vc_row wpb_row vc_row-fluid">
+        <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_custom_heading text_align_center"><h1 style="text-align: center" class="masterstudy-custom-title">Representing Overseas Universities</h1></div>
+<div class="multiseparator"></div>
+<div class="wpb_images_carousel wpb_content_element vc_clearfix"><div class="wpb_wrapper"><div id="vc_images-carousel-1-1773508109" data-ride="vc_carousel" data-wrap="true" style="width: 100%;" data-interval="2000" data-auto-height="yes" data-mode="horizontal" data-partial="true" data-per-view="5" data-hide-on-end="false" class="vc_slide vc_images_carousel vc_per-view-more vc_per-view-5 vc_partial vc_build"><div class="vc_carousel-inner"><div class="vc_carousel-slideline" style="width: 7488px;"><div class="vc_carousel-slideline-inner vc_transition" style="left: -7.5%;"><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered exited" width="163" height="106" alt="waterloo" title="waterloo" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/waterloo.png?fit=163%2C106&amp;ssl=1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20163%20106&#39;%3E%3C/svg%3E"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/waterloo.png?fit=163%2C106&amp;ssl=1" width="163" height="106" alt="waterloo" title="waterloo" /></noscript></div></div><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/trent_university163x49.png" width="163" height="49" alt="trent_university163x49" title="trent_university163x49" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/trent_university163x49.png?fit=163%2C49&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/trent_university163x49.png?fit=163%2C49&amp;ssl=1" width="163" height="49" alt="trent_university163x49" title="trent_university163x49" /></noscript></div></div><div class="vc_item vc_active" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/tasmania_university163x163.png" width="163" height="163" alt="tasmania_university163x163" title="tasmania_university163x163" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/tasmania_university163x163.png?fit=163%2C163&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/tasmania_university163x163.png?fit=163%2C163&amp;ssl=1" width="163" height="163" alt="tasmania_university163x163" title="tasmania_university163x163" /></noscript></div></div><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/photo.jpg-163x102-1.png" width="163" height="102" alt="photo.jpg-163x102" title="photo.jpg-163x102" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/photo.jpg-163x102-1.png?fit=163%2C102&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/photo.jpg-163x102-1.png?fit=163%2C102&amp;ssl=1" width="163" height="102" alt="photo.jpg-163x102" title="photo.jpg-163x102" /></noscript></div></div><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/johns_hopkins_163x105.png" width="163" height="105" alt="johns_hopkins_163x105" title="johns_hopkins_163x105" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/johns_hopkins_163x105.png?fit=163%2C105&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/johns_hopkins_163x105.png?fit=163%2C105&amp;ssl=1" width="163" height="105" alt="johns_hopkins_163x105" title="johns_hopkins_163x105" /></noscript></div></div><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/uppsala_university163x163.png" width="163" height="163" alt="uppsala_university163x163" title="uppsala_university163x163" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/uppsala_university163x163.png?fit=163%2C163&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/uppsala_university163x163.png?fit=163%2C163&amp;ssl=1" width="163" height="163" alt="uppsala_university163x163" title="uppsala_university163x163" /></noscript></div></div><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/aro_NFSA_163x163.png" width="163" height="163" alt="aro_NFSA_163x163" title="aro_NFSA_163x163" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/aro_NFSA_163x163.png?fit=163%2C163&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/06/aro_NFSA_163x163.png?fit=163%2C163&amp;ssl=1" width="163" height="163" alt="aro_NFSA_163x163" title="aro_NFSA_163x163" /></noscript></div></div><div class="vc_item" style="width: 2.5%; height: 163px;"><div class="vc_inner"><img decoding="async" class="entered lazyloaded" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/University_of_Greenwich.png" width="300" height="144" alt="University_of_Greenwich" title="University_of_Greenwich" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2025/01/University_of_Greenwich.png?fit=300%2C144&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" class="" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2025/01/University_of_Greenwich.png?fit=300%2C144&amp;ssl=1" width="300" height="144" alt="University_of_Greenwich" title="University_of_Greenwich" /></noscript></div></div></div></div></div><a class="vc_left vc_carousel-control" href="" data-slide="prev"><span class="icon-prev"></span></a><a class="vc_right vc_carousel-control" href="" data-slide="next"><span class="icon-next"></span></a></div></div></div></div></div></div></div>
+                            </div>
+        
+        
+        <div class="clearfix">
+                    </div>
+
+    </div>
+
+           </div>
+</div>
 		<footer data-wpr-lazyrender="1" id="footer" class="parallax-off">
 			<div class="footer_wrapper">
 				

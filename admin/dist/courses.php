@@ -375,6 +375,7 @@ if (isset($_POST['submit_course'])) {
                           <option value="">Select Course Type</option>
                           <?php
                             $course_options = [
+                                'Our Cources',
                                 'pte academy',
                                 'pte core',
                                 'pte ukvi',
