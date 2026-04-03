@@ -4,24 +4,19 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <meta name="facebook-domain-verification" content="n0134ytg3vlixio8ouysvnv1feiozj">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <script src="data:text/javascript;base64,d2luZG93Ll93Y2EgPSB3aW5kb3cuX3djYSB8fCBbXTs=" data-rocket-status="executed">window._wca = window._wca || [];</script>
 
     <!-- This site is optimized with the Yoast SEO plugin v23.5 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>AyanAcademy</title>
-<link crossorigin="" data-rocket-preconnect="" href="https://fonts.googleapis.com/" rel="preconnect">
-<link crossorigin="" data-rocket-preconnect="" href="https://stats.wp.com/" rel="preconnect">
-<link crossorigin="" data-rocket-preconnect="" href="https://i0.wp.com/" rel="preconnect">
+    <title>Ayans Academy</title>
 <link data-rocket-preload="" as="style" href="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/css" rel="preload">
 <link href="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/css" media="all" onload="this.media=&#39;all&#39;" rel="stylesheet">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CAbril%20Fatface%3Aregular&#038;subset=latin&#038;display=swap"></noscript><link rel="preload" data-rocket-preload="" as="image" href="<?php echo e($bannerImage); ?>" fetchpriority="high">
-    <meta name="description" content="AyanAcademy">
+    <meta name="description" content="Ayans Academy">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AyanAcademy">
-    <meta property="og:description" content="AyanAcademy">
-    <meta property="og:site_name" content="AyanAcademy">
+    <meta property="og:title" content="Ayans Academy">
+    <meta property="og:description" content="Ayans Academy">
+    <meta property="og:site_name" content="Ayans Academy">
     <meta property="article:modified_time" content="2025-01-04T04:59:17+00:00">
     <meta property="og:image" content="<?php echo e($bannerImage); ?>">
     <meta property="og:image:width" content="1280">
@@ -216,7 +211,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
     </script>
 
 <!-- Open Graph Meta Data by WP-Open-Graph plugin-->
-<meta property="og:site_name" content="AyanAcademy">
+<meta property="og:site_name" content="Ayans Academy">
 <meta property="og:locale" content="en_us">
 <meta property="og:type" content="website">
 <meta property="og:image:width" content="200">
@@ -239,7 +234,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
     </script>
     <style>img#wpstats{display:none}</style>
 
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo e($logoTransparent); ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
     <link rel="preconnect" href="https://code.tidio.co/">        <style>
             #wp-admin-bar-stm_lms_settings            img {
@@ -249,10 +244,6 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
                 top: 3px;
             }
         </style>
-        <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
-<link rel="icon" href="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/07/cropped-PEC-blank-logo.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
-<link rel="icon" href="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/07/cropped-PEC-blank-logo.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
-<link rel="apple-touch-icon" href="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/07/cropped-PEC-blank-logo.png?fit=180%2C180&amp;ssl=1">
 <meta name="msapplication-TileImage" content="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/07/cropped-PEC-blank-logo.png?fit=270%2C270&amp;ssl=1">
         <style type="text/css" id="wp-custom-css">
             .transparent_header .header_default{
@@ -337,7 +328,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 
 .oversease-block-main {
       color:white;
-      background-color:#2c75e4;
+      background-color:#5D3FD3;
       padding: 5px;
     margin:5px;
     width: 224px;
@@ -567,7 +558,7 @@ body.classic_lms .classic_style .nav.nav-tabs>li.active a,
 .header_bottom:after,
 .sbc:hover,
 body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content
-{background-color:#2c75e4;}
+{background-color:#5D3FD3;}
 body.skin_custom_color.woocommerce .sidebar-area .widget.widget_layered_nav ul li a:after,
 body.skin_custom_color.woocommerce .sidebar-area .widget.widget_product_categories ul li a:after,
 body.skin_custom_color .wpb_tabs .form-control:focus,
@@ -663,7 +654,95 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 
                 <style type="text/css" data-type="vc_shortcodes-custom-css">
                 .vc_custom_1645950070151{background-image: url(<?php echo e('admin/dist/'.$bannerImage); ?>) !important;}
-                .vc_custom_1645695539961{margin-bottom: 44px !important;}.vc_custom_1536836667813{margin-bottom: 0px !important;padding-top: 29px !important;padding-bottom: 60px !important;}.vc_custom_1645989356413{margin-bottom: 0px !important;background-image: url(https://pecpte.com/wp-content/uploads/2022/02/pecpte-background.jpg?id=5305) !important;}.vc_custom_1579768494906{margin-bottom: 0px !important;background-color: #e8e8e8 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1436164243861{margin-bottom: 28px !important;}.vc_custom_1579437107739{margin-top: !important;}.vc_custom_1645986912369{margin-top: -150px !important;}.vc_custom_1579595041823{margin-bottom: 51px !important;}.vc_custom_1436163882282{margin-bottom: 46px !important;}.vc_custom_1579595072581{margin-bottom: 11px !important;}.vc_custom_1646028687037{margin-right: 210px !important;}.vc_custom_1579416932851{margin-bottom: -13px !important;}.vc_custom_1536751636857{margin-bottom: 47px !important;}.vc_custom_1437023252855{margin-top: 7px !important;margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_preload_links wpr_desktop"><link rel="prefetch" href="https://pecpte.com/events/pte-exam-fee/"></head>
+                .vc_custom_1645695539961{margin-bottom: 44px !important;}.vc_custom_1536836667813{margin-bottom: 0px !important;padding-top: 29px !important;padding-bottom: 60px !important;}.vc_custom_1645989356413{margin-bottom: 0px !important;background-image: url(https://pecpte.com/wp-content/uploads/2022/02/pecpte-background.jpg?id=5305) !important;}.vc_custom_1579768494906{margin-bottom: 0px !important;background-color: #e8e8e8 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1436164243861{margin-bottom: 28px !important;}.vc_custom_1579437107739{margin-top: !important;}.vc_custom_1645986912369{margin-top: -150px !important;}.vc_custom_1579595041823{margin-bottom: 51px !important;}.vc_custom_1436163882282{margin-bottom: 46px !important;}.vc_custom_1579595072581{margin-bottom: 11px !important;}.vc_custom_1646028687037{margin-right: 210px !important;}.vc_custom_1579416932851{margin-bottom: -13px !important;}.vc_custom_1536751636857{margin-bottom: 47px !important;}.vc_custom_1437023252855{margin-top: 7px !important;margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_preload_links wpr_desktop"><link rel="prefetch" href="https://pecpte.com/events/pte-exam-fee/">
+<style>
+@media only screen and (max-width: 991px) {
+    .header_top_bar {
+        display: block !important;
+        padding: 10px 0 !important;
+    }
+
+    .header_top_bar .pull-left {
+        display: none !important;
+    }
+
+    .header_top_bar .header_login_url,
+    .header_top_bar .header_top_bar_socs {
+        display: none !important;
+    }
+
+    .header_top_bar .pull-right,
+    .header_top_bar .xs-pull-left {
+        float: none !important;
+    }
+
+    .header_top_bar .xs-pull-left {
+        width: 100% !important;
+    }
+
+    .header_top_bar .top_bar_info {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header_top_bar .top_bar_info li.hidden-info {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 8px 0 !important;
+        padding: 0 !important;
+        white-space: normal !important;
+        line-height: 1.5 !important;
+        font-size: 13px !important;
+    }
+
+    .header_top_bar .top_bar_info li.hidden-info:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .header_top_bar .top_bar_info li.hidden-info i {
+        width: 18px !important;
+        margin-right: 8px !important;
+        text-align: center;
+    }
+}
+</style>
+
+
+<style id="aa-custom-header-updates">
+.header_top_bar_socs ul li a,
+.copyright_socials ul li a {
+    transition: transform .25s ease, color .25s ease, background-color .25s ease;
+}
+.header-menu > li > a,
+.header-menu-mobile .header-menu > li > a {
+    transition: font-size .22s ease, transform .22s ease, color .22s ease;
+}
+.header_main_menu_wrapper .header-menu > li:hover > a,
+.header_main_menu_wrapper .header-menu > li > a:hover,
+.header-menu-mobile .header-menu > li > a:hover {
+    font-size: 16.5px !important;
+}
+.magic_line,
+.magic_line:after,
+.magic_line.line_visible,
+.magic_line.line_visible:after {
+    background-color: #7c3aed !important;
+}
+.module__cafc4ce9f11bc27b53b4b6553925c990 .triangled_colored_separator,
+.triangled_colored_separator {
+    background-color: #7c3aed !important;
+}
+.module__cafc4ce9f11bc27b53b4b6553925c990 .triangled_colored_separator .triangle,
+.triangled_colored_separator .triangle,
+.triangled_colored_separator .triangle:before,
+.triangled_colored_separator .triangle:after {
+    border-bottom-color: #7c3aed !important;
+    border-top-color: #7c3aed !important;
+}
+</style>
+
+</head>
 <body class="home page-template-default page page-id-7 stm_lms_button theme-masterstudy woocommerce-js skin_custom_color classic_lms masterstudy-theme stm_preloader_0 wpb-js-composer js-comp-ver-6.8.0 vc_responsive" ontouchstart="" style="padding-bottom: 0px;">
 
 
@@ -673,7 +752,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 
 <div id="header" class="transparent_header sticky_header" data-color="" style="padding-bottom: 0px;">
 
-            <div class="header_top_bar" style="background-color:#2c75e4">
+            <div class="header_top_bar" style="background-color:#5D3FD3">
     <div class="container">
         <div class="clearfix">
 
@@ -687,7 +766,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 
                                 <div class="pull-right">
         <div class="header_login_url">
-                            <a href="https://pecpte.com/user-account/">
+                            <a href="">
                 <span class="vertical_divider"></span>
                 <a href=""></a>
                     </div>
@@ -696,7 +775,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
                             <div class="pull-right">
     <div class="header_top_bar_socs">
         <ul class="clearfix">
-            <li><a href=""><i class="fab fa-facebook"></i></a></li><li><a href=""><i class="fab fa-twitter"></i></a></li><li><a href=""><i class="fab fa-instagram"></i></a></li><li><a href=""><i class="fab fa-linkedin"></i></a></li>        </ul>
+            <li><a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li><li><a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li><li><a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li><li><a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>        </ul>
     </div>
 </div>
                 <div class="pull-right xs-pull-left">
@@ -706,7 +785,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
                                         <li class="hidden-info">
                     <i class="fa fa-map-marker-alt"></i> House no-440 ( 2nd Floor Left Side), Road no-6, Avenue-6, Mirpur-DOHS, Dhaka-1216                </li>
                                         <li class="hidden-info">
-                    <i class="fa fa-phone"></i> +880 1876196019                </li>
+                    <i class="fa fa-phone"></i> +880 1319904015                </li>
                     </ul>
     </div>
 
@@ -741,7 +820,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
         <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
             <div class="collapse navbar-collapse header-menu-mobile" id="header_menu_toggler">
                 <ul class="header-menu clearfix">
-                    <li id="menu-item-2065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="" aria-current="page">Home</a><div class="magic_line" style="max-width: 0px;"></div></li>
+                    <li id="menu-item-2065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line" style="max-width: 0px;"></div></li>
 <li id="menu-item-2251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="/about">About Us</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
     <li id="menu-item-4979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.html">Our Team</a></li>
@@ -818,7 +897,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 
     <div class="collapse navbar-collapse pull-right">
         <ul class="header-menu clearfix">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="" aria-current="page">Home</a><div class="magic_line line_visible" style="max-width: 42px;"></div></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line line_visible" style="max-width: 42px;"></div></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="about.php">About Us</a>
 <ul class="sub-menu">
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.php">Our Team</a></li>
@@ -852,7 +931,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724"><a href="course.php?course=pte-ukvi">PTE UKVI</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4163"><a href="course.php?course=pre-pte-course">Pre-PTE Course</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=basic-english">Basic English</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=a-z grammar">AtoZ Grammar</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=a-z grammar">A to Z Grammar</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=spoken-english">Spoken English</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=phonetics">Phonetics</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=toefl-ibt-test">TOEFL IBT Test</a></li>
@@ -877,3 +956,49 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
     </div> <!-- row -->
 </div> <!-- container -->    </div>
 </div> <!-- id header -->
+<style>
+    /* FIX SUBMENU VISIBILITY */
+
+.header_main_menu_wrapper,
+.header_main_menu_wrapper .header-menu,
+.header_main_menu_wrapper .header-menu > li {
+  overflow: visible !important;
+}
+
+/* Parent li */
+.header_main_menu_wrapper .header-menu > li {
+  position: relative;
+}
+
+/* First level submenu */
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0;
+  display: none;
+  z-index: 99999 !important;
+}
+
+/* Show on hover */
+.header_main_menu_wrapper .header-menu > li:hover > ul.sub-menu {
+  display: block !important;
+}
+
+/* Second level submenu (nested) */
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li {
+  position: relative;
+}
+
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > ul.sub-menu {
+  position: absolute !important;
+  top: 0;
+  left: 100%;
+  display: none;
+  z-index: 99999 !important;
+}
+
+/* Show nested */
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li:hover > ul.sub-menu {
+  display: block !important;
+}
+</style>

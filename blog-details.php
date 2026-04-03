@@ -93,7 +93,7 @@ include('header.php');
 
 <footer data-wpr-lazyrender="1" id="footer" class="parallax-off">
     <div class="footer_wrapper">
-        <div id="footer_bottom">
+        <div id="footer_bottom" style="background-color: black;">
             <div class="footer_widgets_wrapper kek text-upper">
                 <?php include('footer.php'); ?>
             </div>

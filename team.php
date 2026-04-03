@@ -41,6 +41,7 @@ $logoColored = local_image($logo['logo_image'] ?? 'logo.png', 'logo.png');
 $bannerImage = local_image($banner['banner_image'] ?? 'banner1.jpg', 'banner1.jpg');
 $bannerTitle = $banner['title'] ?? 'Take the first step';
 $teamRes = mysqli_query($conn, "SELECT * FROM team ORDER BY id DESC");
+
 include('header.php');
 ?>
 
@@ -50,114 +51,124 @@ include('header.php');
             min-height: 400px !important;
         }
 
-        .about-content {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
-            margin-top: 20px;
+        .team-section {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        .about-content p {
-            margin-bottom: 15px;
+        .team-box {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            height: 100%;
         }
 
-        .about-content h1,
-        .about-content h2,
-        .about-content h3,
-        .about-content h4,
-        .about-content h5,
-        .about-content h6 {
-            margin-top: 25px;
-            margin-bottom: 12px;
+        .team-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .team-content {
+            padding: 18px 16px 20px;
+        }
+
+        .team-box h4 {
+            margin: 0 0 8px;
+            font-size: 20px;
+            font-weight: 700;
             color: #222;
         }
 
-        .about-content ul,
-        .about-content ol {
-            margin-left: 20px;
-            margin-bottom: 15px;
+        .team-role {
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #7c3aed;
         }
 
-        .about-content li {
-            margin-bottom: 8px;
+        .team-meta {
+            margin: 6px 0;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
         }
 
-        .about-content strong {
-            font-weight: 700;
+        .team-meta strong {
+            color: #222;
         }
-
-        .about-content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 15px 0;
-        }
-
-        .about-content a {
-            color: #2c75e4;
-            text-decoration: none;
-        }
-
-        .about-content a:hover {
-            text-decoration: underline;
-        }
-		.team-box {
-			text-align: center;
-			margin-bottom: 30px;
-		}
-
-		.team-box img {
-			width: 100%;
-			height: 250px;
-			object-fit: cover;
-			border-radius: 8px;
-		}
-
-		.team-box h4 {
-			margin-top: 10px;
-			font-size: 18px;
-			font-weight: 600;
-		}
     </style>
 
     <div class="stm_lms_breadcrumbs stm_lms_breadcrumbs__header_default"></div>
 </div>
 </div>
 
-<div class="container">
+<div class="container team-section">
     <div class="row">
-        
+
         <?php if ($teamRes && mysqli_num_rows($teamRes) > 0): ?>
-            
+
             <?php while ($team = mysqli_fetch_assoc($teamRes)): ?>
-                
+
                 <?php
                 $name = $team['name'] ?? '';
+                $role = $team['role'] ?? '';
+                $qualifications = $team['qualifications'] ?? '';
+                $university = $team['university'] ?? '';
+
                 $image = trim($team['image'] ?? '');
-                $teamImage = 'admin/dist/' . $image; // adjust if needed
+                $teamImage = $image !== '' ? 'admin/dist/' . ltrim($image, '/') : 'thumbnail.png';
                 ?>
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-box">
-                        <img src="<?php echo $teamImage; ?>" alt="<?php echo e($name); ?>">
-                        <h4><?php echo e($name); ?></h4>
+                        <img src="<?php echo e($teamImage); ?>" alt="<?php echo e($name); ?>">
+
+                        <div class="team-content">
+                            <h4><?php echo e($name); ?></h4>
+
+                            <?php if (!empty($role)): ?>
+                                <div class="team-role"><?php echo e($role); ?></div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($qualifications)): ?>
+                                <div class="team-meta">
+                                    <strong>Qualifications:</strong>
+                                    <?php echo e($qualifications); ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($university)): ?>
+                                <div class="team-meta">
+                                    <strong>University:</strong>
+                                    <?php echo e($university); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
 
             <?php endwhile; ?>
 
         <?php else: ?>
-            <p>No team members found.</p>
+            <div class="col-md-12">
+                <p>No team members found.</p>
+            </div>
         <?php endif; ?>
 
     </div>
 </div>
 
 <footer data-wpr-lazyrender="1" id="footer" class="parallax-off">
-            <div class="footer_wrapper">
-
-
-
+    <div class="footer_wrapper">
         <div id="footer_bottom">
             <div class="footer_widgets_wrapper kek text-upper">
-<?php include('footer.php'); ?>
+                <?php include('footer.php'); ?>
+            </div>
+        </div>
+    </div>
+</footer>

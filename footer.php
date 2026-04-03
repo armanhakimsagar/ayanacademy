@@ -1,52 +1,10 @@
+
 <div class="container">
                     <div class="widgets cols_4 clearfix">
-                        <aside id="stm_text-2" class="widget stm_wp_widget_text"><div class="widget_title"><h3>About Us</h3></div>        <div class="textwidget"><p>prioritizes its client's interests.<br>
-</p>
-</div>
 
-        </aside><aside id="stm_text-3" class="widget stm_wp_widget_text"><div class="widget_title"><h3>Contact Us</h3></div>        <div class="textwidget"><p>Mobile : +880-1713-167969<br>
-Mobile : +880 1876196019<br>
-Email : info@ayanacademy.com<br></p>
-</div>
+                        <aside id="working_hours-4" class="widget widget_working_hours">
 
-        </aside><aside id="socials-2" class="widget widget_socials"><div class="widget_title"><h3>Social Network</h3></div><div class="socials_widget_wrapper"><ul class="widget_socials list-unstyled clearfix"><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
-                                </div>
-                            </div>
-                        </li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </li>
-            </ul></div></aside><aside id="working_hours-4" class="widget widget_working_hours"><div class="widget_title"><h3>Business Hours</h3></div>
+            <div class="widget_title"><h3>Business Hours</h3></div>
             <table class="table_working_hours">
                                                             <tbody><tr class="opened">
                             <td class="day_label h6 normal_font">Monday</td>
@@ -78,7 +36,51 @@ Email : info@ayanacademy.com<br></p>
                         </tr>
                                                 </tbody></table>
 
-        </aside>                    </div>
+        </aside>
+                <aside id="stm_text-3" style="margin-left:100px" class="widget stm_wp_widget_text"><div class="widget_title"><h3>Contact Us</h3></div>        <div class="textwidget"><p>
+Mobile : +880 1319904015<br>
+Email : info@ayansacademy.com<br></p>
+</div>
+
+        </aside><aside id="socials-2" class="widget widget_socials"><div class="widget_title"><h3>Social Network</h3></div><div class="socials_widget_wrapper"><ul class="widget_socials list-unstyled clearfix"><li class="simple_flip_container">
+                            <div class="simple_flipper">
+                                <div class="front">
+                                    <a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener" class="facebook"><i class="fab fa-facebook"></i></a>
+                                </div>
+                                <div class="back">
+                                    <a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </li><li class="simple_flip_container">
+                            <div class="simple_flipper">
+                                <div class="front">
+                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener" class="twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div class="back">
+                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </li><li class="simple_flip_container">
+                            <div class="simple_flipper">
+                                <div class="front">
+                                    <a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener" class="instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="back">
+                                    <a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </li><li class="simple_flip_container">
+                            <div class="simple_flipper">
+                                <div class="front">
+                                    <a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                                <div class="back">
+                                    <a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </li>
+            </ul></div></aside>
+                                </div>
                 </div>
             </div>
         </div>
@@ -102,7 +104,7 @@ Email : info@ayanacademy.com<br></p>
                                                             <div class="pull-right">
                                     <div class="copyright_socials">
                                         <ul class="clearfix">
-                                            <li><a href=""><i class="fab fa-youtube"></i></a></li>                                        </ul>
+                                            <li><a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li><li><a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li><li><a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li><li><a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>                                        </ul>
                                     </div>
                                 </div>
                                                     </div>
@@ -145,7 +147,7 @@ var FC_Validation_2 = {"is_invalid":"Invalid","min_char":"Min [x] characters req
 /* ]]> */
 </script>
 
-<div class="joinchat joinchat--right joinchat--show joinchat--tooltip" data-settings="{&quot;telephone&quot;:&quot;880 1876196019&quot;,&quot;mobile_only&quot;:false,&quot;button_delay&quot;:2,&quot;whatsapp_web&quot;:true,&quot;message_views&quot;:2,&quot;message_delay&quot;:3,&quot;message_badge&quot;:false,&quot;message_send&quot;:&quot;&quot;,&quot;message_hash&quot;:&quot;&quot;}">
+<div class="joinchat joinchat--right joinchat--show joinchat--tooltip" data-settings="{&quot;telephone&quot;:&quot;880 1319904015&quot;,&quot;mobile_only&quot;:false,&quot;button_delay&quot;:2,&quot;whatsapp_web&quot;:true,&quot;message_views&quot;:2,&quot;message_delay&quot;:3,&quot;message_badge&quot;:false,&quot;message_send&quot;:&quot;&quot;,&quot;message_hash&quot;:&quot;&quot;}">
     <div class="joinchat__button">
         <div class="joinchat__button__open"></div>
                                 <div class="joinchat__button__sendtext">Open chat</div>

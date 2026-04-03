@@ -79,7 +79,7 @@ include('header.php');
 
     <style>
         #wrapper #main {
-            min-height: 400px !important;
+            min-height: 200px !important;
         }
 
         .course-content {
@@ -161,6 +161,6 @@ include('header.php');
 
 
 
-        <div id="footer_bottom">
+        <div id="footer_bottom" style="background-color: black;">
             <div class="footer_widgets_wrapper kek text-upper">
 <?php include('footer.php'); ?>

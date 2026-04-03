@@ -235,6 +235,20 @@ if (isset($_GET['uploaded'])) {
     </li>
 
     <li class="nav-item">
+      <a href="ielts-courses.php" class="nav-link">
+        <i class="nav-icon bi bi-journal-text"></i>
+        <p>IELTS Courses</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="tofel-courses.php" class="nav-link">
+        <i class="nav-icon bi bi-journal-text"></i>
+        <p>TOFEL Courses</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
       <a href="our-achievements.php" class="nav-link">
         <i class="nav-icon bi bi-trophy"></i>
         <p>Our Achievements</p>

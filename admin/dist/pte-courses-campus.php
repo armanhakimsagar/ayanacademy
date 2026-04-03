@@ -10,9 +10,16 @@ if (!isset($_SESSION['user_id'])) {
 $message = "";
 $error = "";
 $edit_mode = false;
+
+function admin_image_src($path) {
+    $path = trim((string)($path ?? ''));
+    return $path !== '' ? '../../' . ltrim($path, '/') : '';
+}
+
 $edit_data = [
     'id' => '',
     'course_title' => '',
+    'course_image' => '',
     'course_short_description' => '',
     'lecture_hour_details' => '',
     'course_amount' => '',
@@ -26,9 +33,21 @@ $edit_data = [
 /* DELETE */
 if (isset($_GET['delete_id'])) {
     $delete_id = (int) $_GET['delete_id'];
+
+    $old_image = '';
+    $old_image_query = mysqli_query($conn, "SELECT course_image FROM pte_courses_campus WHERE id = $delete_id LIMIT 1");
+    if ($old_image_query && mysqli_num_rows($old_image_query) > 0) {
+        $old_image_row = mysqli_fetch_assoc($old_image_query);
+        $old_image = $old_image_row['course_image'] ?? '';
+    }
+
     $delete_query = mysqli_query($conn, "DELETE FROM pte_courses_campus WHERE id = $delete_id");
 
     if ($delete_query) {
+        if (!empty($old_image) && file_exists('../../' . $old_image)) {
+            unlink('../../' . $old_image);
+        }
+
         header("Location: pte-courses-campus.php?deleted=1");
         exit;
     } else {
@@ -72,6 +91,8 @@ if (isset($_POST['submit_course'])) {
     $how_many_hour_lecture = trim($_POST['how_many_hour_lecture']);
     $course_long_description = trim($_POST['course_long_description']);
     $course_curriculum = trim($_POST['course_curriculum']);
+    $existing_image = trim($_POST['existing_image'] ?? '');
+    $course_image = $existing_image;
 
     if (
         empty($course_title) ||
@@ -90,63 +111,98 @@ if (isset($_POST['submit_course'])) {
     } elseif (!is_numeric($total_lecture)) {
         $error = "Total lecture must be numeric.";
     } else {
-        $course_title = mysqli_real_escape_string($conn, $course_title);
-        $course_short_description = mysqli_real_escape_string($conn, $course_short_description);
-        $lecture_hour_details = mysqli_real_escape_string($conn, $lecture_hour_details);
-        $course_amount = mysqli_real_escape_string($conn, $course_amount);
-        $course_level = mysqli_real_escape_string($conn, $course_level);
-        $total_lecture = mysqli_real_escape_string($conn, $total_lecture);
-        $how_many_hour_lecture = mysqli_real_escape_string($conn, $how_many_hour_lecture);
-        $course_long_description = mysqli_real_escape_string($conn, $course_long_description);
-        $course_curriculum = mysqli_real_escape_string($conn, $course_curriculum);
+        if (isset($_FILES['course_image']) && !empty($_FILES['course_image']['name'])) {
+            $upload_dir = '../../uploads/pte-courses-campus/';
 
-        if ($id > 0) {
-            $update = "UPDATE pte_courses_campus SET
-                course_title = '$course_title',
-                course_short_description = '$course_short_description',
-                lecture_hour_details = '$lecture_hour_details',
-                course_amount = '$course_amount',
-                course_level = '$course_level',
-                total_lecture = '$total_lecture',
-                how_many_hour_lecture = '$how_many_hour_lecture',
-                course_long_description = '$course_long_description',
-                course_curriculum = '$course_curriculum'
-                WHERE id = $id";
-
-            if (mysqli_query($conn, $update)) {
-                header("Location: pte-courses-campus.php?updated=1");
-                exit;
-            } else {
-                $error = "Update failed.";
+            if (!is_dir($upload_dir)) {
+                mkdir($upload_dir, 0777, true);
             }
-        } else {
-            $insert = "INSERT INTO pte_courses_campus (
-                course_title,
-                course_short_description,
-                lecture_hour_details,
-                course_amount,
-                course_level,
-                total_lecture,
-                how_many_hour_lecture,
-                course_long_description,
-                course_curriculum
-            ) VALUES (
-                '$course_title',
-                '$course_short_description',
-                '$lecture_hour_details',
-                '$course_amount',
-                '$course_level',
-                '$total_lecture',
-                '$how_many_hour_lecture',
-                '$course_long_description',
-                '$course_curriculum'
-            )";
 
-            if (mysqli_query($conn, $insert)) {
-                header("Location: pte-courses-campus.php?added=1");
-                exit;
+            $file_name = time() . '_' . rand(1000, 9999) . '_' . basename($_FILES['course_image']['name']);
+            $target_file = $upload_dir . $file_name;
+            $image_file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $allowed_types = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+            if (!in_array($image_file_type, $allowed_types)) {
+                $error = "Only JPG, JPEG, PNG, GIF, WEBP files are allowed.";
+            } elseif ($_FILES['course_image']['size'] > 2 * 1024 * 1024) {
+                $error = "Image size must be less than 2MB.";
             } else {
-                $error = "Insert failed.";
+                if (move_uploaded_file($_FILES['course_image']['tmp_name'], $target_file)) {
+                    $course_image = 'uploads/pte-courses-campus/' . $file_name;
+
+                    if (!empty($existing_image) && file_exists('../../' . $existing_image)) {
+                        unlink('../../' . $existing_image);
+                    }
+                } else {
+                    $error = "Image upload failed.";
+                }
+            }
+        }
+
+        if ($error === '') {
+            $course_title = mysqli_real_escape_string($conn, $course_title);
+            $course_short_description = mysqli_real_escape_string($conn, $course_short_description);
+            $lecture_hour_details = mysqli_real_escape_string($conn, $lecture_hour_details);
+            $course_amount = mysqli_real_escape_string($conn, $course_amount);
+            $course_level = mysqli_real_escape_string($conn, $course_level);
+            $total_lecture = mysqli_real_escape_string($conn, $total_lecture);
+            $how_many_hour_lecture = mysqli_real_escape_string($conn, $how_many_hour_lecture);
+            $course_long_description = mysqli_real_escape_string($conn, $course_long_description);
+            $course_curriculum = mysqli_real_escape_string($conn, $course_curriculum);
+            $course_image = mysqli_real_escape_string($conn, $course_image);
+
+            if ($id > 0) {
+                $update = "UPDATE pte_courses_campus SET
+                    course_title = '$course_title',
+                    course_image = '$course_image',
+                    course_short_description = '$course_short_description',
+                    lecture_hour_details = '$lecture_hour_details',
+                    course_amount = '$course_amount',
+                    course_level = '$course_level',
+                    total_lecture = '$total_lecture',
+                    how_many_hour_lecture = '$how_many_hour_lecture',
+                    course_long_description = '$course_long_description',
+                    course_curriculum = '$course_curriculum'
+                    WHERE id = $id";
+
+                if (mysqli_query($conn, $update)) {
+                    header("Location: pte-courses-campus.php?updated=1");
+                    exit;
+                } else {
+                    $error = "Update failed.";
+                }
+            } else {
+                $insert = "INSERT INTO pte_courses_campus (
+                    course_title,
+                    course_image,
+                    course_short_description,
+                    lecture_hour_details,
+                    course_amount,
+                    course_level,
+                    total_lecture,
+                    how_many_hour_lecture,
+                    course_long_description,
+                    course_curriculum
+                ) VALUES (
+                    '$course_title',
+                    '$course_image',
+                    '$course_short_description',
+                    '$lecture_hour_details',
+                    '$course_amount',
+                    '$course_level',
+                    '$total_lecture',
+                    '$how_many_hour_lecture',
+                    '$course_long_description',
+                    '$course_curriculum'
+                )";
+
+                if (mysqli_query($conn, $insert)) {
+                    header("Location: pte-courses-campus.php?added=1");
+                    exit;
+                } else {
+                    $error = "Insert failed.";
+                }
             }
         }
     }
@@ -184,6 +240,28 @@ if (isset($_POST['submit_course'])) {
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/adminlte.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css"
+      crossorigin="anonymous"
+    />
+  
+    <style>
+      .course-image-preview {
+        width: 90px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background: #fff;
+        padding: 2px;
+      }
+
+      .note-editor .note-editing-area .note-editable {
+        min-height: 180px;
+      }
+    </style>
   </head>
 
   <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
@@ -408,13 +486,24 @@ if (isset($_POST['submit_course'])) {
                     </div>
                   </div>
 
-                  <form action="" method="post">
+                  <form action="" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo htmlspecialchars($edit_data['id']); ?>">
+                    <input type="hidden" name="existing_image" value="<?php echo htmlspecialchars($edit_data['course_image'] ?? ''); ?>">
 
                     <div class="card-body">
                       <div class="mb-3">
                         <label class="form-label">Course Title</label>
                         <input type="text" name="course_title" class="form-control" value="<?php echo htmlspecialchars($edit_data['course_title']); ?>">
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Course Image</label>
+                        <input type="file" name="course_image" class="form-control" accept=".jpg,.jpeg,.png,.gif,.webp">
+                        <?php if (!empty($edit_data['course_image'])) { ?>
+                          <div class="mt-2">
+                            <img src="<?php echo htmlspecialchars(admin_image_src($edit_data['course_image'])); ?>" alt="Course Image" class="course-image-preview">
+                          </div>
+                        <?php } ?>
                       </div>
 
                       <div class="mb-3">
@@ -449,12 +538,12 @@ if (isset($_POST['submit_course'])) {
 
                       <div class="mb-3">
                         <label class="form-label">Course Long Description</label>
-                        <textarea name="course_long_description" class="form-control" rows="4"><?php echo htmlspecialchars($edit_data['course_long_description']); ?></textarea>
+                        <textarea name="course_long_description" id="course_long_description" class="form-control" rows="4"><?php echo htmlspecialchars($edit_data['course_long_description']); ?></textarea>
                       </div>
 
                       <div class="mb-3">
                         <label class="form-label">Course Curriculum</label>
-                        <textarea name="course_curriculum" class="form-control" rows="4"><?php echo htmlspecialchars($edit_data['course_curriculum']); ?></textarea>
+                        <textarea name="course_curriculum" id="course_curriculum" class="form-control" rows="4"><?php echo htmlspecialchars($edit_data['course_curriculum']); ?></textarea>
                       </div>
                     </div>
 
@@ -483,6 +572,7 @@ if (isset($_POST['submit_course'])) {
                         <tr>
                           <th style="width: 50px;">ID</th>
                           <th>Course Title</th>
+                          <th style="width: 110px;">Image</th>
                           <th>Level</th>
                           <th>Amount</th>
                           <th>Total Lecture</th>
@@ -498,6 +588,13 @@ if (isset($_POST['submit_course'])) {
                           <tr>
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo htmlspecialchars($row['course_title']); ?></td>
+                            <td>
+                              <?php if (!empty($row['course_image'])) { ?>
+                                <img src="<?php echo htmlspecialchars(admin_image_src($row['course_image'])); ?>" alt="Course Image" class="course-image-preview">
+                              <?php } else { ?>
+                                <span class="text-muted">No image</span>
+                              <?php } ?>
+                            </td>
                             <td><?php echo htmlspecialchars($row['course_level']); ?></td>
                             <td><?php echo htmlspecialchars($row['course_amount']); ?></td>
                             <td><?php echo htmlspecialchars($row['total_lecture']); ?></td>
@@ -519,7 +616,7 @@ if (isset($_POST['submit_course'])) {
                         } else {
                         ?>
                           <tr>
-                            <td colspan="6" class="text-center">No course found.</td>
+                            <td colspan="7" class="text-center">No course found.</td>
                           </tr>
                         <?php } ?>
                       </tbody>
@@ -552,6 +649,21 @@ if (isset($_POST['submit_course'])) {
       crossorigin="anonymous"
     ></script>
     <script src="./js/adminlte.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        $('#course_long_description').summernote({
+          height: 220,
+          placeholder: 'Write course details here...'
+        });
+
+        $('#course_curriculum').summernote({
+          height: 220,
+          placeholder: 'Write course curriculum here...'
+        });
+      });
+    </script>
 
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';

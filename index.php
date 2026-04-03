@@ -27,6 +27,32 @@ function excerpt_text($html, $limit = 220) {
     return mb_substr($text, 0, $limit) . '...';
 }
 
+
+function fetch_rows($result) {
+    $rows = [];
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $rows[] = $row;
+        }
+    }
+    return $rows;
+}
+
+function course_image_src($path, $fallback = 'banner1.jpg') {
+    $path = trim((string)($path ?? ''));
+    if ($path === '') {
+        return $fallback;
+    }
+    if (preg_match('/^https?:\/\//i', $path)) {
+        return $path;
+    }
+    return ltrim(str_replace('\\', '/', $path), '/');
+}
+
+function course_preview_url($type, $id) {
+    return 'course-preview.php?type=' . urlencode((string)$type) . '&id=' . urlencode((string)$id);
+}
+
 $logoRes = mysqli_query($conn, "SELECT * FROM logos ORDER BY id DESC LIMIT 1");
 $logo = $logoRes ? mysqli_fetch_assoc($logoRes) : null;
 
@@ -35,6 +61,12 @@ $banner = $bannerRes ? mysqli_fetch_assoc($bannerRes) : null;
 
 $campusCoursesRes = mysqli_query($conn, "SELECT * FROM pte_courses_campus ORDER BY id DESC");
 $onlineCoursesRes = mysqli_query($conn, "SELECT * FROM pte_courses_online ORDER BY id DESC");
+$ieltsCoursesRes = mysqli_query($conn, "SELECT * FROM ielts_courses ORDER BY id DESC");
+$tofelCoursesRes = mysqli_query($conn, "SELECT * FROM tofel_courses ORDER BY id DESC");
+$campusCourses = fetch_rows($campusCoursesRes);
+$onlineCourses = fetch_rows($onlineCoursesRes);
+$ieltsCourses = fetch_rows($ieltsCoursesRes);
+$tofelCourses = fetch_rows($tofelCoursesRes);
 
 $achievementRes = mysqli_query($conn, "SELECT * FROM our_achivements ORDER BY id DESC LIMIT 1");
 $achievement = $achievementRes ? mysqli_fetch_assoc($achievementRes) : null;
@@ -48,6 +80,8 @@ $bannerImage = local_image($banner['banner_image'] ?? 'banner1.jpg', 'banner1.jp
 $bannerTitle = $banner['title'] ?? 'Take the first step';
 include('header.php');
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
     <div id="main">
 
@@ -65,7 +99,7 @@ include('header.php');
         <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12"><div class="vc_column-inner"><div class="wpb_wrapper">
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
         <div class="wpb_wrapper">
-            <h1 class="pecpte-heading" style="color:#fff; line-height:100px; margin-top:50px;"><strong><span class="pecpte-heading-span1" style="font-size:75px; background-color:rgba(0,0,0, .6); padding:10px"><?php echo e($bannerTitle); ?></span></strong></h1>
+            <h1 class="pecpte-heading" style="color:#fff; line-height:100px; margin-top:50px;"><strong><span class="pecpte-heading-span1" style="font-size:25px; background-color:rgba(0,0,0, .6); padding:10px"><?php echo e($bannerTitle); ?></span></strong></h1>
         </div>
     </div>
 <style type="text/css">.vc_btn3-style-gradient.vc_btn-gradient-btn-69b5960c63730:hover{color: #fff;background-color: #f4524d;border: none;background-position: 100% 0;}</style><style type="text/css">.vc_btn3-style-gradient.vc_btn-gradient-btn-69b5960c63730{color: #fff;border: none;background-color: #fe6c61;background-image: -webkit-linear-gradient(left, #fe6c61 0%, #f4524d 50%,#fe6c61 100%);background-image: linear-gradient(to right, #fe6c61 0%, #f4524d 50%,#fe6c61 100%);-webkit-transition: all .2s ease-in-out;transition: all .2s ease-in-out;background-size: 200% 100%;}</style>
@@ -76,14 +110,7 @@ include('header.php');
     <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1645986912369">
         <div class="wpb_wrapper">
             <div class="block-scroll">
-    <a href="study.php?service=study aboard">
-        <div class="block-main b1">
-            <div class="block-img">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" class="block-image" alt="Study Abroad" width="90" height="90">
-            </div>
-            <div class="block-head">Study Abroad</div>
-        </div>
-    </a><!--Main Block End-->
+
     <a href="course.php?course=pte%20academy"><!--Main Block-->
         <div class="block-main b3">
             <div class="pte-block-img"><!--icon-->
@@ -91,6 +118,7 @@ include('header.php');
             </div>
         </div>
     </a><!--Main Block End-->
+
     <a href="course.php?course=ielts"><!--Main Block-->
         <div class="block-main b2">
             <div class="ielts-block-img">
@@ -106,12 +134,22 @@ include('header.php');
             <div class="block-head">Spoken English</div>
         </div>
     </a><!--Main Block End-->
+
     <a href="study.php?service=pte-mock-tests" target="_blank">
         <div class="block-main b5">
             <div class="block-img">
                 <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/online-course_sized.png" class="block-image" alt="Online Courses &amp; PTE Mock Test" width="90" height="90">
             </div>
             <div class="block-head">Online Courses &amp; PTE Mock Test</div>
+        </div>
+    </a><!--Main Block End-->
+    
+    <a href="study.php?service=study aboard">
+        <div class="block-main b1">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" class="block-image" alt="Study Abroad" width="90" height="90">
+            </div>
+            <div class="block-head">Study Abroad</div>
         </div>
     </a><!--Main Block End-->
 </div>
@@ -126,202 +164,312 @@ include('header.php');
                 <div class="wpb_text_column wpb_content_element">
                     <div class="wpb_wrapper">
 
-                        <div class="stm_lms_courses_grid stm_lms_courses all_loaded">
-                            <div class="stm_lms_courses_grid__top showing">
-                                <div class="stm_lms_courses_grid__counter">
-                                    <h2>PTE Courses(On Campus)</h2>
+                        <style>
+                            .aa-course-section {
+                                margin-bottom: 45px;
+                            }
+                            .aa-course-section-header {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 16px;
+                                margin-bottom: 20px;
+                            }
+                            .aa-course-section-header h2 {
+                                margin: 0;
+                            }
+                            .aa-course-slider-shell {
+                                position: relative;
+                                padding: 0 46px;
+                            }
+                            .aa-course-slider-window {
+                                overflow: hidden;
+                            }
+                            .aa-course-slider-track {
+                                display: flex;
+                                gap: 20px;
+                                transition: transform 0.35s ease;
+                                will-change: transform;
+                            }
+                            .aa-course-card {
+                                flex: 0 0 calc((100% - 60px) / 4);
+                                background: #fff;
+                                border: 1px solid #e9e9e9;
+                                border-radius: 12px;
+                                overflow: hidden;
+                                box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+                            }
+                            .aa-course-card-image {
+                                display: block;
+                                aspect-ratio: 16 / 9;
+                                background: #f7f7f7;
+                                overflow: hidden;
+                            }
+                            .aa-course-card-image img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                display: block;
+                            }
+                            .aa-course-card-body {
+                                padding: 18px;
+                            }
+                            .aa-course-card-title {
+                                margin: 0 0 10px;
+                                font-size: 20px;
+                                line-height: 1.35;
+                                min-height: 54px;
+                            }
+                            .aa-course-card-title a {
+                                color: #2b2b2b;
+                                text-decoration: none;
+                            }
+                            .aa-course-card-title a:hover {
+                                color: #2c75e4;
+                            }
+                            .aa-course-card-desc {
+                                color: #666;
+                                line-height: 1.7;
+                                min-height: 74px;
+                                margin-bottom: 14px;
+                            }
+                            .aa-course-meta {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 8px 12px;
+                                margin-bottom: 14px;
+                                color: #444;
+                                font-size: 14px;
+                            }
+                            .aa-course-meta span {
+                                background: #f3f6fb;
+                                padding: 6px 10px;
+                                border-radius: 999px;
+                            }
+                            .aa-course-footer {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 12px;
+                            }
+                            .aa-course-price {
+                                font-size: 20px;
+                                font-weight: 700;
+                                color: #2c75e4;
+                            }
+                            .aa-course-preview-btn {
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 8px;
+                                padding: 10px 16px;
+                                border-radius: 8px;
+                                background: #2c75e4;
+                                color: #fff;
+                                text-decoration: none;
+                                font-weight: 600;
+                            }
+                            .aa-course-preview-btn:hover,
+                            .aa-course-preview-btn:focus {
+                                color: #fff;
+                                background: #1f5db8;
+                                text-decoration: none;
+                            }
+                            .aa-course-nav {
+                                position: absolute;
+                                top: 42%;
+                                transform: translateY(-50%);
+                                width: 36px;
+                                height: 36px;
+                                border: none;
+                                border-radius: 50%;
+                                background: rgba(44,117,228,0.92);
+                                color: #fff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+                                z-index: 2;
+                            }
+                            .aa-course-nav:hover {
+                                background: #1f5db8;
+                            }
+                            .aa-course-nav-left { left: 0; }
+                            .aa-course-nav-right { right: 0; }
+                            .aa-course-nav[hidden] { display: none !important; }
+                            .aa-empty-course {
+                                padding: 20px 0;
+                                color: #666;
+                            }
+                            @media (max-width: 1199px) {
+                                .aa-course-card { flex-basis: calc((100% - 40px) / 3); }
+                            }
+                            @media (max-width: 991px) {
+                                .aa-course-slider-shell { padding: 0 38px; }
+                                .aa-course-card { flex-basis: calc((100% - 20px) / 2); }
+                                .aa-course-card-title { min-height: auto; }
+                                .aa-course-card-desc { min-height: auto; }
+                            }
+                            @media (max-width: 575px) {
+                                .aa-course-slider-shell { padding: 0 30px; }
+                                .aa-course-card { flex-basis: 100%; }
+                                .aa-course-footer { flex-direction: column; align-items: flex-start; }
+                                .aa-course-preview-btn { width: 100%; justify-content: center; }
+                            }
+                        </style>
+
+                        <?php
+                        $courseSections = [
+                            [
+                                'title' => 'PTE Courses(On Campus)',
+                                'type' => 'campus',
+                                'courses' => $campusCourses,
+                                'fallback_image' => './PEC- Education - PTE Academic In Dhaka, Bangladesh_files/1765-1-scaled-272x161.jpg'
+                            ],
+                            [
+                                'title' => 'PTE COURSES(Online)',
+                                'type' => 'online',
+                                'courses' => $onlineCourses,
+                                'fallback_image' => './PEC- Education - PTE Academic In Dhaka, Bangladesh_files/989-scaled-272x161.jpg'
+                            ],
+                            [
+                                'title' => 'IELTS Courses',
+                                'type' => 'ielts',
+                                'courses' => $ieltsCourses,
+                                'fallback_image' => './PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ielts-1.png'
+                            ],
+                            [
+                                'title' => 'TOFEL Courses',
+                                'type' => 'tofel',
+                                'courses' => $tofelCourses,
+                                'fallback_image' => 'banner1.jpg'
+                            ]
+                        ];
+                        ?>
+
+                        <?php foreach ($courseSections as $sectionIndex => $section): ?>
+                            <div class="aa-course-section wow fadeInUp" data-wow-offset="80">
+                                <div class="aa-course-section-header">
+                                    <h2><?php echo e($section['title']); ?></h2>
                                 </div>
-                                <div class="stm_lms_courses_grid__sort heading_font stm_lms_grid_sort_module hidden" data-text="Sort by:"></div>
-                            </div>
 
-                            <div class="stm_lms_courses__grid stm_lms_courses__grid_4 stm_lms_courses__grid_center stm_lms_courses__grid_found_4" data-pages="1">
-                                <?php if ($campusCoursesRes && mysqli_num_rows($campusCoursesRes) > 0): ?>
-                                    <?php while ($course = mysqli_fetch_assoc($campusCoursesRes)): ?>
-                                        <div class="stm_lms_courses__single stm_lms_courses__single_animation no-sale style_1">
-                                            <div class="stm_lms_courses__single__inner">
+                                <?php if (!empty($section['courses'])): ?>
+                                    <div class="aa-course-slider-shell" data-course-slider>
+                                        <button type="button" class="aa-course-nav aa-course-nav-left" data-course-prev hidden aria-label="Previous courses">
+                                            <i class="fa fa-angle-left"></i>
+                                        </button>
 
-                                                <div class="stm_lms_courses__single--image">
-                                                    <a href="" class="heading_font" data-preview="Preview this course">
-                                                        <div>
-                                                            <div class="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded">
-                                                                <img width="272" height="161"
-                                                                     alt="<?php echo e($course['course_title'] ?? 'Course'); ?>"
-                                                                     title="<?php echo e($course['course_title'] ?? 'Course'); ?>"
-                                                                     src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/1765-1-scaled-272x161.jpg">
+                                        <div class="aa-course-slider-window">
+                                            <div class="aa-course-slider-track">
+                                                <?php foreach ($section['courses'] as $course): ?>
+                                                    <?php
+                                                        $previewUrl = course_preview_url($section['type'], (int)($course['id'] ?? 0));
+                                                        $imageSrc = course_image_src($course['course_image'] ?? '', $section['fallback_image']);
+                                                    ?>
+                                                    <div class="aa-course-card wow fadeInUp" data-wow-offset="60">
+                                                        <a href="<?php echo e($previewUrl); ?>" class="aa-course-card-image">
+                                                            <img
+                                                                src="<?php echo e($imageSrc); ?>"
+                                                                alt="<?php echo e($course['course_title'] ?? 'Course'); ?>"
+                                                                title="<?php echo e($course['course_title'] ?? 'Course'); ?>"
+                                                            >
+                                                        </a>
+
+                                                        <div class="aa-course-card-body">
+                                                            <h3 class="aa-course-card-title">
+                                                                <a href="<?php echo e($previewUrl); ?>"><?php echo e($course['course_title'] ?? ''); ?></a>
+                                                            </h3>
+
+                                                            <div class="aa-course-card-desc">
+                                                                <?php echo e(excerpt_text($course['course_short_description'] ?? '', 110)); ?>
                                                             </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
 
-                                                <div class="stm_lms_courses__single--inner">
-                                                    <div class="stm_lms_courses__single--terms">
-                                                        <div class="stm_lms_courses__single--term">
-                                                            <?php echo e($course['course_short_description'] ?? ''); ?>
-                                                        </div>
-                                                    </div>
+                                                            <div class="aa-course-meta">
+                                                                <?php if (!empty($course['lecture_hour_details'])): ?>
+                                                                    <span><?php echo e($course['lecture_hour_details']); ?> Hours</span>
+                                                                <?php endif; ?>
+                                                                <?php if (!empty($course['course_level'])): ?>
+                                                                    <span>Level: <?php echo e($course['course_level']); ?></span>
+                                                                <?php endif; ?>
+                                                                <?php if (($course['total_lecture'] ?? '') !== ''): ?>
+                                                                    <span><?php echo e($course['total_lecture']); ?> Lectures</span>
+                                                                <?php endif; ?>
+                                                            </div>
 
-                                                    <div class="stm_lms_courses__single--title">
-                                                        <a href="">
-                                                            <h5><?php echo e($course['course_title'] ?? ''); ?></h5>
-                                                        </a>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--meta">
-                                                        <div class="stm_lms_courses__hours">
-                                                            <span><?php echo e($course['lecture_hour_details'] ?? ''); ?> Hours</span>
-                                                        </div>
-                                                        <div class="stm_lms_courses__single--price heading_font">
-                                                            <strong>TK<?php echo number_format((float)($course['course_amount'] ?? 0), 0); ?></strong>
+                                                            <div class="aa-course-footer">
+                                                                <div class="aa-course-price">TK<?php echo number_format((float)($course['course_amount'] ?? 0), 0); ?></div>
+                                                            </div>
+                                                            <a href="<?php echo e($previewUrl); ?>" class="aa-course-preview-btn" style="margin-top: 10px;">
+                                                                Preview this course
+                                                            </a>
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="stm_lms_courses__single--info">
-                                                    <div class="stm_lms_courses__single--info_author">
-                                                        <div class="stm_lms_courses__single--info_author__avatar"></div>
-                                                        <div class="stm_lms_courses__single--info_author__login">Ayan Academy</div>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_title">
-                                                        <a href="">
-                                                            <h4><?php echo e($course['course_title'] ?? ''); ?></h4>
-                                                        </a>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_excerpt"></div>
-
-                                                    <div class="stm_lms_courses__single--info_meta">
-                                                        <div class="stm_lms_course__meta">
-                                                            Level:
-                                                            <?php echo e($course['course_level'] ?? ''); ?>
-                                                        </div>
-                                                        <div class="stm_lms_course__meta">
-                                                            <?php echo e($course['total_lecture'] ?? '0'); ?> Lectures
-                                                        </div>
-                                                        <div class="stm_lms_course__meta">
-                                                            <?php echo e($course['how_many_hour_lecture'] ?? ''); ?> Hours
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_preview">
-                                                        <a href="" class="heading_font">Preview this course</a>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_bottom">
-                                                        
-                                                        <div class="stm_lms_courses__single--price heading_font">
-                                                            <strong>TK<?php echo number_format((float)($course['course_amount'] ?? 0), 0); ?></strong>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                                <?php endforeach; ?>
                                             </div>
                                         </div>
-                                    <?php endwhile; ?>
+
+                                        <button type="button" class="aa-course-nav aa-course-nav-right" data-course-next hidden aria-label="Next courses">
+                                            <i class="fa fa-angle-right"></i>
+                                        </button>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="aa-empty-course">No course found.</div>
                                 <?php endif; ?>
                             </div>
+                        <?php endforeach; ?>
 
-                            <div class="hidden">
-                                <div class="text-center">
-                                    <a href="" class="btn btn-default stm_lms_load_more_courses" style="display: none;">
-                                        <span>Load more</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <script>
+                            (function () {
+                                function getVisibleCount() {
+                                    if (window.innerWidth <= 575) return 1;
+                                    if (window.innerWidth <= 991) return 2;
+                                    if (window.innerWidth <= 1199) return 3;
+                                    return 4;
+                                }
 
-                        <div class="stm_lms_courses_grid stm_lms_courses all_loaded">
-                            <div class="stm_lms_courses_grid__top showing">
-                                <div class="stm_lms_courses_grid__counter">
-                                    <h2>PTE COURSES(Online)</h2>
-                                </div>
-                                <div class="stm_lms_courses_grid__sort heading_font stm_lms_grid_sort_module hidden" data-text="Sort by:"></div>
-                            </div>
+                                document.querySelectorAll('[data-course-slider]').forEach(function (slider) {
+                                    var track = slider.querySelector('.aa-course-slider-track');
+                                    var cards = slider.querySelectorAll('.aa-course-card');
+                                    var prevBtn = slider.querySelector('[data-course-prev]');
+                                    var nextBtn = slider.querySelector('[data-course-next]');
+                                    var index = 0;
 
-                            <div class="stm_lms_courses__grid stm_lms_courses__grid_4 stm_lms_courses__grid_center stm_lms_courses__grid_found_4" data-pages="1">
-                                <?php if ($onlineCoursesRes && mysqli_num_rows($onlineCoursesRes) > 0): ?>
-                                    <?php while ($course = mysqli_fetch_assoc($onlineCoursesRes)): ?>
-                                        <div class="stm_lms_courses__single stm_lms_courses__single_animation no-sale style_1">
-                                            <div class="stm_lms_courses__single__inner">
+                                    function maxIndex() {
+                                        return Math.max(0, cards.length - getVisibleCount());
+                                    }
 
-                                                <div class="stm_lms_courses__single--image">
-                                                    <a href="" class="heading_font" data-preview="Preview this course">
-                                                        <div>
-                                                            <div class="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded">
-                                                                <img width="272" height="161"
-                                                                     alt="<?php echo e($course['course_title'] ?? 'Course'); ?>"
-                                                                     title="<?php echo e($course['course_title'] ?? 'Course'); ?>"
-                                                                     src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/989-scaled-272x161.jpg">
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                    function update() {
+                                        var visible = getVisibleCount();
+                                        var firstCard = cards[0];
+                                        if (!firstCard) return;
+                                        var gap = 20;
+                                        var cardWidth = firstCard.getBoundingClientRect().width;
+                                        if (index > maxIndex()) index = maxIndex();
+                                        var move = (cardWidth + gap) * index;
+                                        track.style.transform = 'translateX(-' + move + 'px)';
+                                        prevBtn.hidden = !(cards.length > visible && index > 0);
+                                        nextBtn.hidden = !(cards.length > visible && index < maxIndex());
+                                    }
 
-                                                <div class="stm_lms_courses__single--inner">
-                                                    <div class="stm_lms_courses__single--terms">
-                                                        <div class="stm_lms_courses__single--term">
-                                                            <?php echo e($course['course_short_description'] ?? ''); ?>
-                                                        </div>
-                                                    </div>
+                                    prevBtn.addEventListener('click', function () {
+                                        if (index > 0) {
+                                            index -= 1;
+                                            update();
+                                        }
+                                    });
 
-                                                    <div class="stm_lms_courses__single--title">
-                                                        <a href="">
-                                                            <h5><?php echo e($course['course_title'] ?? ''); ?></h5>
-                                                        </a>
-                                                    </div>
+                                    nextBtn.addEventListener('click', function () {
+                                        if (index < maxIndex()) {
+                                            index += 1;
+                                            update();
+                                        }
+                                    });
 
-                                                    <div class="stm_lms_courses__single--meta">
-                                                        <div class="stm_lms_courses__single--price heading_font">
-                                                            <strong>TK<?php echo number_format((float)($course['course_amount'] ?? 0), 0); ?></strong>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="stm_lms_courses__single--info">
-                                                    <div class="stm_lms_courses__single--info_author">
-                                                        <div class="stm_lms_courses__single--info_author__avatar"></div>
-                                                        <div class="stm_lms_courses__single--info_author__login">Ayan Academy</div>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_title">
-                                                        <a href="">
-                                                            <h4><?php echo e($course['course_title'] ?? ''); ?></h4>
-                                                        </a>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_excerpt"></div>
-
-                                                    <div class="stm_lms_courses__single--info_meta">
-                                                        <div class="stm_lms_course__meta">
-                                                            <?php echo e($course['total_lecture'] ?? '0'); ?> Lectures
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_preview">
-                                                        <a href="" class="heading_font">Preview this course</a>
-                                                    </div>
-
-                                                    <div class="stm_lms_courses__single--info_bottom">
-                                                        <div class="stm_lms_courses__single--price heading_font">
-                                                            <strong>TK<?php echo number_format((float)($course['course_amount'] ?? 0), 0); ?></strong>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
-                            </div>
-
-                            <div class="hidden">
-                                <div class="text-center">
-                                    <a href="" class="btn btn-default stm_lms_load_more_courses" style="display: none;">
-                                        <span>Load more</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                                    window.addEventListener('resize', update);
+                                    update();
+                                });
+                            })();
+                        </script>
 
                     </div>
                 </div>
@@ -335,19 +483,19 @@ include('header.php');
         </div>
     </div>
 
-    <div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.6" data-vc-parallax-image="https://i0.wp.com/pecpte.com/wp-content/uploads/2018/09/achivements.jpg?fit=1920%2C1000&amp;ssl=1" class="vc_row wpb_row vc_row-fluid stm_fixed_background vc_custom_1536836667813 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving" style="position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px;">
+<div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.6" data-vc-parallax-image="https://i0.wp.com/pecpte.com/wp-content/uploads/2018/09/achivements.jpg?fit=1920%2C1000&amp;ssl=1" class="vc_row wpb_row vc_row-fluid stm_fixed_background vc_custom_1536836667813 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving" style="position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px;">
         <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper" style="margin-left: 100px;">
 <div class="aa5b84e1f5e48d81091fc279a089999c3 vc_empty_space" style="height: 42px">
     <span class="vc_empty_space_inner"></span>
 </div>
-<div class="vc_custom_heading vc_custom_1579595041823 text_align_center"><h2 style="color: #ffffff;text-align: center" class="masterstudy-custom-title">OUR ACHIEVEMENTS</h2></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="vc_custom_heading vc_custom_1579595041823 text_align_center wow fadeInUp" data-wow-offset="80"><h2 style="color: #ffffff;text-align: center" class="masterstudy-custom-title">OUR ACHIEVEMENTS</h2></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
     <div class="wpb_text_column wpb_content_element  vc_custom_1579595072581">
         <div class="wpb_wrapper">
 
         </div>
     </div>
 </div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1436163882282">
-                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="wpb_column vc_column_container vc_col-sm-3 wow fadeInUp" data-wow-offset="60">
                             <div class="vc_column-inner"><div class="wpb_wrapper">
                                 <div class="stats_counter text-center" style="color:#ffffff">
                                     <div class="h1" style="color:#FFA700"><?php echo e($achievement['oversease'] ?? '278'); ?></div>
@@ -355,7 +503,7 @@ include('header.php');
                                 </div>
                             </div></div>
                         </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="wpb_column vc_column_container vc_col-sm-3 wow fadeInUp" data-wow-offset="60">
                             <div class="vc_column-inner"><div class="wpb_wrapper">
                                 <div class="stats_counter text-center" style="color:#fff">
                                     <div class="h1" style="color:#FFA700"><?php echo e($achievement['classes_complete'] ?? '470'); ?></div>
@@ -363,7 +511,7 @@ include('header.php');
                                 </div>
                             </div></div>
                         </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="wpb_column vc_column_container vc_col-sm-3 wow fadeInUp" data-wow-offset="60">
                             <div class="vc_column-inner"><div class="wpb_wrapper">
                                 <div class="stats_counter text-center" style="color:#fff">
                                     <div class="h1" style="color:#FFA700"><?php echo e($achievement['students_enrolled'] ?? '830'); ?></div>
@@ -371,7 +519,7 @@ include('header.php');
                                 </div>
                             </div></div>
                         </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="wpb_column vc_column_container vc_col-sm-3 wow fadeInUp" data-wow-offset="60">
                             <div class="vc_column-inner"><div class="wpb_wrapper">
                                 <div class="stats_counter text-center" style="color:#fff">
                                     <div class="h1" style="color:#FFA700"><?php echo e($achievement['certified_teachers'] ?? '6'); ?></div>
@@ -598,7 +746,7 @@ include('header.php');
         <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
                 <div class="wpb_wrapper" style="padding:100px">
-                    <div class="vc_custom_heading vc_custom_1579416932851 text_align_center"><h2 style="text-align: center" class="masterstudy-custom-title">Our Blogs</h2></div>
+                    <div class="vc_custom_heading vc_custom_1579416932851 text_align_center wow fadeInUp" data-wow-offset="80"><h2 style="text-align: center" class="masterstudy-custom-title">Our Blogs</h2></div>
 
                     <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1536751636857">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -625,7 +773,7 @@ include('header.php');
                                                     $day = !empty($blog['blog_date']) ? date('d', strtotime($blog['blog_date'])) : '';
                                                     $month = !empty($blog['blog_date']) ? date('M', strtotime($blog['blog_date'])) : '';
                                                     ?>
-                                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-offset="60">
                                                         <div class="post_list_content_unit">
                                                             <div class="post_list_featured_image">
                                                                 <a href="blog-details.php?id=<?php echo $blog['id']; ?>" title="View post details">
@@ -681,7 +829,7 @@ include('header.php');
                     <div class="testimonials_main_wrapper simple_carousel_wrapper">
                         <div class="clearfix testimonials_control_bar_top">
                             <div class="pull-left">
-                                <h2 class="testimonials_main_title">Testimonials</h2>
+                                <h2 class="testimonials_main_title wow fadeInUp" data-wow-offset="80">Testimonials</h2>
                             </div>
                             <div class="pull-right testimonials_control_bar">
                                 <div class="clearfix"></div>
@@ -692,7 +840,7 @@ include('header.php');
                             <div class="testimonials-carousel-init simple_carousel_init clearfix owl-carousel stm_owl-theme" data-items="2">
                                 <?php if ($testimonialsRes && mysqli_num_rows($testimonialsRes) > 0): ?>
                                     <?php while ($testimonial = mysqli_fetch_assoc($testimonialsRes)): ?>
-                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                        <div class="col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-offset="60">
                                             <div class="testimonial_inner_wrapper">
                                                 <div class="media">
                                                     
@@ -728,7 +876,7 @@ include('header.php');
 </div>
 
 </div>
-<div class="vc_custom_heading text_align_center">
+<div class="vc_custom_heading text_align_center wow fadeInUp" data-wow-offset="80">
     <h1 style="text-align: center" class="masterstudy-custom-title">
         Representing Overseas Universities
     </h1>
@@ -769,7 +917,7 @@ include('header.php');
 }
 </style>
 
-<div class="overseas-grid">
+<div class="overseas-grid wow fadeInUp" data-wow-offset="60">
 
     <?php 
     $overseasUniversitiesRes = mysqli_query($conn, "SELECT * FROM overseas_universities ORDER BY id DESC");
@@ -779,7 +927,7 @@ include('header.php');
             
             <?php $universityLogo = 'admin/dist/' . $university['logo_image']; ?>
 
-            <div class="overseas-item">
+            <div class="overseas-item wow zoomIn" data-wow-offset="60">
                 <img
                     src="<?php echo e($universityLogo); ?>"
                     alt="Overseas University"
@@ -800,11 +948,15 @@ include('header.php');
 
            </div>
 </div>
-        <footer data-wpr-lazyrender="1" id="footer" class="parallax-off">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+if (typeof WOW !== "undefined") { new WOW({ mobile: true }).init(); }
+</script>
+<footer data-wpr-lazyrender="1" id="footer" class="parallax-off">
             <div class="footer_wrapper">
 
 
 
-        <div id="footer_bottom">
+        <div id="footer_bottom" style="background-color: black;">
             <div class="footer_widgets_wrapper kek text-upper">
 <?php include('footer.php') ?>
