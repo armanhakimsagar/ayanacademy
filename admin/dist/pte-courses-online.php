@@ -515,7 +515,7 @@ if (isset($_POST['submit_course'])) {
                       </div>
 
                       <div class="mb-3">
-                        <label class="form-label">Lecture Hour Details</label>
+                        <label class="form-label">Total Lecture hour details</label>
                         <input type="text" name="lecture_hour_details" class="form-control" value="<?php echo htmlspecialchars($edit_data['lecture_hour_details']); ?>">
                       </div>
 
@@ -530,12 +530,12 @@ if (isset($_POST['submit_course'])) {
                       </div>
 
                       <div class="mb-3">
-                        <label class="form-label">Total Lecture</label>
+                        <label class="form-label">Number of total lecture</label>
                         <input type="number" name="total_lecture" class="form-control" value="<?php echo htmlspecialchars($edit_data['total_lecture']); ?>">
                       </div>
 
                       <div class="mb-3">
-                        <label class="form-label">How Many Hour Lecture</label>
+                        <label class="form-label">Lecture hour per class</label>
                         <input type="text" name="how_many_hour_lecture" class="form-control" value="<?php echo htmlspecialchars($edit_data['how_many_hour_lecture']); ?>">
                       </div>
 

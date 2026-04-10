@@ -1,3 +1,8 @@
+<style>
+    .socials_widget_wrapper .widget_socials{
+        max-width: 345px !important;
+    }
+</style>
 
 <div class="container">
                     <div class="widgets cols_4 clearfix">
@@ -37,7 +42,7 @@
                                                 </tbody></table>
 
         </aside>
-                <aside id="stm_text-3" style="margin-left:100px" class="widget stm_wp_widget_text"><div class="widget_title"><h3>Contact Us</h3></div>        <div class="textwidget"><p>
+                <aside id="stm_text-3" class="widget stm_wp_widget_text"><div class="widget_title"><h3>Contact Us</h3></div>        <div class="textwidget"><p>
 Mobile : +880 1319904015<br>
 Email : info@ayansacademy.com<br></p>
 </div>
@@ -54,10 +59,19 @@ Email : info@ayansacademy.com<br></p>
                         </li><li class="simple_flip_container">
                             <div class="simple_flipper">
                                 <div class="front">
-                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener" class="twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
                                 </div>
                                 <div class="back">
-                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                </div>
+                            </div>
+                        </li></li><li class="simple_flip_container">
+                            <div class="simple_flipper">
+                                <div class="front">
+                                    <a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener" class="youtube"><i class="fab fa-youtube"></i></a>
+                                </div>
+                                <div class="back">
+                                    <a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
                                 </div>
                             </div>
                         </li><li class="simple_flip_container">
@@ -94,7 +108,7 @@ Email : info@ayansacademy.com<br></p>
                                                     <div class="pull-left">
                                                                                                         <noscript></noscript>
                                                             </div>
-                                                                            <div class="copyright_text">Copyright ©2026 Ayan Academy All rights reserved.</div>
+                                                                            <div class="copyright_text">Copyright ©2026 Ayan's Academy All rights reserved.</div>
                                             </div>
                 </div>
                 <div class="col-md-6 col-sm-4">
@@ -104,7 +118,7 @@ Email : info@ayansacademy.com<br></p>
                                                             <div class="pull-right">
                                     <div class="copyright_socials">
                                         <ul class="clearfix">
-                                            <li><a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li><li><a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li><li><a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li><li><a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>                                        </ul>
+                                            <li><a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li><li><a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li><li><a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li><li><a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a></li><li><a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>                                        </ul>
                                     </div>
                                 </div>
                                                     </div>

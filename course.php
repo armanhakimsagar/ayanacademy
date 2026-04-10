@@ -79,7 +79,7 @@ include('header.php');
 
     <style>
         #wrapper #main {
-            min-height: 200px !important;
+            min-height: 0px !important;
         }
 
         .course-content {

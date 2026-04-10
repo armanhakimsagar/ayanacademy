@@ -306,176 +306,6 @@ include('header.php');
 }
 </style>
 
-<style id="aa-quick-boxes-final-fix">
-/* only quick boxes redesign + layout fix */
-.aa-quick-links-wrap{
-    display:flex !important;
-    flex-wrap:nowrap !important;
-    gap:22px !important;
-    overflow-x:auto !important;
-    overflow-y:hidden !important;
-    padding:10px 6px 20px !important;
-    margin:0 !important;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
-}
-.aa-quick-links-wrap::-webkit-scrollbar{
-    height:8px;
-}
-.aa-quick-links-wrap::-webkit-scrollbar-thumb{
-    background:rgba(44,117,228,.25);
-    border-radius:999px;
-}
-
-.aa-quick-link{
-    display:block !important;
-    flex:0 0 255px !important;
-    width:255px !important;
-    text-decoration:none !important;
-}
-
-.aa-quick-card{
-    position:relative;
-    min-height:250px;
-    height:100%;
-    border-radius:22px;
-    padding:22px 20px;
-    overflow:hidden;
-    background:#ffffff;
-    border:1px solid #e8eefc;
-    box-shadow:0 14px 34px rgba(18,38,89,.10);
-    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-}
-.aa-quick-card:before{
-    content:"";
-    position:absolute;
-    right:-38px;
-    bottom:-38px;
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:rgba(44,117,228,.06);
-}
-.aa-quick-link:hover .aa-quick-card{
-    transform:translateY(-8px);
-    box-shadow:0 20px 42px rgba(18,38,89,.16);
-    border-color:#d7e4ff;
-}
-
-.aa-quick-card-icon{
-    width:72px;
-    height:72px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#000;
-    box-shadow:0 10px 24px rgba(0,0,0,.08);
-    position:relative;
-    z-index:1;
-}
-.aa-quick-card-icon img{
-    max-width:44px;
-    max-height:44px;
-    object-fit:contain;
-}
-.aa-quick-card-icon.logo img{
-    max-width:120px;
-    max-height:42px;
-    width:100%;
-}
-
-.aa-quick-card-text{
-    position:relative;
-    z-index:1;
-    margin-top:18px;
-}
-.aa-quick-card-kicker{
-    display:inline-block;
-    font-size:11px;
-    line-height:1;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    padding:8px 10px;
-    border-radius:999px;
-    margin-bottom:12px;
-}
-.aa-quick-card-title{
-    margin:0 0 10px;
-    font-size:19px;
-    line-height:1.28;
-    font-weight:700;
-    color:#1f2d4d;
-}
-.aa-quick-card-desc{
-    margin:0;
-    font-size:14px;
-    line-height:1.65;
-    color:#5f6c85;
-}
-.aa-quick-card-arrow{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#13203e;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:15px;
-    margin-top:18px;
-    position:relative;
-    z-index:1;
-}
-
-.aa-quick-card--pte{
-    background:linear-gradient(180deg,#ffffff 0%,#eef4ff 100%);
-}
-.aa-quick-card--ielts{
-    background:linear-gradient(180deg,#ffffff 0%,#eefaf3 100%);
-}
-.aa-quick-card--spoken{
-    background:linear-gradient(180deg,#ffffff 0%,#fff4ec 100%);
-}
-.aa-quick-card--online{
-    background:linear-gradient(180deg,#ffffff 0%,#f5efff 100%);
-}
-.aa-quick-card--abroad{
-    background:linear-gradient(180deg,#ffffff 0%,#eef8ff 100%);
-}
-
-.aa-quick-card--pte .aa-quick-card-kicker{background:#eaf1ff;color:#2957d3;}
-.aa-quick-card--ielts .aa-quick-card-kicker{background:#e9fbf0;color:#13804f;}
-.aa-quick-card--spoken .aa-quick-card-kicker{background:#fff0e8;color:#d56425;}
-.aa-quick-card--online .aa-quick-card-kicker{background:#f1e9ff;color:#6c3ad1;}
-.aa-quick-card--abroad .aa-quick-card-kicker{background:#e7f5ff;color:#126896;}
-
-@media (max-width: 767px){
-    .aa-quick-links-wrap{
-        gap:16px !important;
-        padding-bottom:14px !important;
-    }
-    .aa-quick-link{
-        flex:0 0 220px !important;
-        width:220px !important;
-    }
-    .aa-quick-card{
-        min-height:230px;
-        padding:18px 16px;
-    }
-    .aa-quick-card-title{
-        font-size:18px;
-    }
-    .aa-quick-card-desc{
-        font-size:13px;
-    }
-}
-</style>
-
 
     <div id="main">
 
@@ -503,79 +333,49 @@ include('header.php');
         <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1579437107739"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
     <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1645986912369">
         <div class="wpb_wrapper">
-            
-<div class="aa-quick-links-wrap">
+            <div class="block-scroll">
 
-    <a href="course.php?course=pte%20academy" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--pte">
-            <div class="aa-quick-card-icon logo">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/pte-logo-1.png" alt="PTE Academy">
+    <a href="course.php?course=pte%20academy"><!--Main Block-->
+        <div class="block-main b3">
+            <div class="pte-block-img"><!--icon-->
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/pte-logo-1.png" class="block-image entered lazyloaded" alt="Person PTE Academy" width="190" height="63" data-lazy-src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/pte-logo-1.png?resize=190%2C63&amp;ssl=1" data-ll-status="loaded"><noscript><img decoding="async" src="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/01/pte-logo-1.png?resize=190%2C63&#038;ssl=1" class="block-image" alt="Person PTE Academy" width="190" height="63"  data-recalc-dims="1"></noscript>
             </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Featured Program</div>
-                <h3 class="aa-quick-card-title">PTE Academy</h3>
-                <p class="aa-quick-card-desc">Structured preparation with expert guidance, mock practice, and score-focused coaching.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
         </div>
-    </a>
+    </a><!--Main Block End-->
 
-    <a href="course.php?course=ielts" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--ielts">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ielts-1.png" alt="IELTS">
+    <a href="course.php?course=ielts"><!--Main Block-->
+        <div class="block-main b2">
+            <div class="ielts-block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ielts-1.png" class="block-image" alt="IELTS" width="190" height="190">
             </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Exam Track</div>
-                <h3 class="aa-quick-card-title">IELTS</h3>
-                <p class="aa-quick-card-desc">Academic and practical preparation to build confidence for every module of the test.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
         </div>
-    </a>
-
-    <a href="course.php?course=spoken-english" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--spoken">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/speaking_sized.png" alt="Spoken English">
+    </a><!--Main Block End-->
+    <a href="course.php?course=spoken-english">
+        <div class="block-main b4">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/speaking_sized.png" class="block-image" alt="Spoken English" width="90" height="90">
             </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Communication</div>
-                <h3 class="aa-quick-card-title">Spoken English</h3>
-                <p class="aa-quick-card-desc">Improve fluency, confidence, and everyday speaking with practical sessions and feedback.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+            <div class="block-head">Spoken English</div>
         </div>
-    </a>
+    </a><!--Main Block End-->
 
-    <a href="study.php?service=pte-mock-tests" target="_blank" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--online">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/online-course_sized.png" alt="Online Courses &amp; PTE Mock Test">
+    <a href="study.php?service=pte-mock-tests" target="_blank">
+        <div class="block-main b5">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/online-course_sized.png" class="block-image" alt="Online Courses &amp; PTE Mock Test" width="90" height="90">
             </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Digital Learning</div>
-                <h3 class="aa-quick-card-title">Online Courses</h3>
-                <p class="aa-quick-card-desc">Flexible online prep and mock tests designed for learners who want convenience and performance.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+            <div class="block-head">Online Courses &amp; PTE Mock Test</div>
         </div>
-    </a>
-
-    <a href="study.php?service=study aboard" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--abroad">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" alt="Study Abroad">
+    </a><!--Main Block End-->
+    
+    <a href="study.php?service=study aboard">
+        <div class="block-main b1">
+            <div class="block-img">
+                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" class="block-image" alt="Study Abroad" width="90" height="90">
             </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Global Pathway</div>
-                <h3 class="aa-quick-card-title">Study Abroad</h3>
-                <p class="aa-quick-card-desc">Get guidance for applications, country selection, and your next academic destination abroad.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+            <div class="block-head">Study Abroad</div>
         </div>
-    </a>
-
+    </a><!--Main Block End-->
 </div>
         </div>
     </div>
@@ -588,238 +388,167 @@ include('header.php');
                 <div class="wpb_text_column wpb_content_element">
                     <div class="wpb_wrapper">
 
-                        
+                        <style>
+                            .aa-course-section {
+                                margin-bottom: 45px;
+                            }
+                            .aa-course-section-header {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 16px;
+                                margin-bottom: 20px;
+                            }
+                            .aa-course-section-header h2 {
+                                margin: 0;
+                            }
+                            .aa-course-slider-shell {
+                                position: relative;
+                                padding: 0 46px;
+                            }
+                            .aa-course-slider-window {
+                                overflow: hidden;
+                            }
+                            .aa-course-slider-track {
+                                display: flex;
+                                gap: 20px;
+                                transition: transform 0.35s ease;
+                                will-change: transform;
+                            }
+                            .aa-course-card {
+                                flex: 0 0 calc((100% - 60px) / 4);
+                                background: #fff;
+                                border: 1px solid #e9e9e9;
+                                border-radius: 12px;
+                                overflow: hidden;
+                                box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+                            }
+                            .aa-course-card-image {
+                                display: block;
+                                aspect-ratio: 16 / 9;
+                                background: #f7f7f7;
+                                overflow: hidden;
+                            }
+                            .aa-course-card-image img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                display: block;
+                            }
+                            .aa-course-card-body {
+                                padding: 18px;
+                            }
+                            .aa-course-card-title {
+                                margin: 0 0 10px;
+                                font-size: 20px;
+                                line-height: 1.35;
+                                min-height: 54px;
+                            }
+                            .aa-course-card-title a {
+                                color: #2b2b2b;
+                                text-decoration: none;
+                            }
+                            .aa-course-card-title a:hover {
+                                color: #2c75e4;
+                            }
+                            .aa-course-card-desc {
+                                color: #666;
+                                line-height: 1.7;
+                                min-height: 74px;
+                                margin-bottom: 14px;
+                            }
+                            .aa-course-meta {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 8px 12px;
+                                margin-bottom: 14px;
+                                color: #444;
+                                font-size: 14px;
+                            }
+                            .aa-course-meta span {
+                                background: #f3f6fb;
+                                padding: 6px 10px;
+                                border-radius: 999px;
+                            }
+                            .aa-course-footer {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 12px;
+                            }
+                            .aa-course-price {
+                                font-size: 20px;
+                                font-weight: 700;
+                                color: #2c75e4;
+                            }
+                            .aa-course-preview-btn {
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 8px;
+                                padding: 10px 16px;
+                                border-radius: 8px;
+                                background: #2c75e4;
+                                color: #fff;
+                                text-decoration: none;
+                                font-weight: 600;
+                            }
+                            .aa-course-preview-btn:hover,
+                            .aa-course-preview-btn:focus {
+                                color: #fff;
+                                background: #1f5db8;
+                                text-decoration: none;
+                            }
+                            .aa-course-nav {
+                                position: absolute;
+                                top: 42%;
+                                transform: translateY(-50%);
+                                width: 36px;
+                                height: 36px;
+                                border: none;
+                                border-radius: 50%;
+                                background: rgba(44,117,228,0.92);
+                                color: #fff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+                                z-index: 2;
+                            }
+                            .aa-course-nav:hover {
+                                background: #1f5db8;
+                            }
+                            .aa-course-nav-left { left: 0; }
+                            .aa-course-nav-right { right: 0; }
+                            .aa-course-nav[hidden] { display: none !important; }
+                            .aa-empty-course {
+                                padding: 20px 0;
+                                color: #666;
+                            }
+                            @media (max-width: 1199px) {
+                                .aa-course-card { flex-basis: calc((100% - 40px) / 3); }
+                            }
+                            @media (max-width: 991px) {
+                                .aa-course-slider-shell { padding: 0 38px; }
+                                .aa-course-card { flex-basis: calc((100% - 20px) / 2); }
+                                .aa-course-card-title { min-height: auto; }
+                                .aa-course-card-desc { min-height: auto; }
+                            }
+                            @media (max-width: 575px) {
+                                .aa-course-slider-shell { padding: 0 30px; }
+                                .aa-course-card { flex-basis: 100%; }
+                                .aa-course-footer { flex-direction: column; align-items: flex-start; }
+                                .aa-course-preview-btn { width: 100%; justify-content: center; }
+                            }
 
-<style>
-    .aa-course-section {
-        margin-bottom: 46px;
-        padding: 30px 28px;
-        border-radius: 30px;
-        background:
-            linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.68) 100%);
-        border: 1px solid rgba(255,255,255,0.55);
-        box-shadow: 0 24px 60px rgba(30, 42, 68, 0.14);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        overflow: hidden;
-        position: relative;
-    }
-    .aa-course-section:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            radial-gradient(circle at top left, rgba(255,255,255,0.40), transparent 34%),
-            radial-gradient(circle at bottom right, rgba(124,58,237,0.10), transparent 28%);
-        pointer-events: none;
-    }
-    .aa-course-section-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 24px;
-        position: relative;
-        z-index: 1;
-    }
-    .aa-course-section-header h2 {
-        margin: 0;
-        font-size: 28px;
-        line-height: 1.2;
-        color: #24324a;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-    }
-    .aa-course-slider-shell {
-        position: relative;
-        padding: 0 48px;
-        z-index: 1;
-    }
-    .aa-course-slider-window {
-        overflow: hidden;
-    }
-    .aa-course-slider-track {
-        display: flex;
-        gap: 24px;
-        transition: transform 0.35s ease;
-        will-change: transform;
-    }
-    .aa-course-card {
-        flex: 0 0 calc((100% - 72px) / 4);
-        background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,248,252,0.92) 100%);
-        border: 1px solid rgba(255,255,255,0.75);
-        border-radius: 22px;
-        overflow: hidden;
-        box-shadow: 0 14px 34px rgba(25, 35, 58, 0.12);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        transition: transform .22s ease, box-shadow .22s ease;
-    }
-    .aa-course-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 40px rgba(25, 35, 58, 0.18);
-    }
-    .aa-course-card-image {
-        display: block;
-        aspect-ratio: 16 / 10;
-        background: #eef2f8;
-        overflow: hidden;
-        padding: 10px;
-    }
-    .aa-course-card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        border-radius: 16px;
-    }
-    .aa-course-card-body {
-        padding: 18px 18px 16px;
-    }
-    .aa-course-card-title {
-        margin: 0 0 12px;
-        font-size: 20px;
-        line-height: 1.35;
-        min-height: 56px;
-        font-weight: 800;
-        letter-spacing: -0.01em;
-    }
-    .aa-course-card-title a {
-        color: #161f33;
-        text-decoration: none;
-    }
-    .aa-course-card-title a:hover {
-        color: #2c75e4;
-    }
-    .aa-course-card-desc {
-        color: #2e3546;
-        line-height: 1.55;
-        min-height: 92px;
-        margin-bottom: 16px;
-        font-size: 14px;
-    }
-    .aa-course-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 10px;
-        margin-bottom: 14px;
-        color: #444;
-        font-size: 14px;
-    }
-    .aa-course-meta span {
-        background: rgba(255,255,255,0.76);
-        color: #384256;
-        padding: 8px 12px;
-        border-radius: 999px;
-        box-shadow: inset 0 0 0 1px rgba(118,132,163,0.14);
-    }
-    .aa-course-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-    }
-    .aa-course-price {
-        font-size: 21px;
-        font-weight: 800;
-        color: #2c75e4;
-    }
-    .aa-course-preview-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 12px 16px;
-        border-radius: 0 0 18px 18px;
-        background: transparent;
-        color: #2b3244;
-        text-decoration: none;
-        font-weight: 700;
-        width: calc(100% + 36px);
-        margin-left: -18px;
-        margin-right: -18px;
-        margin-bottom: -16px;
-        border-top: 1px solid rgba(111, 125, 154, 0.18);
-    }
-    .aa-course-preview-btn:hover,
-    .aa-course-preview-btn:focus {
-        color: #111827;
-        background: rgba(255,255,255,0.45);
-        text-decoration: none;
-    }
-    .aa-course-nav {
-        position: absolute;
-        top: 40%;
-        transform: translateY(-50%);
-        width: 44px;
-        height: 44px;
-        border: none;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.30);
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.16);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        z-index: 3;
-    }
-    .aa-course-nav:hover {
-        background: rgba(44,117,228,0.88);
-    }
-    .aa-course-nav-left { left: -6px; }
-    .aa-course-nav-right { right: -6px; }
-    .aa-course-nav[hidden] { display: none !important; }
-    .aa-empty-course {
-        padding: 20px 0;
-        color: #666;
-    }
-    @media (max-width: 1199px) {
-        .aa-course-card { flex-basis: calc((100% - 48px) / 3); }
-    }
-    @media (max-width: 991px) {
-        .aa-course-section {
-            padding: 22px 18px;
-            border-radius: 24px;
-        }
-        .aa-course-section-header h2 {
-            font-size: 24px;
-        }
-        .aa-course-slider-shell { padding: 0 38px; }
-        .aa-course-slider-track { gap: 18px; }
-        .aa-course-card { flex-basis: calc((100% - 18px) / 2); }
-        .aa-course-card-title { min-height: auto; }
-        .aa-course-card-desc { min-height: auto; }
-    }
-    @media (max-width: 575px) {
-        .aa-course-section {
-            padding: 16px 14px;
-            border-radius: 20px;
-        }
-        .aa-course-section-header h2 {
-            font-size: 20px;
-        }
-        .aa-course-slider-shell { padding: 0 28px; }
-        .aa-course-card { flex-basis: 100%; }
-        .aa-course-footer { flex-direction: column; align-items: flex-start; }
-        .aa-course-preview-btn {
-            width: calc(100% + 36px);
-            justify-content: center;
-        }
-    }
-
-    .testimonial_inner_wrapper,
-    .testimonial_inner_wrapper .testimonials-inner-title,
-    .testimonial_inner_wrapper .testimonial_sphere,
-    .testimonial_inner_wrapper .testimonial_inner_content,
-    .testimonial_inner_wrapper .testimonial_inner_content p {
-        color: #000 !important;
-    }
-</style>
-
-
+                            .testimonial_inner_wrapper,
+                            .testimonial_inner_wrapper .testimonials-inner-title,
+                            .testimonial_inner_wrapper .testimonial_sphere,
+                            .testimonial_inner_wrapper .testimonial_inner_content,
+                            .testimonial_inner_wrapper .testimonial_inner_content p {
+                                color: #000 !important;
+                            }
+                        </style>
 
                         <?php
                         $courseSections = [
@@ -986,7 +715,7 @@ include('header.php');
         </div>
     </div>
 
-<div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.6" data-vc-parallax-image="achivement.jpeg?fit=1920%2C1000&amp;ssl=1" class="vc_row wpb_row vc_row-fluid stm_fixed_background vc_custom_1536836667813 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving" style="position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px;">
+<div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.6" data-vc-parallax-image="https://i0.wp.com/pecpte.com/wp-content/uploads/2018/09/achivements.jpg?fit=1920%2C1000&amp;ssl=1" class="vc_row wpb_row vc_row-fluid stm_fixed_background vc_custom_1536836667813 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving" style="position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px;">
         <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper" style="margin-left: 100px;">
 <div class="aa5b84e1f5e48d81091fc279a089999c3 vc_empty_space" style="height: 42px">
     <span class="vc_empty_space_inner"></span>

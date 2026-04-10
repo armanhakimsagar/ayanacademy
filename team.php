@@ -48,7 +48,7 @@ include('header.php');
 <div id="main">
     <style>
         #wrapper #main {
-            min-height: 400px !important;
+            min-height: 0px !important;
         }
 
         .team-section {
@@ -128,7 +128,7 @@ include('header.php');
                     <div class="team-box">
                         <img src="<?php echo e($teamImage); ?>" alt="<?php echo e($name); ?>">
 
-                        <div class="team-content">
+                        <div class="team-content" style="text-align: left;">
                             <h4><?php echo e($name); ?></h4>
 
                             <?php if (!empty($role)): ?>

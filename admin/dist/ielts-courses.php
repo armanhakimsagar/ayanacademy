@@ -344,8 +344,8 @@ if (isset($_POST['submit_course'])) {
                       <div class="mb-3"><label class="form-label">Lecture Hour Details</label><input type="text" name="lecture_hour_details" class="form-control" value="<?php echo h($edit_data['lecture_hour_details']); ?>"></div>
                       <div class="mb-3"><label class="form-label">Course Amount</label><input type="text" name="course_amount" class="form-control" value="<?php echo h($edit_data['course_amount']); ?>"></div>
                       <div class="mb-3"><label class="form-label">Course Level</label><input type="text" name="course_level" class="form-control" value="<?php echo h($edit_data['course_level']); ?>"></div>
-                      <div class="mb-3"><label class="form-label">Total Lecture</label><input type="text" name="total_lecture" class="form-control" value="<?php echo h($edit_data['total_lecture']); ?>"></div>
-                      <div class="mb-3"><label class="form-label">How Many Hour Lecture</label><input type="text" name="how_many_hour_lecture" class="form-control" value="<?php echo h($edit_data['how_many_hour_lecture']); ?>"></div>
+                      <div class="mb-3"><label class="form-label">Number of total Lecture</label><input type="text" name="total_lecture" class="form-control" value="<?php echo h($edit_data['total_lecture']); ?>"></div>
+                      <div class="mb-3"><label class="form-label">Lecture Hour Per Class</label><input type="text" name="how_many_hour_lecture" class="form-control" value="<?php echo h($edit_data['how_many_hour_lecture']); ?>"></div>
                       <div class="mb-3"><label class="form-label">Course Details</label><textarea name="course_long_description" id="course_long_description" class="form-control summernote"><?php echo h($edit_data['course_long_description']); ?></textarea></div>
                       <div class="mb-3"><label class="form-label">Course Curriculum</label><textarea name="course_curriculum" id="course_curriculum" class="form-control summernote"><?php echo h($edit_data['course_curriculum']); ?></textarea></div>
                     </div>

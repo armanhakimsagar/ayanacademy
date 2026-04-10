@@ -38,7 +38,7 @@ include('header.php');
 <div id="main">
     <style>
         #wrapper #main {
-            min-height: 400px !important;
+            min-height: 0px !important;
         }
 
         .achievement-gallery {

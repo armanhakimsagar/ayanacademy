@@ -742,254 +742,6 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 }
 </style>
 
-
-
-
-<style id="aa-submenu-overlap-fix">
-/* Submenu must stay above content on inner pages */
-body,
-#wrapper,
-#main,
-.stm_lms_breadcrumbs,
-.stm_lms_breadcrumbs__header_default{
-    overflow: visible !important;
-}
-
-#header,
-#header .header_default,
-#header .header_default .container,
-#header .header_default .row,
-#header .header_default [class*="col-"],
-#header .header_main_menu_wrapper,
-#header .header_main_menu_wrapper .collapse,
-#header .header_main_menu_wrapper .navbar-collapse,
-#header .header_main_menu_wrapper .header-menu,
-#header .header_main_menu_wrapper .header-menu > li,
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu,
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li{
-    overflow: visible !important;
-}
-
-#header{
-    position: relative !important;
-    z-index: 999999 !important;
-}
-
-#header .header_default,
-#header .header_main_menu_wrapper,
-#header .header_main_menu_wrapper .collapse.navbar-collapse.pull-right{
-    position: relative !important;
-    z-index: 999999 !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li{
-    position: relative !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu{
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    display: none !important;
-    min-width: 250px !important;
-    background: #fff !important;
-    margin: 0 !important;
-    padding: 10px 0 !important;
-    list-style: none !important;
-    border-radius: 8px !important;
-    box-shadow: 0 12px 30px rgba(0,0,0,.18) !important;
-    z-index: 9999999 !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li:hover > ul.sub-menu{
-    display: block !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li{
-    position: relative !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > ul.sub-menu{
-    position: absolute !important;
-    top: 0 !important;
-    left: 100% !important;
-    display: none !important;
-    min-width: 250px !important;
-    background: #fff !important;
-    margin: 0 0 0 6px !important;
-    padding: 10px 0 !important;
-    list-style: none !important;
-    border-radius: 8px !important;
-    box-shadow: 0 12px 30px rgba(0,0,0,.18) !important;
-    z-index: 9999999 !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li:hover > ul.sub-menu{
-    display: block !important;
-}
-
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > a,
-#header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > ul.sub-menu > li > a{
-    display: block !important;
-    white-space: nowrap !important;
-    color: black !important;
-    background-color: white !important;
-}
-
-@media only screen and (max-width: 991px){
-    #header .header_main_menu_wrapper .header-menu > li > ul.sub-menu,
-    #header .header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > ul.sub-menu{
-        position: static !important;
-        min-width: 100% !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-    }
-}
-</style>
-
-
-<style>
-/* FORCE BLACK DROPDOWN */
-.header_main_menu_wrapper .header-menu > li > ul.sub-menu,
-.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > ul.sub-menu{
-    background:#000 !important;
-    opacity:1 !important;
-    backdrop-filter:none !important;
-    -webkit-backdrop-filter:none !important;
-}
-
-/* text */
-.header_main_menu_wrapper .header-menu > li > ul.sub-menu li a{
-    color:#fff !important;
-}
-
-/* hover */
-.header_main_menu_wrapper .header-menu > li > ul.sub-menu li:hover > a{
-    background:#222 !important;
-    color:#fff !important;
-}
-</style>
-
-
-<style>
-/* Mobile Top Bar: show only phone & social */
-@media (max-width: 767px){
-    .header_top_bar .top_bar_left span:not(.top_bar_phone),
-    .header_top_bar .top_bar_left a:not(.top_bar_phone){
-        display:none !important;
-    }
-    .header_top_bar .top_bar_right{
-        display:flex !important;
-        justify-content:flex-end !important;
-        align-items:center;
-    }
-    .header_top_bar .top_bar_left{
-        display:flex !important;
-        align-items:center;
-    }
-}
-</style>
-
-
-<style id="aa-mobile-topbar-only-phone-social-final">
-@media only screen and (max-width: 991px){
-    /* topbar layout */
-    .header_top_bar{
-        display:block !important;
-        padding:10px 0 !important;
-    }
-
-    .header_top_bar .container,
-    .header_top_bar .clearfix{
-        display:flex !important;
-        align-items:center !important;
-        justify-content:space-between !important;
-        gap:12px !important;
-        flex-wrap:nowrap !important;
-    }
-
-    /* hide empty left/login blocks */
-    .header_top_bar .pull-left,
-    .header_top_bar .header_login_url{
-        display:none !important;
-    }
-
-    /* show socials */
-    .header_top_bar .pull-right,
-    .header_top_bar .header_top_bar_socs,
-    .header_top_bar .header_top_bar_socs ul,
-    .header_top_bar .header_top_bar_socs ul li{
-        display:block !important;
-    }
-
-    .header_top_bar .header_top_bar_socs{
-        float:none !important;
-        order:2 !important;
-        flex:0 0 auto !important;
-    }
-
-    .header_top_bar .header_top_bar_socs ul{
-        display:flex !important;
-        align-items:center !important;
-        justify-content:flex-end !important;
-        gap:8px !important;
-        margin:0 !important;
-        padding:0 !important;
-        list-style:none !important;
-    }
-
-    .header_top_bar .header_top_bar_socs ul li{
-        margin:0 !important;
-        padding:0 !important;
-    }
-
-    .header_top_bar .header_top_bar_socs ul li a{
-        display:inline-flex !important;
-        align-items:center !important;
-        justify-content:center !important;
-        width:30px !important;
-        height:30px !important;
-        color:#fff !important;
-    }
-
-    /* show only phone item */
-    .header_top_bar .xs-pull-left{
-        float:none !important;
-        order:1 !important;
-        flex:1 1 auto !important;
-        width:auto !important;
-        min-width:0 !important;
-    }
-
-    .header_top_bar .xs-pull-left .top_bar_info{
-        display:flex !important;
-        align-items:center !important;
-        margin:0 !important;
-        padding:0 !important;
-        list-style:none !important;
-    }
-
-    .header_top_bar .xs-pull-left .top_bar_info li.hidden-info{
-        display:none !important;
-        margin:0 !important;
-        padding:0 !important;
-        white-space:nowrap !important;
-    }
-
-    .header_top_bar .xs-pull-left .top_bar_info li.hidden-info:last-child{
-        display:inline-flex !important;
-        align-items:center !important;
-        font-size:14px !important;
-        line-height:1.4 !important;
-        color:#fff !important;
-    }
-
-    .header_top_bar .xs-pull-left .top_bar_info li.hidden-info:last-child i{
-        margin-right:7px !important;
-    }
-}
-</style>
-
 </head>
 <body class="home page-template-default page page-id-7 stm_lms_button theme-masterstudy woocommerce-js skin_custom_color classic_lms masterstudy-theme stm_preloader_0 wpb-js-composer js-comp-ver-6.8.0 vc_responsive" ontouchstart="" style="padding-bottom: 0px;">
 
@@ -1069,15 +821,15 @@ body,
             <div class="collapse navbar-collapse header-menu-mobile" id="header_menu_toggler">
                 <ul class="header-menu clearfix">
                     <li id="menu-item-2065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-2251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="about.php">About Us</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+<li id="menu-item-2251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="/about">About Us</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
-    <li id="menu-item-4979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.php">Our Team</a></li>
-    <li id="menu-item-3719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3719"><a href="mission.php">Our Mission</a></li>
-    <li id="menu-item-3720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3720"><a href="vision.php">Our Vision</a></li>
-    <li id="menu-item-3721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="certificates.php">Certificates</a></li>
+    <li id="menu-item-4979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.html">Our Team</a></li>
+    <li id="menu-item-3719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3719"><a href="mission.html">Our Mission</a></li>
+    <li id="menu-item-3720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3720"><a href="mission.html">Our Vision</a></li>
+    <li id="menu-item-3721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="certificates.html">Certificates</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1176"><a href="study.php">Services</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+<li id="menu-item-1176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1176"><a href="https://pecpte.com/services/">Services</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
     <li id="menu-item-3713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3713"><a href="study.php">Study Abroad</a>
     <ul class="sub-menu">
@@ -1095,7 +847,7 @@ body,
     <li id="menu-item-3758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3758"><a href="study.php">PTE Exam Registration</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1873"><a href="course.php">Courses</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+<li id="menu-item-1873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1873"><a href="study.php">Courses</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
     <li id="menu-item-3723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3723"><a href="study.php">PTE Academic</a>
     <ul class="sub-menu">
@@ -1112,14 +864,14 @@ body,
 <li id="menu-item-3938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3938"></span>
 
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1492"><a href="gallery.php">Gallery</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+<li id="menu-item-1492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1492"><a href="">Gallery</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
-    <li id="menu-item-3726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3726"><a href="gallery.php?gallery=pte-score-card">PTE Score Card</a></li>
-    <li id="menu-item-3757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3757"><a href="gallery.php?gallery=seminar-pics">Seminar Pics</a></li>
-    <li id="menu-item-1566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1566"><a href="faq.php">FAQ</a></li>
+    <li id="menu-item-3726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3726"><a href="">PTE Score Card</a></li>
+    <li id="menu-item-3757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3757"><a href="">Seminar Pics</a></li>
+    <li id="menu-item-1566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1566"><a href="">FAQ</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
-<li id="menu-item-1167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a href="contact.php">Contact Us</a><div class="magic_line" style="max-width: 0px;"></div></li>
+<li id="menu-item-1167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a href="">Contact Us</a><div class="magic_line" style="max-width: 0px;"></div></li>
 <li class="menu-item wpmenucartli wpmenucart-display-right menu-item empty-wpmenucart" id="wpmenucartli" style=""><a class="wpmenucart-contents empty-wpmenucart" style="display:none">&nbsp;</a><div class="magic_line" style="max-width: 0px;"></div></li>                    <li>
 
                     <div class="magic_line" style="max-width: 0px;"></div></li>
@@ -1204,18 +956,49 @@ body,
     </div> <!-- row -->
 </div> <!-- container -->    </div>
 </div> <!-- id header -->
-<script id="aa-mobile-menu-fix">
-jQuery(function($){
-    var $mobileMenu = $('.header-menu-mobile');
+<style>
+    /* FIX SUBMENU VISIBILITY */
 
-    $mobileMenu.find('.menu-item-has-children > .arrow').off('click.aa').on('click.aa', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        var $arrow = $(this);
-        var $li = $arrow.closest('.menu-item-has-children');
-        $li.toggleClass('opened');
-        $arrow.toggleClass('active');
-        $li.children('.sub-menu').first().stop(true, true).slideToggle(180);
-    });
-});
-</script>
+.header_main_menu_wrapper,
+.header_main_menu_wrapper .header-menu,
+.header_main_menu_wrapper .header-menu > li {
+  overflow: visible !important;
+}
+
+/* Parent li */
+.header_main_menu_wrapper .header-menu > li {
+  position: relative;
+}
+
+/* First level submenu */
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0;
+  display: none;
+  z-index: 99999 !important;
+}
+
+/* Show on hover */
+.header_main_menu_wrapper .header-menu > li:hover > ul.sub-menu {
+  display: block !important;
+}
+
+/* Second level submenu (nested) */
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li {
+  position: relative;
+}
+
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li > ul.sub-menu {
+  position: absolute !important;
+  top: 0;
+  left: 100%;
+  display: none;
+  z-index: 99999 !important;
+}
+
+/* Show nested */
+.header_main_menu_wrapper .header-menu > li > ul.sub-menu > li:hover > ul.sub-menu {
+  display: block !important;
+}
+</style>

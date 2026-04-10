@@ -48,7 +48,7 @@ include('header.php');
 
     <style>
         #wrapper #main {
-            min-height: 400px !important;
+            min-height: 0px !important;
         }
     </style>
 
