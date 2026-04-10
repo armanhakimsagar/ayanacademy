@@ -654,11 +654,54 @@ include('header.php');
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         transition: transform .22s ease, box-shadow .22s ease;
+        position: relative;
     }
     .aa-course-card:hover {
         transform: translateY(-6px);
         box-shadow: 0 18px 40px rgba(25, 35, 58, 0.18);
     }
+    .aa-course-featured-tag {
+        position: absolute;
+        top: 14px;
+        left: -8px;
+        z-index: 4;
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 14px 7px 16px;
+        background: linear-gradient(90deg, #ff8a00 0%, #ff6a00 100%);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        border-radius: 0 999px 999px 0;
+        box-shadow: 0 10px 20px rgba(255, 106, 0, 0.28);
+    }
+    .aa-course-featured-tag:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid #ff8a00;
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .aa-course-pricing {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+    }
+    .aa-course-price-old {
+        font-size: 15px;
+        font-weight: 700;
+        color: #8a93a6;
+        text-decoration: line-through;
+    }
+
     .aa-course-card-image {
         display: block;
         aspect-ratio: 16 / 10;
@@ -870,6 +913,7 @@ include('header.php');
                                                         $imageSrc = course_image_src($course['course_image'] ?? '', $section['fallback_image']);
                                                     ?>
                                                     <div class="aa-course-card wow fadeInUp" data-wow-offset="60">
+                                                        <div class="aa-course-featured-tag">Featured</div>
                                                         <a href="<?php echo e($previewUrl); ?>" class="aa-course-card-image">
                                                             <img
                                                                 src="<?php echo e($imageSrc); ?>"
@@ -900,7 +944,16 @@ include('header.php');
                                                             </div>
 
                                                             <div class="aa-course-footer">
-                                                                <div class="aa-course-price">TK<?php echo number_format((float)($course['course_amount'] ?? 0), 0); ?></div>
+                                                                <?php
+                                                                    $actualPrice = (float)($course['course_amount'] ?? 0);
+                                                                    $oldPrice = $actualPrice > 0 ? round($actualPrice * 1.10) : 0;
+                                                                ?>
+                                                                <div class="aa-course-pricing">
+                                                                    <?php if ($oldPrice > 0): ?>
+                                                                        <div class="aa-course-price-old">TK<?php echo number_format($oldPrice, 0); ?></div>
+                                                                    <?php endif; ?>
+                                                                    <div class="aa-course-price">TK<?php echo number_format($actualPrice, 0); ?></div>
+                                                                </div>
                                                             </div>
                                                             <a href="<?php echo e($previewUrl); ?>" class="aa-course-preview-btn" style="margin-top: 10px;">
                                                                 Preview this course
@@ -1463,7 +1516,104 @@ include('header.php');
 
            </div>
 </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        
+<style id="aa-mobile-fixes">
+@media (max-width: 767px){
+    .header_top_bar,
+    .header_top_bar .container,
+    .header_top_bar .clearfix{
+        overflow: visible !important;
+    }
+    .header_top_bar .top_bar_info{
+        display:flex !important;
+        flex-wrap:wrap !important;
+        align-items:center !important;
+        gap:6px 10px !important;
+    }
+    .header_top_bar .top_bar_info li:last-child{
+        max-width:none !important;
+        white-space:normal !important;
+        word-break:break-word !important;
+        line-height:1.3 !important;
+    }
+    .header_top_bar .header_top_bar_socs ul{
+        flex-wrap:wrap !important;
+        justify-content:flex-start !important;
+    }
+
+    .testimonials_main_wrapper{
+        padding:0 14px !important;
+    }
+    .testimonials_main_wrapper .testimonials_main_title{
+        font-size:42px !important;
+        line-height:1.05 !important;
+    }
+    .testimonials-carousel-unit,
+    .testimonials-carousel-init,
+    .testimonials-carousel-init .owl-stage-outer,
+    .testimonials-carousel-init .owl-stage,
+    .testimonials-carousel-init .owl-item{
+        overflow:visible !important;
+    }
+    .testimonials-carousel-init .col-md-6,
+    .testimonials-carousel-init .col-sm-12,
+    .testimonials-carousel-init .col-xs-12{
+        width:100% !important;
+        float:none !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .testimonial_inner_wrapper{
+        background:#fff !important;
+        border:1px solid #e8edf7 !important;
+        border-radius:18px !important;
+        box-shadow:0 10px 26px rgba(20,30,60,.08) !important;
+        padding:18px 18px 16px !important;
+        margin:0 0 18px !important;
+    }
+    .testimonial_inner_wrapper .media,
+    .testimonial_inner_wrapper .media-body{
+        display:block !important;
+        width:100% !important;
+    }
+    .testimonial_inner_wrapper .media-left,
+    .testimonial_inner_wrapper .media-right{
+        display:none !important;
+    }
+    .testimonial_inner_wrapper .testimonial_inner_content{
+        margin-top:10px !important;
+    }
+
+    .vc_row .wpb_column .wpb_wrapper[style*="padding: 0px 0px 0px 100px"],
+    .vc_row .wpb_column .wpb_wrapper[style*="padding:0px 0px 0px 100px"]{
+        padding:0 14px !important;
+    }
+    .vc_row .wpb_column .wpb_wrapper[style*="margin-left: 100px"],
+    .vc_row .wpb_column .wpb_wrapper[style*="margin-left:100px"]{
+        margin-left:0 !important;
+    }
+
+    a[href*="wa.me"],
+    a[href*="whatsapp"],
+    .joinchat,
+    .joinchat--right,
+    .whatsapp_float,
+    .whatsapp-icon,
+    .floating-whatsapp,
+    .wabtn,
+    #joinchat,
+    #wh-widget-send-button{
+        right:14px !important;
+        left:auto !important;
+        bottom:14px !important;
+        transform:none !important;
+        max-width:calc(100vw - 28px) !important;
+    }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>
 if (typeof WOW !== "undefined") { new WOW({ mobile: true }).init(); }
 </script>

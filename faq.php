@@ -1,521 +1,319 @@
 <?php
-session_start();
-require_once '../../db.php';
+include 'db.php';
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login.php");
-    exit;
+function e($value) {
+    return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8');
 }
 
-$message = "";
-$error = "";
-$edit_mode = false;
-
-$edit_data = [
-    'id' => '',
-    'question' => '',
-    'answer' => ''
+$faqs = [
+    [
+        'question' => 'What courses does Ayan\'s Academy offer?',
+        'answer' => 'Ayan\'s Academy offers PTE Courses (On Campus), PTE Courses (Online), IELTS Courses, TOEFL Courses, Spoken English, Basic English, A to Z Grammar, Phonetics, and other language preparation programs.'
+    ],
+    [
+        'question' => 'Do you provide both online and offline classes?',
+        'answer' => 'Yes. We provide both on-campus and online learning options depending on the course and student preference.'
+    ],
+    [
+        'question' => 'How can I enroll in a course?',
+        'answer' => 'You can enroll by contacting us directly, visiting our office, or submitting an inquiry through the website. Our team will guide you through the admission process.'
+    ],
+    [
+        'question' => 'Do you provide mock tests?',
+        'answer' => 'Yes. We provide mock tests and practice support for exam preparation courses such as PTE and IELTS.'
+    ],
+    [
+        'question' => 'Do you help with study abroad applications?',
+        'answer' => 'Yes. We provide guidance for study abroad, including application support, country selection, and related consultation.'
+    ],
+    [
+        'question' => 'Where is Ayan\'s Academy located?',
+        'answer' => 'Our office is located at House no-440 (2nd Floor Left Side), Road no-6, Avenue-6, Mirpur-DOHS, Dhaka-1216.'
+    ],
+    [
+        'question' => 'What are your business hours?',
+        'answer' => 'Our business hours are Monday to Saturday, 10:00 AM to 6:00 PM. Sunday is closed.'
+    ],
+    [
+        'question' => 'How can I contact Ayan\'s Academy?',
+        'answer' => 'You can contact us by phone at +880 1319904015 or by email at info@ayansacademy.com.'
+    ],
 ];
 
-/* DELETE */
-if (isset($_GET['delete_id'])) {
-    $delete_id = (int) $_GET['delete_id'];
-
-    $delete_query = mysqli_query($conn, "DELETE FROM faq WHERE id = $delete_id");
-    if ($delete_query) {
-        header("Location: faq.php?deleted=1");
-        exit;
-    } else {
-        $error = "Delete failed.";
-    }
-}
-
-/* EDIT LOAD */
-if (isset($_GET['edit_id'])) {
-    $edit_id = (int) $_GET['edit_id'];
-    $edit_query = mysqli_query($conn, "SELECT * FROM faq WHERE id = $edit_id LIMIT 1");
-
-    if ($edit_query && mysqli_num_rows($edit_query) > 0) {
-        $edit_data = mysqli_fetch_assoc($edit_query);
-        $edit_mode = true;
-    }
-}
-
-/* SUCCESS MESSAGE */
-if (isset($_GET['deleted'])) {
-    $message = "FAQ deleted successfully.";
-}
-
-if (isset($_GET['added'])) {
-    $message = "FAQ added successfully.";
-}
-
-if (isset($_GET['updated'])) {
-    $message = "FAQ updated successfully.";
-}
-
-/* INSERT / UPDATE */
-if (isset($_POST['submit_faq'])) {
-    $id = isset($_POST['id']) ? (int) $_POST['id'] : 0;
-    $question = mysqli_real_escape_string($conn, trim($_POST['question']));
-    $answer = mysqli_real_escape_string($conn, trim($_POST['answer']));
-
-    if (empty($question)) {
-        $error = "Question is required.";
-    } elseif (empty($answer)) {
-        $error = "Answer is required.";
-    } else {
-        if ($id > 0) {
-            $update = "UPDATE faq 
-                       SET question = '$question', answer = '$answer' 
-                       WHERE id = $id";
-
-            if (mysqli_query($conn, $update)) {
-                header("Location: faq.php?updated=1");
-                exit;
-            } else {
-                $error = "Update failed.";
-            }
-        } else {
-            $insert = "INSERT INTO faq (question, answer) 
-                       VALUES ('$question', '$answer')";
-
-            if (mysqli_query($conn, $insert)) {
-                header("Location: faq.php?added=1");
-                exit;
-            } else {
-                $error = "Insert failed.";
-            }
-        }
-    }
-}
+include('header.php');
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <meta name="title" content="Admin Panel | FAQ" />
-    <meta name="author" content="Starkology" />
-    <meta name="description" content="FAQ Management" />
-    <meta name="supported-color-schemes" content="light dark" />
+<style>
+    .aa-faq-page {
+        padding: 50px 0 80px;
+        background: #f7f9fd;
+    }
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
-      crossorigin="anonymous"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/adminlte.css" />
+    .aa-faq-hero {
+        margin-bottom: 28px;
+        text-align: center;
+    }
 
-    <style>
-      .faq-answer-preview {
-        max-width: 220px;
-        white-space: nowrap;
+    .aa-faq-badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(44, 117, 228, 0.08);
+        color: #2c75e4;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+
+    .aa-faq-title {
+        margin: 0 0 12px;
+        font-size: 42px;
+        line-height: 1.15;
+        font-weight: 800;
+        color: #1f2d4d;
+    }
+
+    .aa-faq-subtitle {
+        max-width: 760px;
+        margin: 0 auto;
+        color: #5e677a;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .aa-faq-wrap {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .aa-faq-card {
+        background: #fff;
+        border: 1px solid #e8eef8;
+        border-radius: 18px;
+        box-shadow: 0 12px 28px rgba(20, 34, 66, 0.06);
         overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    </style>
-  </head>
+    }
 
-  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
-    <div class="app-wrapper">
+    .aa-faq-item + .aa-faq-item {
+        border-top: 1px solid #edf1f7;
+    }
 
-      <nav class="app-header navbar navbar-expand bg-body">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
-                <i class="bi bi-list"></i>
-              </a>
-            </li>
-            <li class="nav-item d-none d-md-block">
-              <a href="index.php" class="nav-link">Dashboard</a>
-            </li>
-          </ul>
+    .aa-faq-question {
+        width: 100%;
+        border: none;
+        background: #fff;
+        padding: 22px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        text-align: left;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 1.45;
+        font-weight: 700;
+        color: #1f2d4d;
+        transition: background-color .2s ease, color .2s ease;
+    }
 
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item d-none d-md-block">
-              <span class="nav-link">
-                Welcome,
-                <?php echo isset($_SESSION['name']) ? htmlspecialchars($_SESSION['name']) : 'Admin'; ?>
-              </span>
-            </li>
-            <li class="nav-item">
-              <a href="logout.php" class="nav-link">
-                <i class="bi bi-box-arrow-right me-1"></i> Logout
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    .aa-faq-question:hover,
+    .aa-faq-question:focus {
+        background: #f8fbff;
+        color: #2c75e4;
+        outline: none;
+    }
 
-      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-        <div class="sidebar-brand">
-          <a href="index.php" class="brand-link">
-            <img
-              src="./assets/img/AdminLTELogo.png"
-              alt="Admin Logo"
-              class="brand-image opacity-75 shadow"
-            />
-            <span class="brand-text fw-light">Admin Panel</span>
-          </a>
-        </div>
+    .aa-faq-icon {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #f1f6ff;
+        color: #2c75e4;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        transition: transform .2s ease, background-color .2s ease, color .2s ease;
+    }
 
-        <div class="sidebar-wrapper">
-          <nav class="mt-2">
-            <ul
-              class="nav sidebar-menu flex-column"
-              data-lte-toggle="treeview"
-              role="navigation"
-              aria-label="Main navigation"
-              data-accordion="false"
-              id="navigation"
-            >
-              <li class="nav-header">CMS</li>
+    .aa-faq-item.active .aa-faq-icon {
+        transform: rotate(45deg);
+        background: #2c75e4;
+        color: #fff;
+    }
 
-              <li class="nav-item">
-                <a href="index.php" class="nav-link">
-                  <i class="nav-icon bi bi-image"></i>
-                  <p>Banner</p>
-                </a>
-              </li>
+    .aa-faq-answer {
+        display: none;
+        padding: 0 24px 24px;
+        color: #4b5568;
+        font-size: 16px;
+        line-height: 1.85;
+        background: #fff;
+    }
 
-              <li class="nav-item">
-                <a href="logo.php" class="nav-link">
-                  <i class="nav-icon bi bi-badge-ad"></i>
-                  <p>Logo</p>
-                </a>
-              </li>
+    .aa-faq-item.active .aa-faq-answer {
+        display: block;
+    }
 
-              <li class="nav-item">
-                <a href="pte-courses-campus.php" class="nav-link">
-                  <i class="nav-icon bi bi-book"></i>
-                  <p>PTE Courses (On Campus)</p>
-                </a>
-              </li>
+    .aa-faq-contact {
+        margin-top: 30px;
+        background: linear-gradient(135deg, #2c75e4 0%, #4f46e5 100%);
+        color: #fff;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 16px 34px rgba(44, 117, 228, 0.18);
+    }
 
-              <li class="nav-item">
-                <a href="pte-courses-online.php" class="nav-link">
-                  <i class="nav-icon bi bi-laptop"></i>
-                  <p>PTE Courses (Online)</p>
-                </a>
-              </li>
+    .aa-faq-contact h3 {
+        margin: 0 0 10px;
+        font-size: 28px;
+        line-height: 1.2;
+        color: #fff;
+    }
 
-              <li class="nav-item">
-                <a href="our-achievements.php" class="nav-link">
-                  <i class="nav-icon bi bi-trophy"></i>
-                  <p>Our Achievements</p>
-                </a>
-              </li>
+    .aa-faq-contact p {
+        margin: 0 0 18px;
+        color: rgba(255,255,255,0.92);
+        line-height: 1.8;
+    }
 
-              <li class="nav-item">
-                <a href="blogs.php" class="nav-link">
-                  <i class="nav-icon bi bi-pencil-square"></i>
-                  <p>Our Blogs</p>
-                </a>
-              </li>
+    .aa-faq-contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 
-              <li class="nav-item">
-                <a href="testimonials.php" class="nav-link">
-                  <i class="nav-icon bi bi-chat-left-quote"></i>
-                  <p>Testimonials</p>
-                </a>
-              </li>
+    .aa-faq-contact-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.16);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        border: 1px solid rgba(255,255,255,0.22);
+    }
 
-              <li class="nav-item">
-                <a href="overseas-universities.php" class="nav-link">
-                  <i class="nav-icon bi bi-mortarboard"></i>
-                  <p>Overseas Universities</p>
-                </a>
-              </li>
+    .aa-faq-contact-links a:hover,
+    .aa-faq-contact-links a:focus {
+        background: #fff;
+        color: #2c75e4;
+        text-decoration: none;
+    }
 
-              <li class="nav-item">
-                <a href="about-us.php" class="nav-link">
-                  <i class="nav-icon bi bi-info-circle"></i>
-                  <p>About Us</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="team.php" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Team</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="mission-vision.php" class="nav-link">
-                  <i class="nav-icon bi bi-bullseye"></i>
-                  <p>Mission / Vision</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="achievement.php" class="nav-link">
-                  <i class="nav-icon bi bi-award"></i>
-                  <p>Achievement</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="services.php" class="nav-link">
-                  <i class="nav-icon bi bi-briefcase"></i>
-                  <p>Service</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="course.php" class="nav-link">
-                  <i class="nav-icon bi bi-journal-text"></i>
-                  <p>Course</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="gallery.php" class="nav-link">
-                  <i class="nav-icon bi bi-images"></i>
-                  <p>Gallery</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="faq.php" class="nav-link active">
-                  <i class="nav-icon bi bi-question-circle"></i>
-                  <p>FAQ</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="logout.php" class="nav-link">
-                  <i class="nav-icon bi bi-box-arrow-right"></i>
-                  <p>Logout</p>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </aside>
-
-      <main class="app-main">
-        <div class="app-content-header">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-6">
-                <h3 class="mb-0">FAQ</h3>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">FAQ</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="app-content">
-          <div class="container-fluid">
-
-            <?php if (!empty($message)) { ?>
-              <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <?php echo $message; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              </div>
-            <?php } ?>
-
-            <?php if (!empty($error)) { ?>
-              <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <?php echo $error; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              </div>
-            <?php } ?>
-
-            <div class="row">
-              <div class="col-md-5">
-                <div class="card card-primary card-outline mb-4">
-                  <div class="card-header">
-                    <div class="card-title">
-                      <?php echo $edit_mode ? 'Edit FAQ' : 'Add FAQ'; ?>
-                    </div>
-                  </div>
-
-                  <form action="" method="post">
-                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($edit_data['id']); ?>">
-
-                    <div class="card-body">
-                      <div class="mb-3">
-                        <label class="form-label">Question</label>
-                        <input
-                          type="text"
-                          name="question"
-                          class="form-control"
-                          value="<?php echo htmlspecialchars($edit_data['question']); ?>"
-                          required
-                        >
-                      </div>
-
-                      <div class="mb-3">
-                        <label class="form-label">Answer</label>
-                        <textarea
-                          name="answer"
-                          class="form-control"
-                          rows="5"
-                          required
-                        ><?php echo htmlspecialchars($edit_data['answer']); ?></textarea>
-                      </div>
-                    </div>
-
-                    <div class="card-footer">
-                      <button type="submit" name="submit_faq" class="btn btn-primary">
-                        <?php echo $edit_mode ? 'Update' : 'Submit'; ?>
-                      </button>
-
-                      <?php if ($edit_mode) { ?>
-                        <a href="faq.php" class="btn btn-secondary">Cancel</a>
-                      <?php } ?>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <div class="col-md-7">
-                <div class="card card-primary card-outline mb-4">
-                  <div class="card-header">
-                    <div class="card-title">View FAQ</div>
-                  </div>
-
-                  <div class="card-body table-responsive">
-                    <table class="table table-bordered table-striped align-middle">
-                      <thead>
-                        <tr>
-                          <th style="width: 60px;">ID</th>
-                          <th style="width: 220px;">Question</th>
-                          <th>Answer</th>
-                          <th style="width: 180px;">Created At</th>
-                          <th style="width: 150px;">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <?php
-                        $faq_query = mysqli_query($conn, "SELECT * FROM faq ORDER BY id DESC");
-                        if ($faq_query && mysqli_num_rows($faq_query) > 0) {
-                            while ($row = mysqli_fetch_assoc($faq_query)) {
-                        ?>
-                          <tr>
-                            <td><?php echo $row['id']; ?></td>
-                            <td><?php echo htmlspecialchars($row['question']); ?></td>
-                            <td
-                              class="faq-answer-preview"
-                              title="<?php echo htmlspecialchars($row['answer']); ?>"
-                            >
-                              <?php
-                                $text = $row['answer'];
-                                $short = mb_substr($text, 0, 20);
-                                echo htmlspecialchars($short) . (mb_strlen($text) > 20 ? '...' : '');
-                              ?>
-                            </td>
-                            <td><?php echo $row['created_at']; ?></td>
-                            <td>
-                              <a
-                                href="faq.php?edit_id=<?php echo $row['id']; ?>"
-                                class="btn btn-success btn-sm"
-                              >
-                                Edit
-                              </a>
-                              <a
-                                href="faq.php?delete_id=<?php echo $row['id']; ?>"
-                                class="btn btn-danger btn-sm"
-                                onclick="return confirm('Are you sure you want to delete this FAQ?')"
-                              >
-                                Delete
-                              </a>
-                            </td>
-                          </tr>
-                        <?php
-                            }
-                        } else {
-                        ?>
-                          <tr>
-                            <td colspan="5" class="text-center">No FAQ found.</td>
-                          </tr>
-                        <?php } ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </main>
-
-      <footer class="app-footer">
-        <div class="float-end d-none d-sm-inline">CMS Management Panel</div>
-        All rights reserved.
-      </footer>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/adminlte.js"></script>
-
-    <script>
-      const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
-      const Default = {
-        scrollbarTheme: 'os-theme-light',
-        scrollbarAutoHide: 'leave',
-        scrollbarClickScroll: true,
-      };
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-        const isMobile = window.innerWidth <= 992;
-
-        if (
-          sidebarWrapper &&
-          OverlayScrollbarsGlobal?.OverlayScrollbars !== undefined &&
-          !isMobile
-        ) {
-          OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-            scrollbars: {
-              theme: Default.scrollbarTheme,
-              autoHide: Default.scrollbarAutoHide,
-              clickScroll: Default.scrollbarClickScroll,
-            },
-          });
+    @media (max-width: 767px) {
+        .aa-faq-page {
+            padding: 36px 0 60px;
         }
-      });
-    </script>
-  </body>
-</html>
+
+        .aa-faq-title {
+            font-size: 32px;
+        }
+
+        .aa-faq-subtitle {
+            font-size: 15px;
+        }
+
+        .aa-faq-question {
+            padding: 18px 16px;
+            font-size: 17px;
+        }
+
+        .aa-faq-answer {
+            padding: 0 16px 18px;
+            font-size: 15px;
+        }
+
+        .aa-faq-contact {
+            padding: 22px 18px;
+            border-radius: 16px;
+        }
+
+        .aa-faq-contact h3 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<div id="main">
+    <div class="aa-faq-page">
+        <div class="container">
+            <div class="aa-faq-hero wow fadeInUp" data-wow-offset="80">
+                <div class="aa-faq-badge">Frequently Asked Questions</div>
+                <h1 class="aa-faq-title">FAQ</h1>
+                <p class="aa-faq-subtitle">
+                    Find quick answers about our courses, admission process, study abroad support, contact details, and class formats.
+                </p>
+            </div>
+
+            <div class="aa-faq-wrap">
+                <div class="aa-faq-card wow fadeInUp" data-wow-offset="60">
+                    <?php foreach ($faqs as $index => $faq): ?>
+                        <div class="aa-faq-item<?php echo $index === 0 ? ' active' : ''; ?>">
+                            <button type="button" class="aa-faq-question">
+                                <span><?php echo e($faq['question']); ?></span>
+                                <span class="aa-faq-icon">+</span>
+                            </button>
+                            <div class="aa-faq-answer">
+                                <p><?php echo e($faq['answer']); ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <div class="aa-faq-contact wow fadeInUp" data-wow-offset="60">
+                    <h3>Still need help?</h3>
+                    <p>
+                        Reach out to Ayan's Academy for course guidance, admission support, or study abroad consultation.
+                    </p>
+                    <div class="aa-faq-contact-links">
+                        <a href="tel:+8801319904015">Call Now</a>
+                        <a href="mailto:info@ayansacademy.com">Email Us</a>
+                        <a href="contact.php">Contact Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+if (typeof WOW !== "undefined") {
+    new WOW({ mobile: true }).init();
+}
+
+document.querySelectorAll('.aa-faq-question').forEach(function(button) {
+    button.addEventListener('click', function () {
+        var item = button.closest('.aa-faq-item');
+        var card = button.closest('.aa-faq-card');
+
+        if (!item || !card) return;
+
+        card.querySelectorAll('.aa-faq-item').forEach(function(other) {
+            if (other !== item) {
+                other.classList.remove('active');
+            }
+        });
+
+        item.classList.toggle('active');
+    });
+});
+</script>
+
+<footer data-wpr-lazyrender="1" id="footer" class="parallax-off">
+    <div class="footer_wrapper">
+        <div id="footer_bottom" style="background-color: black;">
+            <div class="footer_widgets_wrapper kek text-upper">
+                <?php include('footer.php') ?>
+            </div>
+        </div>
+    </div>
+</footer>

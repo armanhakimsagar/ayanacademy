@@ -191,136 +191,160 @@ if (isset($_POST['submit_testimonial'])) {
 
         <div class="sidebar-wrapper">
           <nav class="mt-2">
-            <ul
-              class="nav sidebar-menu flex-column"
-              data-lte-toggle="treeview"
-              role="navigation"
-              aria-label="Main navigation"
-              data-accordion="false"
-              id="navigation"
-            >
-              <li class="nav-header">CMS</li>
+  <!--begin::Sidebar Menu-->
+  <ul
+    class="nav sidebar-menu flex-column"
+    data-lte-toggle="treeview"
+    role="navigation"
+    aria-label="Main navigation"
+    data-accordion="false"
+    id="navigation"
+  >
+    <li class="nav-header">CMS</li>
 
-              <li class="nav-item">
-                <a href="index.php" class="nav-link">
-                  <i class="nav-icon bi bi-image"></i>
-                  <p>Banner</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="index.php" class="nav-link">
+        <i class="nav-icon bi bi-image"></i>
+        <p>Banner</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="logo.php" class="nav-link">
-                  <i class="nav-icon bi bi-badge-ad"></i>
-                  <p>Logo</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="logo.php" class="nav-link">
+        <i class="nav-icon bi bi-badge-ad"></i>
+        <p>Logo</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="pte-courses-campus.php" class="nav-link">
-                  <i class="nav-icon bi bi-book"></i>
-                  <p>PTE Courses (On Campus)</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="pte-courses-campus.php" class="nav-link">
+        <i class="nav-icon bi bi-book"></i>
+        <p>PTE Courses (On Campus)</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="pte-courses-online.php" class="nav-link">
-                  <i class="nav-icon bi bi-laptop"></i>
-                  <p>PTE Courses (Online)</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="pte-courses-online.php" class="nav-link">
+        <i class="nav-icon bi bi-laptop"></i>
+        <p>PTE Courses (Online)</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="our-achievements.php" class="nav-link">
-                  <i class="nav-icon bi bi-trophy"></i>
-                  <p>Our Achievements</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="ielts-courses.php" class="nav-link">
+        <i class="nav-icon bi bi-journal-text"></i>
+        <p>IELTS Courses</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="blogs.php" class="nav-link">
-                  <i class="nav-icon bi bi-pencil-square"></i>
-                  <p>Our Blogs</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="tofel-courses.php" class="nav-link">
+        <i class="nav-icon bi bi-journal-text"></i>
+        <p>TOFEL Courses</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="testimonials.php" class="nav-link active">
-                  <i class="nav-icon bi bi-chat-left-quote"></i>
-                  <p>Testimonials</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="our-achievements.php" class="nav-link">
+        <i class="nav-icon bi bi-trophy"></i>
+        <p>Our Achievements</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="overseas-universities.php" class="nav-link">
-                  <i class="nav-icon bi bi-mortarboard"></i>
-                  <p>Overseas Universities</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="blogs.php" class="nav-link">
+        <i class="nav-icon bi bi-pencil-square"></i>
+        <p>Our Blogs</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="about-us.php" class="nav-link">
-                  <i class="nav-icon bi bi-info-circle"></i>
-                  <p>About Us</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="testimonials.php" class="nav-link">
+        <i class="nav-icon bi bi-chat-left-quote"></i>
+        <p>Testimonials</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="team.php" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Team</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="overseas-universities.php" class="nav-link">
+        <i class="nav-icon bi bi-mortarboard"></i>
+        <p>Overseas Universities</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="mission-vision.php" class="nav-link">
-                  <i class="nav-icon bi bi-bullseye"></i>
-                  <p>Mission / Vision</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="about-us.php" class="nav-link">
+        <i class="nav-icon bi bi-info-circle"></i>
+        <p>About Us</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="achievement.php" class="nav-link">
-                  <i class="nav-icon bi bi-award"></i>
-                  <p>Achievement</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="team.php" class="nav-link">
+        <i class="nav-icon bi bi-people"></i>
+        <p>Team</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="services.php" class="nav-link">
-                  <i class="nav-icon bi bi-briefcase"></i>
-                  <p>Service</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="mission-vision.php" class="nav-link">
+        <i class="nav-icon bi bi-bullseye"></i>
+        <p>Mission / Vision</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="courses.php" class="nav-link">
-                  <i class="nav-icon bi bi-journal-text"></i>
-                  <p>Course</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="achievement.php" class="nav-link">
+        <i class="nav-icon bi bi-award"></i>
+        <p>Achievement</p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="gallery.php" class="nav-link">
-                  <i class="nav-icon bi bi-images"></i>
-                  <p>Gallery</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="services.php" class="nav-link">
+        <i class="nav-icon bi bi-briefcase"></i>
+        <p>
+          Service
+        </p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="faq.php" class="nav-link">
-                  <i class="nav-icon bi bi-question-circle"></i>
-                  <p>FAQ</p>
-                </a>
-              </li>
+    <li class="nav-item">
+      <a href="courses.php" class="nav-link">
+        <i class="nav-icon bi bi-journal-text"></i>
+        <p>
+          Course
+        </p>
+      </a>
+    </li>
 
-              <li class="nav-item">
-                <a href="logout.php" class="nav-link">
-                  <i class="nav-icon bi bi-box-arrow-right"></i>
-                  <p>Logout</p>
-                </a>
-              </li>
-            </ul>
-          </nav>
+    <li class="nav-item">
+      <a href="gallery.php" class="nav-link">
+        
+      <i class="nav-icon bi bi-journal-text"></i>
+        <p>
+          Gallery
+        </p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="faq.php" class="nav-link">
+        
+      <i class="nav-icon bi bi-journal-text"></i>
+        <p>FAQ</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      
+    <i class="nav-icon bi bi-journal-text"></i>
+      <a href="logout.php" class="nav-link">
+        <p>Logout</p>
+      </a>
+    </li>
+  </ul>
+  <!--end::Sidebar Menu-->
+</nav>
         </div>
       </aside>
 
