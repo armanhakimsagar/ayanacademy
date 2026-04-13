@@ -45,7 +45,7 @@ include('header.php');
 
     <style>
         #wrapper #main {
-            min-height: 400px !important;
+            min-height: 50px !important;
         }
 
         .blog-content {

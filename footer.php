@@ -1,106 +1,208 @@
-<style>
-    .socials_widget_wrapper .widget_socials{
-        max-width: 345px !important;
-    }
+
+<style id="aa-glossy-footer-cards">
+#footer_bottom{
+    background:linear-gradient(180deg,#111827 0%, #0f172a 100%) !important;
+}
+#footer_bottom .widgets.cols_4.clearfix{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:24px !important;
+    align-items:stretch !important;
+}
+#footer_bottom .widgets.cols_4.clearfix > aside{
+    float:none !important;
+    width:calc((100% - 48px) / 3) !important;
+    margin:0 !important;
+}
+.aa-footer-card{
+    height:100%;
+    border-radius:24px;
+    padding:24px 22px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 100%);
+    border:1px solid rgba(255,255,255,0.14);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    position:relative;
+    overflow:hidden;
+}
+.aa-footer-card:before{
+    content:"";
+    position:absolute;
+    right:-45px;
+    top:-45px;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:rgba(255,167,0,.14);
+    pointer-events:none;
+}
+.aa-footer-card .widget_title{margin-bottom:18px !important;}
+.aa-footer-card .widget_title h3{
+    margin:0 !important;
+    color:#ffffff !important;
+    font-size:22px !important;
+    line-height:1.2 !important;
+}
+.aa-footer-card, .aa-footer-card p, .aa-footer-card td, .aa-footer-card li, .aa-footer-card a{
+    color:rgba(255,255,255,.92) !important;
+}
+.aa-footer-card a:hover{color:#ffd36a !important;}
+.aa-footer-card .table_working_hours{width:100%; margin:0;}
+.aa-footer-card .table_working_hours tr{border-bottom:1px solid rgba(255,255,255,.10);}
+.aa-footer-card .table_working_hours tr:last-child{border-bottom:none;}
+.aa-footer-card .table_working_hours td{padding:10px 0 !important; vertical-align:top;}
+.aa-footer-card .table_working_hours .day_label{font-weight:700 !important;}
+.aa-footer-card .table_working_hours .closed span{color:#ffd36a !important;}
+.aa-footer-contact-list{display:flex; flex-direction:column; gap:14px;}
+.aa-footer-contact-item{
+    display:flex; align-items:flex-start; gap:12px;
+    padding:12px 14px; border-radius:16px; background:rgba(255,255,255,.06);
+}
+.aa-footer-contact-item i{width:18px; margin-top:2px; color:#ffd36a;}
+.aa-footer-card .socials_widget_wrapper .widget_socials{
+    display:flex !important; flex-wrap:wrap !important; gap:12px !important; max-width:none !important;
+}
+.aa-footer-card .socials_widget_wrapper .widget_socials li{margin:0 !important;}
+.aa-footer-card .socials_widget_wrapper .widget_socials li .front a,
+.aa-footer-card .socials_widget_wrapper .widget_socials li .back a{
+    width:48px !important; height:48px !important; border-radius:14px !important;
+    background:rgba(255,255,255,.10) !important;
+    display:flex !important; align-items:center !important; justify-content:center !important; box-shadow:none !important;
+}
+.aa-footer-card .socials_widget_wrapper .widget_socials li .front a i,
+.aa-footer-card .socials_widget_wrapper .widget_socials li .back a i{
+    color:#ffffff !important; font-size:18px !important;
+}
+.aa-footer-card .socials_widget_wrapper .widget_socials li:hover .front a,
+.aa-footer-card .socials_widget_wrapper .widget_socials li:hover .back a{
+    background:#ffa700 !important;
+}
+@media (max-width: 991px){
+    #footer_bottom .widgets.cols_4.clearfix > aside{width:100% !important;}
+    .aa-footer-card{padding:20px 18px; border-radius:20px;}
+}
+
 </style>
 
-<div class="container">
-                    <div class="widgets cols_4 clearfix">
 
-                        <aside id="working_hours-4" class="widget widget_working_hours">
+<style id="aa-footer-grid-fixes">
+#aa-custom-footer .aa-footer-grid,
+.footer_wrapper .aa-footer-grid{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:28px !important;
+    align-items:stretch !important;
+    justify-content:space-between !important;
+}
+#aa-custom-footer.widgets,
+#aa-custom-footer .widgets,
+.footer_wrapper .widgets.aa-footer-grid{
+    width:100% !important;
+}
+#aa-custom-footer .aa-footer-grid > aside,
+.footer_wrapper .aa-footer-grid > aside{
+    flex:1 1 0 !important;
+    width:auto !important;
+    max-width:none !important;
+    margin:0 !important;
+    min-height:100% !important;
+    float:none !important;
+    display:block !important;
+}
+#aa-custom-footer .aa-footer-card,
+.footer_wrapper .aa-footer-card{
+    height:100% !important;
+    box-sizing:border-box;
+}
+#aa-custom-footer .socials_widget_wrapper .widget_socials,
+.footer_wrapper .socials_widget_wrapper .widget_socials{
+    max-width:none !important;
+    width:100% !important;
+}
+.footer_wrapper .aa-footer-grid > aside.widget{
+    clear:none !important;
+}
+.footer_wrapper .widgets.cols_4 > aside{
+    float:none !important;
+}
+.footer_wrapper .socials_widget_wrapper{
+    max-width:none !important;
+}
+@media (max-width: 991px){
+    #aa-custom-footer .aa-footer-grid,
+    .footer_wrapper .aa-footer-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:18px !important;
+    }
+}
+/* ✅ ONLY MOBILE FIX */
+@media (max-width: 768px){
 
+    #footer_bottom .widgets.cols_4.clearfix,
+    #aa-custom-footer .widgets.cols_4.clearfix,
+    .footer_wrapper .widgets.cols_4.clearfix{
+        display: flex !important;
+        flex-direction: column !important;  /* niche niche */
+        gap: 20px !important;
+    }
+
+    #footer_bottom .widgets.cols_4.clearfix > aside,
+    #aa-custom-footer .widgets.cols_4.clearfix > aside,
+    .footer_wrapper .widgets.cols_4.clearfix > aside{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .aa-footer-card{
+        width: 100% !important;
+        padding: 18px !important;
+        border-radius: 18px !important;
+    }
+
+}
+</style>
+
+
+<div class="container" id="aa-custom-footer">
+    <div class="widgets cols_4 clearfix aa-footer-grid">
+        <aside id="working_hours-4" class="widget widget_working_hours aa-footer-card" style="margin: 0px 0px 10px 10px !important;padding: 10px;">
             <div class="widget_title"><h3>Business Hours</h3></div>
             <table class="table_working_hours">
-                                                            <tbody><tr class="opened">
-                            <td class="day_label h6 normal_font">Monday</td>
-                            <td class="day_value h6 normal_font">10 am - 6.00 pm</td>
-                        </tr>
-                                                                                <tr class="opened">
-                            <td class="day_label h6 normal_font">Tuesday</td>
-                            <td class="day_value h6 normal_font">10 am - 6.00 pm</td>
-                        </tr>
-                                                                                <tr class="opened">
-                            <td class="day_label h6 normal_font">Wednesday</td>
-                            <td class="day_value h6 normal_font">10 am - 6.00 pm</td>
-                        </tr>
-                                                                                <tr class="opened">
-                            <td class="day_label h6 normal_font">Thursday</td>
-                            <td class="day_value h6 normal_font">10 am - 6.00 pm</td>
-                        </tr>
-                                                                                <tr class="opened">
-                            <td class="day_label h6 normal_font">Friday</td>
-                            <td class="day_value h6 normal_font">10 am - 6.00 pm</td>
-                        </tr>
-                                                                                <tr class="opened">
-                            <td class="day_label h6 normal_font">Saturday</td>
-                            <td class="day_value h6 normal_font">10 am - 6.00 pm</td>
-                        </tr>
-                                                                                <tr class="closed">
-                            <td class="day_label h6 normal_font">Sunday</td>
-                            <td class="day_value closed h6 normal_font"><span>Closed</span></td>
-                        </tr>
-                                                </tbody></table>
-
+                <tbody>
+                    <tr class="opened"><td class="day_label h6 normal_font">Monday</td><td class="day_value h6 normal_font">10 am - 6.00 pm</td></tr>
+                    <tr class="opened"><td class="day_label h6 normal_font">Tuesday</td><td class="day_value h6 normal_font">10 am - 6.00 pm</td></tr>
+                    <tr class="opened"><td class="day_label h6 normal_font">Wednesday</td><td class="day_value h6 normal_font">10 am - 6.00 pm</td></tr>
+                    <tr class="opened"><td class="day_label h6 normal_font">Thursday</td><td class="day_value h6 normal_font">10 am - 6.00 pm</td></tr>
+                    <tr class="opened"><td class="day_label h6 normal_font">Friday</td><td class="day_value h6 normal_font">10 am - 6.00 pm</td></tr>
+                    <tr class="opened"><td class="day_label h6 normal_font">Saturday</td><td class="day_value h6 normal_font">10 am - 6.00 pm</td></tr>
+                    <tr class="closed"><td class="day_label h6 normal_font">Sunday</td><td class="day_value closed h6 normal_font"><span>Closed</span></td></tr>
+                </tbody>
+            </table>
         </aside>
-                <aside id="stm_text-3" class="widget stm_wp_widget_text"><div class="widget_title"><h3>Contact Us</h3></div>        <div class="textwidget"><p>
-Mobile : +880 1319904015<br>
-Email : info@ayansacademy.com<br></p>
-</div>
-
-        </aside><aside id="socials-2" class="widget widget_socials"><div class="widget_title"><h3>Social Network</h3></div><div class="socials_widget_wrapper"><ul class="widget_socials list-unstyled clearfix"><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener" class="facebook"><i class="fab fa-facebook"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-                                </div>
-                            </div>
-                        </li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-                                </div>
-                            </div>
-                        </li></li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener" class="youtube"><i class="fab fa-youtube"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
-                                </div>
-                            </div>
-                        </li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener" class="instagram"><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </li><li class="simple_flip_container">
-                            <div class="simple_flipper">
-                                <div class="front">
-                                    <a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                                <div class="back">
-                                    <a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </li>
-            </ul></div></aside>
-                                </div>
+        <aside id="stm_text-3" class="widget stm_wp_widget_text aa-footer-card" style="padding:10px">
+            <div class="widget_title"><h3>Contact Us</h3></div>
+            <div class="textwidget">
+                <div class="aa-footer-contact-list">
+                    <div class="aa-footer-contact-item"><i class="fa fa-phone"></i><div>+880 1319904015</div></div>
+                    <div class="aa-footer-contact-item"><i class="fa fa-envelope"></i><div>info@ayansacademy.com</div></div>
                 </div>
             </div>
-        </div>
+        </aside>
+        <aside id="socials-2" class="widget widget_socials aa-footer-card" style="padding:10px">
+            <div class="widget_title"><h3>Social Network</h3></div>
+            <div class="socials_widget_wrapper"><ul class="widget_socials list-unstyled clearfix"><li class="simple_flip_container">
+                <div class="simple_flipper"><div class="front"><a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener" class="facebook"><i class="fab fa-facebook"></i></a></div><div class="back"><a href="https://www.facebook.com/share/1c8YP6kvMn/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></div></div></li><li class="simple_flip_container">
+                <div class="simple_flipper"><div class="front"><a href="https://x.com/ayansacademy" target="_blank" rel="noopener" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></div><div class="back"><a href="https://x.com/ayansacademy" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a></div></div></li><li class="simple_flip_container">
+                <div class="simple_flipper"><div class="front"><a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener" class="youtube"><i class="fab fa-youtube"></i></a></div><div class="back"><a href="https://youtube.com/@ayansacademy?si=lAH25hFyQXTg2Hcf" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></div></div></li><li class="simple_flip_container">
+                <div class="simple_flipper"><div class="front"><a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener" class="instagram"><i class="fab fa-instagram"></i></a></div><div class="back"><a href="https://www.instagram.com/ayans_academy?igsh=amdrYXJ5eG81cnZo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></div></div></li><li class="simple_flip_container">
+                <div class="simple_flipper"><div class="front"><a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener" class="linkedin"><i class="fab fa-linkedin"></i></a></div><div class="back"><a href="https://www.linkedin.com/company/ayan-s-academy/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></div></div></li></ul></div>
+        </aside>
+    </div>
+</div>
 
-
-                <div id="footer_copyright">
+<div id="footer_copyright">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-8">
@@ -108,7 +210,7 @@ Email : info@ayansacademy.com<br></p>
                                                     <div class="pull-left">
                                                                                                         <noscript></noscript>
                                                             </div>
-                                                                            <div class="copyright_text">Copyright ©2026 Ayan's Academy All rights reserved.</div>
+                                                                            <div class="copyright_text">Copyright ©2026 Ayan's Academy All Rights Reserved</div>
                                             </div>
                 </div>
                 <div class="col-md-6 col-sm-4">
@@ -325,5 +427,104 @@ document.tidioChatCode = "x8xdhyazkdb577arbj3rrgabpbczw4d5";
 })();
 </script>    <script defer="" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;ed93474679284e09820733c88e189923&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
 
+<style>
+    /* ===== FINAL SAFE FOOTER FIX ===== */
+
+/* Desktop ঠিক থাকবে */
+#footer_bottom .widgets.cols_4.clearfix{
+    display:flex;
+    flex-wrap:wrap !important;
+    gap:24px;
+}
+
+#footer_bottom .widgets.cols_4.clearfix > aside{
+    width:calc((100% - 48px) / 3) !important;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+
+    #footer_bottom .widgets.cols_4.clearfix{
+        display:block !important;
+    }
+
+    #footer_bottom .widgets.cols_4.clearfix > aside{
+        width:100% !important;
+        margin-bottom:20px !important;
+        margin-left: 10px !important;
+    }
+
+    .aa-footer-card{
+        width:100% !important;
+        padding:18px !important;
+        box-sizing:border-box;
+    }
+
+    /* title fix */
+    .aa-footer-card .widget_title h3{
+        font-size:18px !important;
+        line-height:1.3 !important;
+    }
+
+    /* text overflow fix */
+    .aa-footer-card{
+        overflow:hidden !important;
+    }
+
+}/* ===== FINAL SAFE FOOTER FIX ===== */
+
+/* Desktop ঠিক থাকবে */
+#footer_bottom .widgets.cols_4.clearfix{
+    display:flex;
+    flex-wrap:wrap !important;
+    gap:24px;
+}
+
+#footer_bottom .widgets.cols_4.clearfix > aside{
+    width:calc((100% - 48px) / 3) !important;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+
+    #footer_bottom .widgets.cols_4.clearfix{
+        display:block !important;
+    }
+
+    #footer_bottom .widgets.cols_4.clearfix > aside{
+        width:100% !important;
+        margin-bottom:20px !important;
+    }
+
+    .aa-footer-card{
+        width:100% !important;
+        padding:18px !important;
+        box-sizing:border-box;
+    }
+
+    /* title fix */
+    .aa-footer-card .widget_title h3{
+        font-size:18px !important;
+        line-height:1.3 !important;
+    }
+
+    /* text overflow fix */
+    .aa-footer-card{
+        overflow:hidden !important;
+    }
+
+}
+/* Fix WhatsApp overlap */
+.joinchat{
+    bottom: 80px !important; /* upore tule dilam */
+    z-index: 10 !important;
+}
+
+/* Footer socials ke safe rakhte */
+#footer_copyright .copyright_socials{
+    position: relative;
+    z-index: 20;
+}
+</style>
 
 <script type="text/javascript" async="" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/x8xdhyazkdb577arbj3rrgabpbczw4d5.js.download"></script></body></html>

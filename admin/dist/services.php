@@ -409,7 +409,8 @@ if (isset($_POST['submit_service'])) {
                                 'study in new zealand',
                                 'study in denmark',
                                 'study in hungry',
-                                'study in neatherlands'
+                                'study in neatherlands',
+                                'sop'
                             ];
 
                             foreach ($service_options as $option) {

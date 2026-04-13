@@ -1,0 +1,52 @@
+[10-Apr-2026 11:23:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/ayansaca/public_html/db.php:7
+Stack trace:
+#0 /home/ayansaca/public_html/db.php(7): mysqli_connect('localhost', 'root', Object(SensitiveParameterValue), 'ayanacademy')
+#1 /home/ayansaca/public_html/index.php(2): include('/home/ayansaca/...')
+#2 {main}
+  thrown in /home/ayansaca/public_html/db.php on line 7
+[10-Apr-2026 11:23:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/ayansaca/public_html/db.php:7
+Stack trace:
+#0 /home/ayansaca/public_html/db.php(7): mysqli_connect('localhost', 'root', Object(SensitiveParameterValue), 'ayanacademy')
+#1 /home/ayansaca/public_html/index.php(2): include('/home/ayansaca/...')
+#2 {main}
+  thrown in /home/ayansaca/public_html/db.php on line 7
+[10-Apr-2026 11:27:11 UTC] PHP Warning:  require_once(../../db.php): Failed to open stream: No such file or directory in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:27:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../db.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/ayansaca/public_html/faq.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:28:34 UTC] PHP Warning:  require_once(../../db.php): Failed to open stream: No such file or directory in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:28:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../db.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/ayansaca/public_html/faq.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:30:54 UTC] PHP Warning:  require_once(../../db.php): Failed to open stream: No such file or directory in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:30:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../db.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/ayansaca/public_html/faq.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:44:17 UTC] PHP Warning:  require_once(../../db.php): Failed to open stream: No such file or directory in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 11:44:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../db.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/ayansaca/public_html/faq.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 12:27:34 UTC] PHP Warning:  require_once(../../db.php): Failed to open stream: No such file or directory in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 12:27:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../db.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/ayansaca/public_html/faq.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 12:29:49 UTC] PHP Warning:  require_once(../../db.php): Failed to open stream: No such file or directory in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 12:29:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../db.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/ayansaca/public_html/faq.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ayansaca/public_html/faq.php on line 3
+[10-Apr-2026 12:30:51 UTC] PHP Warning:  Undefined variable $bannerImage in /home/ayansaca/public_html/header.php on line 13
+[10-Apr-2026 12:30:51 UTC] PHP Warning:  Undefined variable $bannerImage in /home/ayansaca/public_html/header.php on line 21
+[10-Apr-2026 12:30:51 UTC] PHP Warning:  Undefined variable $bannerImage in /home/ayansaca/public_html/header.php on line 656
+[10-Apr-2026 12:30:51 UTC] PHP Warning:  Undefined variable $logoTransparent in /home/ayansaca/public_html/header.php on line 1052
+[10-Apr-2026 12:30:51 UTC] PHP Warning:  Undefined variable $logoColored in /home/ayansaca/public_html/header.php on line 1053
+[10-Apr-2026 12:31:04 UTC] PHP Warning:  Undefined variable $bannerImage in /home/ayansaca/public_html/header.php on line 13
+[10-Apr-2026 12:31:04 UTC] PHP Warning:  Undefined variable $bannerImage in /home/ayansaca/public_html/header.php on line 21
+[10-Apr-2026 12:31:04 UTC] PHP Warning:  Undefined variable $bannerImage in /home/ayansaca/public_html/header.php on line 656
+[10-Apr-2026 12:31:04 UTC] PHP Warning:  Undefined variable $logoTransparent in /home/ayansaca/public_html/header.php on line 1052
+[10-Apr-2026 12:31:04 UTC] PHP Warning:  Undefined variable $logoColored in /home/ayansaca/public_html/header.php on line 1053

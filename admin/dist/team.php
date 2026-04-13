@@ -17,7 +17,8 @@ $edit_data = [
     'name' => '',
     'role' => '',
     'qualifications' => '',
-    'university' => ''
+    'university' => '',
+    'details' => ''
 ];
 
 if (isset($_GET['delete_id'])) {
@@ -56,6 +57,7 @@ if (isset($_POST['submit_team'])) {
     $role = trim($_POST['role'] ?? '');
     $qualifications = trim($_POST['qualifications'] ?? '');
     $university = trim($_POST['university'] ?? '');
+    $details = $_POST['details'] ?? '';
 
     if ($name === '') {
         $error = "Name is required.";
@@ -64,6 +66,7 @@ if (isset($_POST['submit_team'])) {
         $role_esc = mysqli_real_escape_string($conn, $role);
         $qualifications_esc = mysqli_real_escape_string($conn, $qualifications);
         $university_esc = mysqli_real_escape_string($conn, $university);
+        $details_esc = mysqli_real_escape_string($conn, $details);
 
         if ($id > 0) {
             $old_image = $edit_data['image'];
@@ -93,7 +96,7 @@ if (isset($_POST['submit_team'])) {
                         }
                         $image_path = mysqli_real_escape_string($conn, $new_name);
 
-                        $update = "UPDATE team SET image='$image_path', name='$name_esc', role='$role_esc', qualifications='$qualifications_esc', university='$university_esc' WHERE id = $id";
+                        $update = "UPDATE team SET image='$image_path', name='$name_esc', role='$role_esc', qualifications='$qualifications_esc', university='$university_esc', details='$details_esc' WHERE id = $id";
                         if (mysqli_query($conn, $update)) {
                             header("Location: team.php?updated=1");
                             exit;
@@ -105,7 +108,7 @@ if (isset($_POST['submit_team'])) {
                     }
                 }
             } else {
-                $update = "UPDATE team SET name='$name_esc', role='$role_esc', qualifications='$qualifications_esc', university='$university_esc' WHERE id = $id";
+                $update = "UPDATE team SET name='$name_esc', role='$role_esc', qualifications='$qualifications_esc', university='$university_esc', details='$details_esc' WHERE id = $id";
                 if (mysqli_query($conn, $update)) {
                     header("Location: team.php?updated=1");
                     exit;
@@ -137,7 +140,7 @@ if (isset($_POST['submit_team'])) {
 
                     if (move_uploaded_file($tmp_name, $new_name)) {
                         $image_path = mysqli_real_escape_string($conn, $new_name);
-                        $insert = "INSERT INTO team (image, name, role, qualifications, university) VALUES ('$image_path', '$name_esc', '$role_esc', '$qualifications_esc', '$university_esc')";
+                        $insert = "INSERT INTO team (image, name, role, qualifications, university, details) VALUES ('$image_path', '$name_esc', '$role_esc', '$qualifications_esc', '$university_esc', '$details_esc')";
                         if (mysqli_query($conn, $insert)) {
                             header("Location: team.php?added=1");
                             exit;
@@ -171,6 +174,9 @@ if (isset($_POST['submit_team'])) {
   <style>
     .team-image-preview {width: 70px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; background: #fff; padding: 2px;}
     .team-meta-preview {min-width: 220px;}
+    .team-details-preview {max-width: 280px; white-space: normal;}
+    .team-details-preview-content {max-height: 110px; overflow: auto; font-size: 13px; line-height: 1.55; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 10px;}
+    .ck-editor__editable_inline {min-height: 220px;}
   </style>
 </head>
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
@@ -392,6 +398,10 @@ if (isset($_POST['submit_team'])) {
                 <div class="mb-3"><label class="form-label">Role</label><input type="text" name="role" class="form-control" value="<?php echo htmlspecialchars($edit_data['role'] ?? ''); ?>" placeholder="Senior Instructor"></div>
                 <div class="mb-3"><label class="form-label">Qualifications</label><input type="text" name="qualifications" class="form-control" value="<?php echo htmlspecialchars($edit_data['qualifications'] ?? ''); ?>" placeholder="MA in English, CELTA"></div>
                 <div class="mb-3"><label class="form-label">University</label><input type="text" name="university" class="form-control" value="<?php echo htmlspecialchars($edit_data['university'] ?? ''); ?>" placeholder="University of Dhaka"></div>
+                <div class="mb-3">
+                  <label class="form-label">Team Member Details</label>
+                  <textarea name="details" id="details_editor" class="form-control" rows="10"><?php echo htmlspecialchars($edit_data['details'] ?? ''); ?></textarea>
+                </div>
               </div>
               <div class="card-footer">
                 <button type="submit" name="submit_team" class="btn btn-primary"><?php echo $edit_mode ? 'Update Team Member' : 'Add Team Member'; ?></button>
@@ -412,6 +422,7 @@ if (isset($_POST['submit_team'])) {
                     <th style="width:90px;">Image</th>
                     <th>Name</th>
                     <th class="team-meta-preview">Role / Qualifications / University</th>
+                    <th class="team-details-preview">Details</th>
                     <th style="width:140px;">Action</th>
                   </tr>
                 </thead>
@@ -430,6 +441,18 @@ if (isset($_POST['submit_team'])) {
                       <?php if (!empty($row['qualifications'])): ?><div><strong>Qualifications:</strong> <?php echo htmlspecialchars($row['qualifications']); ?></div><?php endif; ?>
                       <?php if (!empty($row['university'])): ?><div><strong>University:</strong> <?php echo htmlspecialchars($row['university']); ?></div><?php endif; ?>
                     </td>
+                    <td class="team-details-preview">
+                      <div class="team-details-preview-content">
+                        <?php
+                          $details_preview = $row['details'] ?? '';
+                          if (!empty(trim(strip_tags($details_preview)))) {
+                              echo $details_preview;
+                          } else {
+                              echo '<span class="text-muted">No details added.</span>';
+                          }
+                        ?>
+                      </div>
+                    </td>
                     <td>
                       <a href="team.php?edit_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm mb-1">Edit</a>
                       <a href="team.php?delete_id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this team member?')">Delete</a>
@@ -438,7 +461,7 @@ if (isset($_POST['submit_team'])) {
                 <?php
                     }
                 } else {
-                    echo '<tr><td colspan="5" class="text-center">No team members found.</td></tr>';
+                    echo '<tr><td colspan="6" class="text-center">No team members found.</td></tr>';
                 }
                 ?>
                 </tbody>
@@ -459,5 +482,16 @@ if (isset($_POST['submit_team'])) {
 </div>
 <script src="./js/adminlte.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var editorEl = document.querySelector('#details_editor');
+  if (editorEl) {
+    ClassicEditor.create(editorEl).catch(function (error) {
+      console.error(error);
+    });
+  }
+});
+</script>
 </body>
 </html>

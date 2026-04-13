@@ -5,7 +5,7 @@ function e($value) {
     return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8');
 }
 
-function local_image($path, $fallback = '') {
+function local_image($path, $fallback = '', $type = '') {
     $path = trim((string)$path);
 
     if ($path === '') {
@@ -16,7 +16,29 @@ function local_image($path, $fallback = '') {
         return $path;
     }
 
-    return ltrim(str_replace('\\', '/', $path), '/');
+    $base = '/ayanacademy/';
+    $path = str_replace('\\', '/', $path);
+    $path = ltrim($path, '/');
+    $type = strtolower(trim((string)$type));
+
+    $usesAdminDist = in_array($type, ['ielts', 'tofel'], true);
+    $usesDirectUploads = in_array($type, ['campus', 'online'], true);
+
+    if (strpos($path, 'admin/dist/uploads/') === 0) {
+        if ($usesDirectUploads) {
+            return $base . substr($path, strlen('admin/dist/'));
+        }
+        return $base . $path;
+    }
+
+    if (strpos($path, 'uploads/') === 0) {
+        if ($usesAdminDist) {
+            return $base . 'admin/dist/' . $path;
+        }
+        return $base . $path;
+    }
+
+    return $base . $path;
 }
 
 $type = strtolower(trim($_GET['type'] ?? 'campus'));
@@ -184,7 +206,7 @@ include('header.php');
     <a href="index.php" class="course-preview-back"><i class="fa fa-arrow-left"></i> Back to Home</a>
 
     <?php if ($course): ?>
-        <?php $courseImage = local_image($course['course_image'] ?? '', $fallbackImage); ?>
+        <?php $courseImage = local_image($course['course_image'] ?? '', $fallbackImage, $type); ?>
         <div class="course-preview-card">
             <div class="row" style="margin:0;">
                 <div class="col-md-5" style="padding:0;">

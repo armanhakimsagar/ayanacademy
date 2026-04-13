@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html prefix="og: http://ogp.me/ns#" class="no-js js_active  vc_desktop  vc_transform  vc_transform skrollr skrollr-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.3",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseenter","mouseout","mouseleave","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input","visibilitychange"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),this.F("domReady"),await this.T(),await this.j(),await this.I(),this.F("windowLoad"),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise((t=>setTimeout(t,500-Date.now()+this.lastTouchEnd))),this.H(),this.F("all"),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))}),{isRocket:!0})}o(){window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0}),{isRocket:!0}),window.addEventListener("pagehide",(()=>{this.onFirstUserAction=null}),{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",(function i(o){Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1})),event.preventDefault(),window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}))}),{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),this.savedUserEvents.length>0&&(t.stopPropagation(),t.stopImmediatePropagation()),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach((t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})))}U(){this.userEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0}))),this.savedUserEvents.forEach((t=>{t.target.dispatchEvent(new window[t.constructor.name](t.type,t))}))}m(){this.eventsMutationObserver=new MutationObserver((t=>{const e="return false";for(const i of t){if("attributes"===i.type){const t=i.target.getAttribute(i.attributeName);t&&t!==e&&(i.target.setAttribute("data-rocket-"+i.attributeName,t),i.target["rocket"+i.attributeName]=new Function("event",t),i.target.setAttribute(i.attributeName,e))}"childList"===i.type&&i.addedNodes.forEach((t=>{if(t.nodeType===Node.ELEMENT_NODE)for(const i of t.attributes)this.attributeEvents.includes(i.name)&&i.value&&""!==i.value&&(t.setAttribute("data-rocket-"+i.name,i.value),t["rocket"+i.name]=new Function("event",i.value),t.setAttribute(i.name,e))}))}})),this.eventsMutationObserver.observe(document,{subtree:!0,childList:!0,attributeFilter:this.attributeEvents})}H(){this.eventsMutationObserver.disconnect(),this.attributeEvents.forEach((t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach((e=>{e.setAttribute(t,e.getAttribute("data-rocket-"+t)),e.removeAttribute("data-rocket-"+t)}))}))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o})},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}F(t){"all"===t&&(EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener),this.savedEventListeners=this.savedEventListeners.filter((e=>{let i=e.type,o=e.target||window;return"domReady"===t&&"DOMContentLoaded"!==i&&"readystatechange"!==i||("windowLoad"===t&&"load"!==i&&"readystatechange"!==i&&"pageshow"!==i||(this.B(i,o)&&(i="rocket-"+i),e.remove?o.removeEventListener(i,e.func,e.options):o.addEventListener(i,e.func,e.options),!1))}))}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,(()=>{e[t].forEach((t=>t()))}),{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout((()=>i.bind(document)(o))):i.bind(document)(o)}return t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise((t=>{this.userActionTriggered?t():this.onFirstUserAction=t}))}async L(){return new Promise((t=>{document.addEventListener("DOMContentLoaded",(()=>{this.realDomReadyFired=!0,t()}),{isRocket:!0})}))}async I(){return this.realWindowLoadedFired?Promise.resolve():new Promise((t=>{window.addEventListener("load",t,{isRocket:!0})}))}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver((t=>{for(const e of t)e.addedNodes.forEach((t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise((e=>{const i=()=>{const i=this.pendingScripts.findIndex((e=>e.script===t));i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)}))})}))})),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async j(){await this.J(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.j()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.N(t,"preconnect")}async $(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",(()=>{i.setAttribute("data-rocket-status","failed-network"),e()}),{isRocket:!0}),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.$(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())}),{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.$(e),this.C(t)):Promise.resolve()}O(){this.N([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}N(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach((t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}})),document.head.appendChild(o)}W(){this.trash.forEach((t=>t.remove()))}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async G(){Date.now()-this.lastBreath>45&&(await this.J(),this.lastBreath=Date.now())}async J(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
+<html prefix="og: http://ogp.me/ns#" class="no-js js_active  vc_desktop  vc_transform  vc_transform skrollr skrollr-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.3",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseenter","mouseout","mouseleave","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input","visibilitychange"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),this.F("domReady"),await this.T(),await this.j(),await this.I(),this.F("windowLoad"),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise((t=>setTimeout(t,500-Date.now()+this.lastTouchEnd))),this.H(),this.F("all"),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))}),{isRocket:!0})}o(){window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0}),{isRocket:!0}),window.addEventListener("pagehide",(()=>{this.onFirstUserAction=null}),{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",(function i(o){Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1})),event.preventDefault(),window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}))}),{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),this.savedUserEvents.length>0&&(t.stopPropagation(),t.stopImmediatePropagation()),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach((t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})))}U(){this.userEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0}))),this.savedUserEvents.forEach((t=>{t.target.dispatchEvent(new window[t.constructor.name](t.type,t))}))}m(){this.eventsMutationObserver=new MutationObserver((t=>{const e="return false";for(const i of t){if("attributes"===i.type){const t=i.target.getAttribute(i.attributeName);t&&t!==e&&(i.target.setAttribute("data-rocket-"+i.attributeName,t),i.target["rocket"+i.attributeName]=new Function("event",t),i.target.setAttribute(i.attributeName,e))}"childList"===i.type&&i.addedNodes.forEach((t=>{if(t.nodeType===Node.ELEMENT_NODE)for(const i of t.attributes)this.attributeEvents.includes(i.name)&&i.value&&""!==i.value&&(t.setAttribute("data-rocket-"+i.name,i.value),t["rocket"+i.name]=new Function("event",i.value),t.setAttribute(i.name,e))}))}})),this.eventsMutationObserver.observe(document,{subtree:!0,childList:!0,attributeFilter:this.attributeEvents})}H(){this.eventsMutationObserver.disconnect(),this.attributeEvents.forEach((t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach((e=>{e.setAttribute(t,e.getAttribute("data-rocket-"+t)),e.removeAttribute("data-rocket-"+t)}))}))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o})},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}F(t){"all"===t&&(EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener),this.savedEventListeners=this.savedEventListeners.filter((e=>{let i=e.type,o=e.target||window;return"domReady"===t&&"DOMContentLoaded"!==i&&"readystatechange"!==i||("windowLoad"===t&&"load"!==i&&"readystatechange"!==i&&"pageshow"!==i||(this.B(i,o)&&(i="rocket-"+i),e.remove?o.removeEventListener(i,e.func,e.options):o.addEventListener(i,e.func,e.options),!1))}))}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,(()=>{e[t].forEach((t=>t()))}),{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout((()=>i.bind(document)(o))):i.bind(document)(o)}return t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise((t=>{this.userActionTriggered?t():this.onFirstUserAction=t}))}async L(){return new Promise((t=>{document.addEventListener("DOMContentLoaded",(()=>{this.realDomReadyFired=!0,t()}),{isRocket:!0})}))}async I(){return this.realWindowLoadedFired?Promise.resolve():new Promise((t=>{window.addEventListener("load",t,{isRocket:!0})}))}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver((t=>{for(const e of t)e.addedNodes.forEach((t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise((e=>{const i=()=>{const i=this.pendingScripts.findIndex((e=>e.script===t));i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)}))})}))})),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async j(){await this.J(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.j()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.N(t,"preconnect")}async $(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",(()=>{i.setAttribute("data-rocket-status","failed-network"),e()}),{isRocket:!0}),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.$(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())}),{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.$(e),this.C(t)):Promise.resolve()}O(){this.N([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}N(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach((t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}})),document.head.appendChild(o)}W(){this.trash.forEach((t=>t.remove()))}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async G(){Date.now()-this.lastBreath>45&&(await this.J(),this.lastBreath=Date.now())}async J(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
@@ -246,13 +247,13 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
         </style>
 <meta name="msapplication-TileImage" content="https://i0.wp.com/pecpte.com/wp-content/uploads/2020/07/cropped-PEC-blank-logo.png?fit=270%2C270&amp;ssl=1">
         <style type="text/css" id="wp-custom-css">
-            .transparent_header .header_default{
+            .aa-simple-header .header_default{
     padding-bottom: 25px;
     background-color: black;
     opacity: 70%;
 }
 
-.transparent_header .fixed .right_buttons .search-toggler {
+.aa-simple-header .fixed .right_buttons .search-toggler {
     border-color: #000;
     color: #000;
 }
@@ -654,7 +655,7 @@ body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .val
 
                 <style type="text/css" data-type="vc_shortcodes-custom-css">
                 .vc_custom_1645950070151{background-image: url(<?php echo e('admin/dist/'.$bannerImage); ?>) !important;}
-                .vc_custom_1645695539961{margin-bottom: 44px !important;}.vc_custom_1536836667813{margin-bottom: 0px !important;padding-top: 29px !important;padding-bottom: 60px !important;}.vc_custom_1645989356413{margin-bottom: 0px !important;background-image: url(https://pecpte.com/wp-content/uploads/2022/02/pecpte-background.jpg?id=5305) !important;}.vc_custom_1579768494906{margin-bottom: 0px !important;background-color: #e8e8e8 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1436164243861{margin-bottom: 28px !important;}.vc_custom_1579437107739{margin-top: !important;}.vc_custom_1645986912369{margin-top: -150px !important;}.vc_custom_1579595041823{margin-bottom: 51px !important;}.vc_custom_1436163882282{margin-bottom: 46px !important;}.vc_custom_1579595072581{margin-bottom: 11px !important;}.vc_custom_1646028687037{margin-right: 210px !important;}.vc_custom_1579416932851{margin-bottom: -13px !important;}.vc_custom_1536751636857{margin-bottom: 47px !important;}.vc_custom_1437023252855{margin-top: 7px !important;margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_preload_links wpr_desktop"><link rel="prefetch" href="https://pecpte.com/events/pte-exam-fee/">
+                .vc_custom_1645695539961{margin-bottom: 44px !important;margin-top: -70px;}.vc_custom_1536836667813{margin-bottom: 0px !important;padding-top: 29px !important;padding-bottom: 60px !important;}.vc_custom_1645989356413{margin-bottom: 0px !important;background-image: url(https://pecpte.com/wp-content/uploads/2022/02/pecpte-background.jpg?id=5305) !important;}.vc_custom_1579768494906{margin-bottom: 0px !important;background-color: #e8e8e8 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1436164243861{margin-bottom: 28px !important;}.vc_custom_1579437107739{margin-top: !important;}.vc_custom_1645986912369{margin-top: -150px !important;}.vc_custom_1579595041823{margin-bottom: 51px !important;}.vc_custom_1436163882282{margin-bottom: 46px !important;}.vc_custom_1579595072581{margin-bottom: 11px !important;}.vc_custom_1646028687037{margin-right: 210px !important;}.vc_custom_1579416932851{margin-bottom: -13px !important;}.vc_custom_1536751636857{margin-bottom: 47px !important;}.vc_custom_1437023252855{margin-top: 7px !important;margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_preload_links wpr_desktop"><link rel="prefetch" href="https://pecpte.com/events/pte-exam-fee/">
 <style>
 @media only screen and (max-width: 991px) {
     .header_top_bar {
@@ -990,6 +991,379 @@ body,
 }
 </style>
 
+
+<style id="aa-menu-dynamic-and-mobile-submenu">
+@media only screen and (max-width: 991px){
+    .header-menu-mobile .header-menu > li > a{
+        color:#ffffff !important;
+        font-weight:700 !important;
+    }
+    .header-menu-mobile .header-menu > li > .arrow{
+        color:#ffffff !important;
+        background:rgba(255,255,255,.14) !important;
+        border-radius:10px !important;
+        padding:6px 10px !important;
+    }
+    .header-menu-mobile .header-menu > li > ul.sub-menu,
+    .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu{
+        background:linear-gradient(180deg,#1d2438 0%, #2b3450 100%) !important;
+        border:1px solid rgba(255,255,255,.12) !important;
+        border-radius:16px !important;
+        margin:8px 0 10px !important;
+        padding:8px 0 !important;
+        box-shadow:0 18px 34px rgba(0,0,0,.24) !important;
+        overflow:hidden !important;
+    }
+    .header-menu-mobile .header-menu > li > ul.sub-menu > li,
+    .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu > li{
+        border-bottom:1px solid rgba(255,255,255,.08) !important;
+    }
+    .header-menu-mobile .header-menu > li > ul.sub-menu > li:last-child,
+    .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu > li:last-child{
+        border-bottom:none !important;
+    }
+    .header-menu-mobile .header-menu > li > ul.sub-menu li > a{
+        color:#ffffff !important;
+        background:transparent !important;
+        font-size:15px !important;
+        font-weight:600 !important;
+        line-height:1.45 !important;
+        padding:13px 18px !important;
+        display:block !important;
+    }
+    .header-menu-mobile .header-menu > li > ul.sub-menu li:hover > a,
+    .header-menu-mobile .header-menu > li > ul.sub-menu li.current-menu-item > a,
+    .header-menu-mobile .header-menu > li > ul.sub-menu li.current_page_item > a{
+        background:rgba(255,255,255,.14) !important;
+        color:#ffd36a !important;
+    }
+    .header-menu-mobile .header-menu > li.menu-item-has-children.opened > a{
+        color:#ffd36a !important;
+    }
+}
+.header-menu > li.aa-current-menu > a,
+.header-menu-mobile .header-menu > li.aa-current-menu > a{
+    color:#ffd36a !important;
+}
+
+@media (max-width: 991px){
+
+    #header .header-menu-mobile{
+        background:#1f2937 !important; /* deep dark blue/grey */
+    }
+
+    #header .header-menu-mobile .header-menu > li{
+        background:#1f2937 !important;
+    }
+
+    #header .header-menu-mobile .header-menu li > ul.sub-menu{
+        background:#111827 !important; /* darker */
+    }
+
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu{
+        background:#0b1220 !important; /* nested আরও dark */
+    }
+
+}
+@media (max-width: 991px) {
+  .header-menu-mobile .header-menu > li > .sub-menu > li > .sub-menu > li::before {
+    content: "" !important;
+    display: none !important;
+  }
+}
+
+</style>
+<script id="aa-dynamic-menu-active">
+(function(){
+    function normalizePath(value){
+        value = String(value || '').trim();
+        value = value.split('#')[0].split('?')[0];
+        value = value.replace(/^https?:\/\/[^\/]+/i, '');
+        value = value.replace(/^\/+/, '');
+        if (!value) return 'index.php';
+        return value.toLowerCase();
+    }
+    function clearState(root){
+        root.querySelectorAll('li').forEach(function(li){
+            li.classList.remove('current-menu-item', 'current_page_item', 'aa-current-menu');
+        });
+        root.querySelectorAll('.magic_line').forEach(function(line){
+            line.classList.remove('line_visible');
+            line.style.maxWidth = '0px';
+        });
+    }
+    function revealLine(li){
+        var link = li.querySelector(':scope > a');
+        var line = li.querySelector(':scope > .magic_line');
+        if (!line) return;
+        var width = link ? Math.ceil(link.getBoundingClientRect().width) : 42;
+        line.classList.add('line_visible');
+        line.style.maxWidth = width + 'px';
+    }
+    function scoreHref(href, current){
+        if (!href || href === '#' || href.indexOf('javascript:') === 0) return -1;
+        var normalized = normalizePath(href);
+        if (normalized === current) return 1000;
+        var file = normalized.split('/').pop();
+        var currentFile = current.split('/').pop();
+        if (file && file === currentFile) return normalized.length;
+        return -1;
+    }
+    function initMenu(root){
+        clearState(root);
+        var current = normalizePath(window.location.pathname);
+        var bestLi = null;
+        var bestScore = -1;
+        root.querySelectorAll(':scope > li').forEach(function(li){
+            li.querySelectorAll('a[href]').forEach(function(link){
+                var score = scoreHref(link.getAttribute('href') || '', current);
+                if (score > bestScore){
+                    bestScore = score;
+                    bestLi = li;
+                }
+            });
+        });
+        if (!bestLi) return;
+        bestLi.classList.add('current-menu-item', 'current_page_item', 'aa-current-menu');
+        revealLine(bestLi);
+        bestLi.querySelectorAll('.sub-menu li').forEach(function(li){
+            var a = li.querySelector('a[href]');
+            if (!a) return;
+            if (scoreHref(a.getAttribute('href') || '', current) >= 1000){
+                li.classList.add('current-menu-item', 'current_page_item');
+            }
+        });
+    }
+    function run(){
+        document.querySelectorAll('.header_main_menu_wrapper .header-menu, .header-menu-mobile .header-menu').forEach(initMenu);
+    }
+    if (document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', run);
+    } else {
+        run();
+    }
+    window.addEventListener('load', run);
+})();
+</script>
+
+
+<style id="aa-mobile-topbar-single-line-fix">
+@media only screen and (max-width: 767px){
+    .header_top_bar{
+        padding: 6px 0 !important;
+        background-color:#5D3FD3 !important;
+    }
+    .header_top_bar .container{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .header_top_bar .container,
+    .header_top_bar .clearfix{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+        gap:8px !important;
+        flex-wrap:nowrap !important;
+    }
+    .header_top_bar .pull-left,
+    .header_top_bar .header_login_url{
+        display:none !important;
+    }
+    .header_top_bar .xs-pull-left{
+        order:2 !important;
+        flex:0 1 auto !important;
+        width:auto !important;
+        min-width:0 !important;
+        float:none !important;
+        margin-left:auto !important;
+    }
+    .header_top_bar .xs-pull-left .top_bar_info{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:flex-end !important;
+        margin:0 !important;
+        padding:0 !important;
+    }
+    .header_top_bar .xs-pull-left .top_bar_info li.hidden-info{
+        display:none !important;
+    }
+    .header_top_bar .xs-pull-left .top_bar_info li.hidden-info:last-child{
+        display:inline-flex !important;
+        align-items:center !important;
+        white-space:nowrap !important;
+        font-size:12px !important;
+        line-height:1 !important;
+        margin:0 !important;
+        color:#ffffff !important;
+    }
+    .header_top_bar .xs-pull-left .top_bar_info li.hidden-info:last-child i{
+        margin-right:6px !important;
+        font-size:13px !important;
+    }
+    .header_top_bar .header_top_bar_socs{
+        order:1 !important;
+        flex:0 0 auto !important;
+        float:none !important;
+        margin-right:0 !important;
+    }
+    .header_top_bar .header_top_bar_socs ul{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:flex-start !important;
+        gap:4px !important;
+        margin:0 !important;
+        padding:0 !important;
+        list-style:none !important;
+        flex-wrap:nowrap !important;
+    }
+    .header_top_bar .header_top_bar_socs ul li{
+        margin:0 !important;
+        padding:0 !important;
+    }
+    .header_top_bar .header_top_bar_socs ul li a{
+        width:22px !important;
+        height:22px !important;
+        display:inline-flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        font-size:11px !important;
+        color:#ffffff !important;
+        padding:0 !important;
+    }
+}
+</style>
+
+
+
+<style id="aa-mobile-menu-redesign">
+@media (max-width: 991px){
+    #header .header-menu-mobile{
+        margin-top:12px !important;
+        background:#66728d !important;
+        border-radius:18px !important;
+        overflow:hidden !important;
+        box-shadow:0 12px 28px rgba(0,0,0,.16) !important;
+    }
+
+    #header .header-menu-mobile .header-menu,
+    #header .header-menu-mobile .header-menu ul{
+        list-style:none !important;
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li,
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li,
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu > li{
+        position:relative !important;
+        border-bottom:1px solid rgba(255,255,255,.08) !important;
+        background:#66728d !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li:last-child{
+        border-bottom:none !important;
+    }
+
+    #header .header-menu-mobile .header-menu li > a{
+        display:block !important;
+        color:#fff !important;
+        text-decoration:none !important;
+        font-size:16px !important;
+        font-weight:700 !important;
+        line-height:1.4 !important;
+        padding:18px 52px 18px 18px !important;
+        background:transparent !important;
+        text-transform:none !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li.current-menu-item > a,
+    #header .header-menu-mobile .header-menu > li.current_page_item > a,
+    #header .header-menu-mobile .header-menu li > a:hover{
+        color:#ffd36a !important;
+    }
+
+    #header .header-menu-mobile .header-menu li.menu-item-has-children > .arrow{
+        position:absolute !important;
+        top:11px !important;
+        right:12px !important;
+        width:34px !important;
+        height:34px !important;
+        border-radius:10px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        background:rgba(255,255,255,.12) !important;
+        color:#ffd36a !important;
+        cursor:pointer !important;
+        z-index:5 !important;
+        transition:all .2s ease !important;
+    }
+
+    #header .header-menu-mobile .header-menu li.menu-item-has-children > .arrow i{
+        font-size:16px !important;
+        line-height:1 !important;
+        transition:transform .22s ease !important;
+        pointer-events:none !important;
+    }
+
+    #header .header-menu-mobile .header-menu li.menu-item-has-children.opened > .arrow{
+        background:rgba(255,255,255,.2) !important;
+    }
+
+    #header .header-menu-mobile .header-menu li.menu-item-has-children.opened > .arrow i{
+        transform:rotate(90deg) !important;
+    }
+
+    #header .header-menu-mobile .header-menu li > ul.sub-menu{
+        display:none !important;
+        background:#7380a0 !important;
+        border-top:1px solid rgba(255,255,255,.06) !important;
+        margin:0 !important;
+        padding:0 !important;
+        border-radius:0 !important;
+        box-shadow:none !important;
+        position:static !important;
+        width:100% !important;
+        opacity:1 !important;
+        visibility:visible !important;
+    }
+
+    #header .header-menu-mobile .header-menu li.opened > ul.sub-menu{
+        display:block !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li > a{
+        font-size:15px !important;
+        font-weight:600 !important;
+        padding:15px 48px 15px 22px !important;
+        background:#7380a0 !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu{
+        background:#8390ae !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li > ul.sub-menu > li > a{
+        font-size:14px !important;
+        font-weight:600 !important;
+        padding:14px 18px 14px 30px !important;
+        background:#8390ae !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li.menu-item-has-children > .arrow{
+        top:8px !important;
+        right:10px !important;
+        width:30px !important;
+        height:30px !important;
+        border-radius:8px !important;
+    }
+
+    #header .header-menu-mobile .header-menu > li > ul.sub-menu > li.menu-item-has-children > .arrow i{
+        font-size:14px !important;
+    }
+}
+</style>
+
 </head>
 <body class="home page-template-default page page-id-7 stm_lms_button theme-masterstudy woocommerce-js skin_custom_color classic_lms masterstudy-theme stm_preloader_0 wpb-js-composer js-comp-ver-6.8.0 vc_responsive" ontouchstart="" style="padding-bottom: 0px;">
 
@@ -998,9 +1372,9 @@ body,
 
 
 
-<div id="header" class="transparent_header sticky_header" data-color="" style="padding-bottom: 0px;">
+<div id="header" class="aa-simple-header" data-color="" style="padding-bottom: 0px;">
 
-            <div class="header_top_bar" style="background-color:#5D3FD3">
+            <div class="header_top_bar" style="background-color:#FF8C00">
     <div class="container">
         <div class="clearfix">
 
@@ -1029,9 +1403,9 @@ body,
                 <div class="pull-right xs-pull-left">
         <ul class="top_bar_info clearfix">
                             <li class="hidden-info">
-                    <i class="far fa-clock"></i> Monday- Saturday 10.00 - 6.00                </li>
+                    <i class="far fa-clock"></i> Monday - Saturday 10.00 - 6.00                </li>
                                         <li class="hidden-info">
-                    <i class="fa fa-map-marker-alt"></i> House no-440 ( 2nd Floor Left Side), Road no-6, Avenue-6, Mirpur-DOHS, Dhaka-1216                </li>
+                    <i class="fa fa-map-marker-alt"></i> House no-440 (2nd Floor Left Side), Road no-6, Avenue-6, Mirpur-DOHS, Dhaka-1216                </li>
                                         <li class="hidden-info">
                     <i class="fa fa-phone"></i> +880 1319904015                </li>
                     </ul>
@@ -1068,7 +1442,7 @@ body,
         <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
             <div class="collapse navbar-collapse header-menu-mobile" id="header_menu_toggler">
                 <ul class="header-menu clearfix">
-                    <li id="menu-item-2065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line" style="max-width: 0px;"></div></li>
+                    <li id="menu-item-2065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-7 menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line" style="max-width: 0px;"></div></li>
 <li id="menu-item-2251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="about.php">About Us</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
     <li id="menu-item-4979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.php">Our Team</a></li>
@@ -1079,34 +1453,33 @@ body,
 <div class="magic_line" style="max-width: 0px;"></div></li>
 <li id="menu-item-1176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1176"><a href="study.php">Services</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
-    <li id="menu-item-3713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3713"><a href="study.php">Study Abroad</a>
-    <ul class="sub-menu">
-        <li id="menu-item-4251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251"><a href="study.php">Study in Best Universities in USA</a></li>
-        <li id="menu-item-4252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4252"><a href="study.php">Study in Canada</a></li>
-        <li id="menu-item-4250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="study.php">Study in the UK</a></li>
-        <li id="menu-item-4247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4247"><a href="study.php">Study in Australia</a></li>
-        <li id="menu-item-4249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4249"><a href="study.php">Study in Sweden</a></li>
-        <li id="menu-item-4248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php">Study in Germany</a></li>
-    </ul>
-</li>
-    <li id="menu-item-5442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5442"><a href="study.php">Pearson VUE Test Center</a></li>
-    <li id="menu-item-3722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3722"><a href="study.php">PTE Online Courses</a></li>
-    <li id="menu-item-5448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php">PTE Mock Tests</a></li>
-    <li id="menu-item-3758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3758"><a href="study.php">PTE Exam Registration</a></li>
+    <li id="menu-item-3713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3713"><a href="study.php">Study Abroad</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
+        <ul class="sub-menu">
+            <li id="menu-item-4251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251"><a href="study.php">Study in Best Universities in USA</a></li>
+            <li id="menu-item-4252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4252"><a href="study.php">Study in Canada</a></li>
+            <li id="menu-item-4250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="study.php">Study in the UK</a></li>
+            <li id="menu-item-4247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4247"><a href="study.php">Study in Australia</a></li>
+            <li id="menu-item-4249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4249"><a href="study.php">Study in Sweden</a></li>
+            <li id="menu-item-4248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php">Study in Germany</a></li>
+        </ul>
+    </li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5442"><a href="study.php?service=pte-exam-registration">PTE Exam Registration</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php?service=pte-mock-tests">Mock Tests</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php?service=sop">SOP Writing</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
 <li id="menu-item-1873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1873"><a href="course.php">Courses</a><span class="arrow"><i class="fa fa-angle-right"></i></span>
 <ul class="sub-menu">
-    <li id="menu-item-3723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3723"><a href="study.php">PTE Academic</a>
-    <ul class="sub-menu">
-        <li id="menu-item-5111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5111"><a href="study.php">PTE Home Test</a></li>
-    </ul>
-</li>
-    <li id="menu-item-5497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5497"><a href="study.php">PTE Core Exam</a></li>
-    <li id="menu-item-5845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5845"><a href="study.php">TOEFL iBT Test</a></li>
-    <li id="menu-item-3724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724"><a href="study.php">IELTS</a></li>
-    <li id="menu-item-4163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4163"><a href="study.php">Lean Sigma Project Management</a></li>
-    <li id="menu-item-3725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="study.php">Spoken English</a></li>
+    <li id="menu-item-5497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5497"><a href="course.php?course=pte academy">PTE Academic</a></li>
+    <li id="menu-item-5845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5845"><a href="course.php?course=pte-core">PTE Core</a></li>
+    <li id="menu-item-3724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724"><a href="course.php?course=pte-ukvi">PTE UKVI</a></li>
+    <li id="menu-item-4163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4163"><a href="course.php?course=pre-pte-course">Pre-PTE Course</a></li>
+    <li id="menu-item-3725a" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=basic-english">Basic English</a></li>
+    <li id="menu-item-3725b" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=a-z grammar">A-Z English Grammar</a></li>
+    <li id="menu-item-3725c" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=spoken-english">Spoken English</a></li>
+    <li id="menu-item-3725d" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=phonetics">Phonetics</a></li>
+    <li id="menu-item-3725e" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=toefl-ibt-test">TOEFL iBT</a></li>
+    <li id="menu-item-3725f" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=ielts">IELTS</a></li>
 </ul>
 <div class="magic_line" style="max-width: 0px;"></div></li>
 <li id="menu-item-3938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3938"></span>
@@ -1145,7 +1518,7 @@ body,
 
     <div class="collapse navbar-collapse pull-right">
         <ul class="header-menu clearfix">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line line_visible" style="max-width: 42px;"></div></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-7 menu-item-2065"><a href="index.php" aria-current="page">Home</a><div class="magic_line" style="max-width: 0px;"></div></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2251"><a href="about.php">About Us</a>
 <ul class="sub-menu">
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4979"><a href="team.php">Our Team</a></li>
@@ -1158,18 +1531,19 @@ body,
 <ul class="sub-menu">
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3713"><a href="study.php?service=study aboard">Study Abroad</a>
     <ul class="sub-menu">
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251"><a href="study.php?service=australia">Study in Australia</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4252"><a href="study.php?service=canada">Study in Canada</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="study.php?service=usa">Study in the USA </a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4247"><a href="study.php?service=germany">Study in Germany </a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4249"><a href="study.php?service=new-zealand">Study in New Zealand</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php?service=denmark">Study in Denmak</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php?service=hungry">Study in Hungry</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php?service=neatherlands">Study in Natherlands</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251"><a href="study.php?service=australia">Study In Australia</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4252"><a href="study.php?service=canada">Study In Canada</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="study.php?service=usa">Study In USA </a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4247"><a href="study.php?service=germany">Study In Germany </a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4249"><a href="study.php?service=new-zealand">Study In New Zealand</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php?service=denmark">Study In Denmak</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php?service=hungry">Study In Hungry</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4248"><a href="study.php?service=neatherlands">Study In Natherlands</a></li>
     </ul>
 </li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5442"><a href="study.php?service=pte-exam-registration">PTE Exam Registration</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php?service=pte-mock-tests">PTE Mock Tests</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php?service=pte-mock-tests">Mock Tests</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5448"><a href="study.php?service=sop">SOP Writing</a></li>
 </ul>
 <div class="magic_line" style="max-width: 70.55px;"></div></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1873"><a href="course.php">Courses</a>
@@ -1179,10 +1553,10 @@ body,
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724"><a href="course.php?course=pte-ukvi">PTE UKVI</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4163"><a href="course.php?course=pre-pte-course">Pre-PTE Course</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=basic-english">Basic English</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=a-z grammar">A to Z Grammar</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=a-z grammar">A-Z English Grammar</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=spoken-english">Spoken English</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=phonetics">Phonetics</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=toefl-ibt-test">TOEFL IBT Test</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=toefl-ibt-test">TOEFL iBT</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3725"><a href="course.php?course=ielts">IELTS</a></li>
 </ul>
 <div class="magic_line" style="max-width: 69.2375px;"></div></li>
@@ -1207,15 +1581,71 @@ body,
 <script id="aa-mobile-menu-fix">
 jQuery(function($){
     var $mobileMenu = $('.header-menu-mobile');
+    var lastTouchTime = 0;
 
-    $mobileMenu.find('.menu-item-has-children > .arrow').off('click.aa').on('click.aa', function(e){
+    function closeBranch($li){
+        $li.removeClass('opened');
+        $li.children('.arrow').removeClass('active');
+        $li.find('.menu-item-has-children').removeClass('opened');
+        $li.find('.menu-item-has-children > .arrow').removeClass('active');
+        $li.find('.sub-menu').stop(true, true).slideUp(180);
+    }
+
+    function openBranch($li){
+        var $submenu = $li.children('.sub-menu').first();
+        var $siblings = $li.siblings('.menu-item-has-children');
+
+        $siblings.each(function(){
+            closeBranch($(this));
+        });
+
+        $li.addClass('opened');
+        $li.children('.arrow').addClass('active');
+        $submenu.stop(true, true).slideDown(180);
+    }
+
+    function handleArrowTap(e){
+        var now = Date.now();
+
+        if (e.type === 'click' && now - lastTouchTime < 500) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            return false;
+        }
+
+        if (e.type === 'touchstart' || e.type === 'pointerdown') {
+            lastTouchTime = now;
+        }
+
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
+
         var $arrow = $(this);
         var $li = $arrow.closest('.menu-item-has-children');
-        $li.toggleClass('opened');
-        $arrow.toggleClass('active');
-        $li.children('.sub-menu').first().stop(true, true).slideToggle(180);
-    });
+
+        if ($li.hasClass('opened')) {
+            closeBranch($li);
+        } else {
+            openBranch($li);
+        }
+
+        return false;
+    }
+
+    $mobileMenu.find('.menu-item-has-children').removeClass('opened');
+    $mobileMenu.find('.menu-item-has-children > .arrow').removeClass('active');
+    $mobileMenu.find('.sub-menu').hide();
+
+    $mobileMenu.off('touchstart.aa click.aa pointerdown.aa', '.menu-item-has-children > .arrow');
+    $mobileMenu.on('touchstart.aa click.aa pointerdown.aa', '.menu-item-has-children > .arrow', handleArrowTap);
 });
 </script>
+<style>
+@media (max-width: 991px) {
+  .header_top_bar {
+    background-color: #FF8C00 !important;
+  }
+}
+</style>

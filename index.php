@@ -251,7 +251,7 @@ $tofelCourses = fetch_rows($tofelCoursesRes);
 $achievementRes = mysqli_query($conn, "SELECT * FROM our_achivements ORDER BY id DESC LIMIT 1");
 $achievement = $achievementRes ? mysqli_fetch_assoc($achievementRes) : null;
 
-$blogsRes = mysqli_query($conn, "SELECT * FROM blogs ORDER BY blog_date DESC, id DESC LIMIT 3");
+$blogsRes = mysqli_query($conn, "SELECT * FROM blogs ORDER BY blog_date DESC, id DESC");
 $testimonialsRes = mysqli_query($conn, "SELECT * FROM testimonials ORDER BY id DESC LIMIT 10");
 
 $logoTransparent = local_image($logo['logo_image'] ?? 'thumbnail.png', 'thumbnail.png');
@@ -261,6 +261,17 @@ $bannerTitle = $banner['title'] ?? 'Take the first step';
 include('header.php');
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<style id="aa-extra-user-fixes">
+.vc_row.wpb_row.vc_row-fluid.sbc.vc_custom_1645989356413.vc_row-has-fill{
+    background:#ff8a00 !important;
+    background-image:none !important;
+}
+.wpb_raw_code.wpb_content_element.wpb_raw_html.vc_custom_1645986912369{
+    margin-top:50px !important;
+}
+</style>
+
 
 <style>
 .pecpte-hero-area {
@@ -273,13 +284,13 @@ include('header.php');
 .aa-hero-heading {
     color: #fff;
     line-height: 1.3;
-    margin-top: 120px;
+    margin-top: 200px;
     margin-bottom: 0;
     max-width: 720px;
 }
 .aa-hero-heading-badge {
     display: inline-block;
-    font-size: 42px;
+    font-size: 24px;
     line-height: 1.25;
     background-color: rgba(0,0,0,.45);
     padding: 14px 20px;
@@ -307,33 +318,33 @@ include('header.php');
 </style>
 
 <style id="aa-quick-boxes-final-fix">
-/* only quick boxes redesign + layout fix */
+/* quick boxes slider */
+.aa-quick-slider-shell{
+    position:relative;
+    padding:10px 48px 20px;
+}
+.aa-quick-slider-window{
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+.aa-course-slider-window{
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
 .aa-quick-links-wrap{
     display:flex !important;
     flex-wrap:nowrap !important;
     gap:22px !important;
-    overflow-x:auto !important;
-    overflow-y:hidden !important;
-    padding:10px 6px 20px !important;
     margin:0 !important;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
+    scroll-snap-type:x mandatory;
 }
-.aa-quick-links-wrap::-webkit-scrollbar{
-    height:8px;
-}
-.aa-quick-links-wrap::-webkit-scrollbar-thumb{
-    background:rgba(44,117,228,.25);
-    border-radius:999px;
-}
-
 .aa-quick-link{
     display:block !important;
-    flex:0 0 255px !important;
-    width:255px !important;
+    scroll-snap-align:start;
+    flex:0 0 calc((100% - 66px) / 4) !important;
+    width:calc((100% - 66px) / 4) !important;
     text-decoration:none !important;
 }
-
 .aa-quick-card{
     position:relative;
     min-height:250px;
@@ -364,7 +375,6 @@ include('header.php');
     box-shadow:0 20px 42px rgba(18,38,89,.16);
     border-color:#d7e4ff;
 }
-
 .aa-quick-card-icon{
     width:72px;
     height:72px;
@@ -387,7 +397,6 @@ include('header.php');
     max-height:42px;
     width:100%;
 }
-
 .aa-quick-card-text{
     position:relative;
     z-index:1;
@@ -431,7 +440,6 @@ include('header.php');
     position:relative;
     z-index:1;
 }
-
 .aa-quick-card--pte{
     background:linear-gradient(180deg,#ffffff 0%,#eef4ff 100%);
 }
@@ -447,21 +455,64 @@ include('header.php');
 .aa-quick-card--abroad{
     background:linear-gradient(180deg,#ffffff 0%,#eef8ff 100%);
 }
-
 .aa-quick-card--pte .aa-quick-card-kicker{background:#eaf1ff;color:#2957d3;}
 .aa-quick-card--ielts .aa-quick-card-kicker{background:#e9fbf0;color:#13804f;}
 .aa-quick-card--spoken .aa-quick-card-kicker{background:#fff0e8;color:#d56425;}
 .aa-quick-card--online .aa-quick-card-kicker{background:#f1e9ff;color:#6c3ad1;}
 .aa-quick-card--abroad .aa-quick-card-kicker{background:#e7f5ff;color:#126896;}
 
-@media (max-width: 767px){
+.aa-quick-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:44px;
+    height:44px;
+    border:none;
+    border-radius:50%;
+    background:rgba(19,32,62,.85);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.16);
+    z-index:3;
+}
+.aa-quick-nav:hover{
+    background:rgba(44,117,228,0.95);
+}
+.aa-quick-nav-left{left:0;}
+.aa-quick-nav-right{right:0;}
+.aa-quick-nav[hidden]{display:none !important;}
+
+@media (max-width: 1199px){
+    .aa-quick-link{
+        flex:0 0 calc((100% - 44px) / 3) !important;
+        width:calc((100% - 44px) / 3) !important;
+    }
+}
+@media (max-width: 991px){
+    .aa-quick-slider-shell{
+        padding:10px 38px 18px;
+    }
     .aa-quick-links-wrap{
-        gap:16px !important;
-        padding-bottom:14px !important;
+        gap:18px !important;
     }
     .aa-quick-link{
-        flex:0 0 220px !important;
-        width:220px !important;
+        flex:0 0 calc((100% - 18px) / 2) !important;
+        width:calc((100% - 18px) / 2) !important;
+    }
+}
+@media (max-width: 767px){
+    .aa-quick-slider-shell{
+        padding:10px 28px 14px;
+    }
+    .aa-quick-links-wrap{
+        gap:16px !important;
+    }
+    .aa-quick-link{
+        flex:0 0 100% !important;
+        width:100% !important;
     }
     .aa-quick-card{
         min-height:230px;
@@ -474,6 +525,22 @@ include('header.php');
         font-size:13px;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .pecpte-hero-area,
+    .vc_row.wpb_row.vc_row-fluid.pecpte-hero-area.vc_custom_1645950070151 {
+        min-height: 400px !important;
+        height: 400px !important;
+        max-height: 400px !important;
+    }
+
+    .pecpte-hero-area .vc_column-inner,
+    .pecpte-hero-area .wpb_wrapper,
+    .pecpte-hero-area .wpb_raw_code,
+    .pecpte-hero-area .wpb_raw_html {
+        height: 100%;
+    }
+}
 </style>
 
 
@@ -481,19 +548,19 @@ include('header.php');
 
 
 <!-- Breads -->
-<div class="stm_lms_breadcrumbs stm_lms_breadcrumbs__header_default">
+<div class="stm_lms_breadcrumbs stm_lms_breadcrumbs__header_default" style="max-width: none;">
 
 
     </div>
 
-    <div class="container">
+    <div class="container" style="max-width: none !important;">
 
                     <div class="post_type_exist clearfix">
-                                    <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid pecpte-hero-area vc_custom_1645950070151 vc_row-has-fill vc_row-o-full-height vc_row-o-columns-middle vc_row-o-content-middle vc_row-flex" style="background-position: center top !important; position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px; min-height: 100vh;">
+                                    <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid pecpte-hero-area vc_custom_1645950070151 vc_row-has-fill vc_row-o-full-height vc_row-o-columns-middle vc_row-o-content-middle vc_row-flex" style="background-position: center top !important; position: relative; left: -160.4px; box-sizing: border-box; width: 1521px; padding-left: 160.4px; padding-right: 160.6px; min-height: 400px;">
         <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12"><div class="vc_column-inner"><div class="wpb_wrapper">
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
         <div class="wpb_wrapper">
-            <h1 class="pecpte-heading aa-hero-heading" style="margin-top:-120px"><strong><span class="pecpte-heading-span1 aa-hero-heading-badge" style="font-size:20px !important"><?php echo e($bannerTitle); ?></span></strong></h1>
+            <h1 class="pecpte-heading aa-hero-heading" style="margin-top:-200px"><strong><span class="pecpte-heading-span1 aa-hero-heading-badge" style="font-size:34px !important"><?php echo e($bannerTitle); ?></span></strong></h1>
         </div>
     </div>
 <style type="text/css">.vc_btn3-style-gradient.vc_btn-gradient-btn-69b5960c63730:hover{color: #fff;background-color: #f4524d;border: none;background-position: 100% 0;}</style><style type="text/css">.vc_btn3-style-gradient.vc_btn-gradient-btn-69b5960c63730{color: #fff;border: none;background-color: #fe6c61;background-image: -webkit-linear-gradient(left, #fe6c61 0%, #f4524d 50%,#fe6c61 100%);background-image: linear-gradient(to right, #fe6c61 0%, #f4524d 50%,#fe6c61 100%);-webkit-transition: all .2s ease-in-out;transition: all .2s ease-in-out;background-size: 200% 100%;}</style>
@@ -504,78 +571,88 @@ include('header.php');
     <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1645986912369">
         <div class="wpb_wrapper">
             
-<div class="aa-quick-links-wrap">
+<div class="aa-quick-slider-shell" data-quick-slider>
+    <button type="button" class="aa-quick-nav aa-quick-nav-left" data-quick-prev hidden aria-label="Previous quick links">
+        <i class="fa fa-angle-left"></i>
+    </button>
 
-    <a href="course.php?course=pte%20academy" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--pte">
-            <div class="aa-quick-card-icon logo">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/pte-logo-1.png" alt="PTE Academy">
-            </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Featured Program</div>
-                <h3 class="aa-quick-card-title">PTE Academy</h3>
-                <p class="aa-quick-card-desc">Structured preparation with expert guidance, mock practice, and score-focused coaching.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+    <div class="aa-quick-slider-window">
+        <div class="aa-quick-links-wrap">
+            <a href="course.php?course=pte%20academy" class="aa-quick-link">
+                <div class="aa-quick-card aa-quick-card--pte">
+                    <div class="aa-quick-card-icon logo">
+                        <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/pte-logo-1.png" alt="PTE Academy">
+                    </div>
+                    <div class="aa-quick-card-text">
+                        <div class="aa-quick-card-kicker">Featured Program</div>
+                        <h3 class="aa-quick-card-title">PTE Academic</h3>
+                        <p class="aa-quick-card-desc">Structured preparation with expert guidance, mock practice, and score-focused coaching.</p>
+                    </div>
+                    <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <a href="course.php?course=ielts" class="aa-quick-link">
+                <div class="aa-quick-card aa-quick-card--ielts">
+                    <div class="aa-quick-card-icon">
+                        <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ielts-1.png" alt="IELTS">
+                    </div>
+                    <div class="aa-quick-card-text">
+                        <div class="aa-quick-card-kicker">Exam Track</div>
+                        <h3 class="aa-quick-card-title">IELTS</h3>
+                        <p class="aa-quick-card-desc">Academic and practical preparation to build confidence for every module of the test.</p>
+                    </div>
+                    <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <a href="course.php?course=spoken-english" class="aa-quick-link">
+                <div class="aa-quick-card aa-quick-card--spoken">
+                    <div class="aa-quick-card-icon">
+                        <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/speaking_sized.png" alt="Spoken English">
+                    </div>
+                    <div class="aa-quick-card-text">
+                        <div class="aa-quick-card-kicker">Communication</div>
+                        <h3 class="aa-quick-card-title">Spoken English</h3>
+                        <p class="aa-quick-card-desc">Improve fluency, confidence, and everyday speaking with practical sessions and feedback.</p>
+                    </div>
+                    <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <a href="study.php?service=pte-mock-tests" target="_blank" class="aa-quick-link">
+                <div class="aa-quick-card aa-quick-card--online">
+                    <div class="aa-quick-card-icon">
+                        <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/online-course_sized.png" alt="Online Courses &amp; PTE Mock Test">
+                    </div>
+                    <div class="aa-quick-card-text">
+                        <div class="aa-quick-card-kicker">Digital Learning</div>
+                        <h3 class="aa-quick-card-title">Mock Tests</h3>
+                        <p class="aa-quick-card-desc">Flexible online prep and mock tests designed for learners who want convenience and performance.</p>
+                    </div>
+                    <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <a href="study.php?service=study aboard" class="aa-quick-link">
+                <div class="aa-quick-card aa-quick-card--abroad">
+                    <div class="aa-quick-card-icon">
+                        <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" alt="Study Abroad">
+                    </div>
+                    <div class="aa-quick-card-text">
+                        <div class="aa-quick-card-kicker">Global Pathway</div>
+                        <h3 class="aa-quick-card-title">Study Abroad</h3>
+                        <p class="aa-quick-card-desc">Get guidance for applications, country selection, and your next academic destination abroad.</p>
+                    </div>
+                    <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
 
-    <a href="course.php?course=ielts" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--ielts">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/ielts-1.png" alt="IELTS">
-            </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Exam Track</div>
-                <h3 class="aa-quick-card-title">IELTS</h3>
-                <p class="aa-quick-card-desc">Academic and practical preparation to build confidence for every module of the test.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
-        </div>
-    </a>
-
-    <a href="course.php?course=spoken-english" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--spoken">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/speaking_sized.png" alt="Spoken English">
-            </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Communication</div>
-                <h3 class="aa-quick-card-title">Spoken English</h3>
-                <p class="aa-quick-card-desc">Improve fluency, confidence, and everyday speaking with practical sessions and feedback.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
-        </div>
-    </a>
-
-    <a href="study.php?service=pte-mock-tests" target="_blank" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--online">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/online-course_sized.png" alt="Online Courses &amp; PTE Mock Test">
-            </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Digital Learning</div>
-                <h3 class="aa-quick-card-title">Online Courses</h3>
-                <p class="aa-quick-card-desc">Flexible online prep and mock tests designed for learners who want convenience and performance.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
-        </div>
-    </a>
-
-    <a href="study.php?service=study aboard" class="aa-quick-link">
-        <div class="aa-quick-card aa-quick-card--abroad">
-            <div class="aa-quick-card-icon">
-                <img decoding="async" src="./PEC- Education - PTE Academic In Dhaka, Bangladesh_files/oversease_sized.png" alt="Study Abroad">
-            </div>
-            <div class="aa-quick-card-text">
-                <div class="aa-quick-card-kicker">Global Pathway</div>
-                <h3 class="aa-quick-card-title">Study Abroad</h3>
-                <p class="aa-quick-card-desc">Get guidance for applications, country selection, and your next academic destination abroad.</p>
-            </div>
-            <div class="aa-quick-card-arrow"><i class="fa fa-arrow-right"></i></div>
-        </div>
-    </a>
-
+    <button type="button" class="aa-quick-nav aa-quick-nav-right" data-quick-next hidden aria-label="Next quick links">
+        <i class="fa fa-angle-right"></i>
+    </button>
 </div>
         </div>
     </div>
@@ -586,7 +663,7 @@ include('header.php');
         <div class="vc_column-inner">
             <div class="wpb_wrapper">
                 <div class="wpb_text_column wpb_content_element">
-                    <div class="wpb_wrapper">
+                    <div class="wpb_wrapper" style="margin-top: -80px;">
 
                         
 
@@ -641,16 +718,15 @@ include('header.php');
     .aa-course-slider-track {
         display: flex;
         gap: 24px;
-        transition: transform 0.35s ease;
-        will-change: transform;
+        scroll-snap-type: x mandatory;
     }
     .aa-course-card {
         flex: 0 0 calc((100% - 72px) / 4);
+        scroll-snap-align: start;
         background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,248,252,0.92) 100%);
         border: 1px solid rgba(255,255,255,0.75);
         border-radius: 22px;
         overflow: hidden;
-        box-shadow: 0 14px 34px rgba(25, 35, 58, 0.12);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         transition: transform .22s ease, box-shadow .22s ease;
@@ -798,8 +874,9 @@ include('header.php');
         height: 44px;
         border: none;
         border-radius: 50%;
-        background: rgba(255,255,255,0.30);
+        background: rgba(44,117,228,0.92);
         color: #ffffff;
+        border: 1px solid rgba(255,255,255,0.22);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -976,53 +1053,227 @@ include('header.php');
 
                         <script>
                             (function () {
-                                function getVisibleCount() {
-                                    if (window.innerWidth <= 575) return 1;
-                                    if (window.innerWidth <= 991) return 2;
-                                    if (window.innerWidth <= 1199) return 3;
-                                    return 4;
+                                function setupSlider(config) {
+                                    document.querySelectorAll(config.selector).forEach(function (slider) {
+                                        var windowEl = slider.querySelector(config.windowSelector);
+                                        var track = slider.querySelector(config.trackSelector);
+                                        var cards = Array.prototype.slice.call(slider.querySelectorAll(config.cardSelector));
+                                        var prevBtn = slider.querySelector(config.prevSelector);
+                                        var nextBtn = slider.querySelector(config.nextSelector);
+                                        var currentStep = 0;
+                                        var snapPoints = [];
+                                        var syncTimer = null;
+
+                                        if (!windowEl || !track || !cards.length) {
+                                            return;
+                                        }
+
+                                        function getMaxScrollLeft() {
+                                            return Math.max(0, track.scrollWidth - windowEl.clientWidth);
+                                        }
+
+                                        function buildSnapPoints() {
+                                            var maxScrollLeft = getMaxScrollLeft();
+                                            var points = cards.map(function (card) {
+                                                var rawLeft = card.offsetLeft - track.offsetLeft;
+                                                return Math.max(0, Math.min(rawLeft, maxScrollLeft));
+                                            });
+
+                                            if (maxScrollLeft > 0) {
+                                                points.push(maxScrollLeft);
+                                            }
+
+                                            points.sort(function (a, b) { return a - b; });
+
+                                            var uniquePoints = [];
+                                            points.forEach(function (point) {
+                                                if (!uniquePoints.length || Math.abs(uniquePoints[uniquePoints.length - 1] - point) > 2) {
+                                                    uniquePoints.push(point);
+                                                }
+                                            });
+
+                                            if (!uniquePoints.length) {
+                                                uniquePoints = [0];
+                                            }
+
+                                            snapPoints = uniquePoints;
+                                        }
+
+                                        function getNearestStep() {
+                                            var scrollLeft = windowEl.scrollLeft;
+                                            var nearestStep = 0;
+                                            var nearestDistance = Infinity;
+
+                                            snapPoints.forEach(function (point, idx) {
+                                                var distance = Math.abs(point - scrollLeft);
+                                                if (distance < nearestDistance) {
+                                                    nearestDistance = distance;
+                                                    nearestStep = idx;
+                                                }
+                                            });
+
+                                            return nearestStep;
+                                        }
+
+                                        function updateButtons() {
+                                            if (!prevBtn || !nextBtn) return;
+                                            var maxScrollLeft = getMaxScrollLeft();
+                                            var scrollLeft = windowEl.scrollLeft;
+
+                                            prevBtn.hidden = scrollLeft <= 2;
+                                            nextBtn.hidden = scrollLeft >= maxScrollLeft - 2 || snapPoints.length <= 1;
+                                        }
+
+                                        function goToStep(newStep, smooth) {
+                                            currentStep = Math.max(0, Math.min(newStep, snapPoints.length - 1));
+
+                                            windowEl.scrollTo({
+                                                left: snapPoints[currentStep] || 0,
+                                                behavior: smooth === false ? 'auto' : 'smooth'
+                                            });
+
+                                            clearTimeout(syncTimer);
+                                            syncTimer = setTimeout(function () {
+                                                currentStep = getNearestStep();
+                                                updateButtons();
+                                            }, smooth === false ? 0 : 420);
+                                        }
+
+                                        if (prevBtn) {
+                                            prevBtn.addEventListener('click', function () {
+                                                currentStep = getNearestStep();
+                                                goToStep(currentStep - 1, true);
+                                            });
+                                        }
+
+                                        if (nextBtn) {
+                                            nextBtn.addEventListener('click', function () {
+                                                currentStep = getNearestStep();
+                                                goToStep(currentStep + 1, true);
+                                            });
+                                        }
+
+                                        windowEl.addEventListener('scroll', function () {
+                                            clearTimeout(syncTimer);
+                                            syncTimer = setTimeout(function () {
+                                                currentStep = getNearestStep();
+                                                updateButtons();
+                                            }, 80);
+                                        }, { passive: true });
+
+                                        window.addEventListener('resize', function () {
+                                            buildSnapPoints();
+                                            currentStep = getNearestStep();
+                                            goToStep(currentStep, false);
+                                        });
+
+                                        buildSnapPoints();
+                                        goToStep(0, false);
+                                    });
                                 }
 
-                                document.querySelectorAll('[data-course-slider]').forEach(function (slider) {
-                                    var track = slider.querySelector('.aa-course-slider-track');
-                                    var cards = slider.querySelectorAll('.aa-course-card');
-                                    var prevBtn = slider.querySelector('[data-course-prev]');
-                                    var nextBtn = slider.querySelector('[data-course-next]');
-                                    var index = 0;
+                                setupSlider({
+                                    selector: '[data-quick-slider]',
+                                    windowSelector: '.aa-quick-slider-window',
+                                    trackSelector: '.aa-quick-links-wrap',
+                                    cardSelector: '.aa-quick-link',
+                                    prevSelector: '[data-quick-prev]',
+                                    nextSelector: '[data-quick-next]'
+                                });
 
-                                    function maxIndex() {
-                                        return Math.max(0, cards.length - getVisibleCount());
-                                    }
+                                setupSlider({
+                                    selector: '[data-course-slider]',
+                                    windowSelector: '.aa-course-slider-window',
+                                    trackSelector: '.aa-course-slider-track',
+                                    cardSelector: '.aa-course-card',
+                                    prevSelector: '[data-course-prev]',
+                                    nextSelector: '[data-course-next]'
+                                });
 
-                                    function update() {
-                                        var visible = getVisibleCount();
-                                        var firstCard = cards[0];
-                                        if (!firstCard) return;
-                                        var gap = 20;
-                                        var cardWidth = firstCard.getBoundingClientRect().width;
-                                        if (index > maxIndex()) index = maxIndex();
-                                        var move = (cardWidth + gap) * index;
-                                        track.style.transform = 'translateX(-' + move + 'px)';
-                                        prevBtn.hidden = !(cards.length > visible && index > 0);
-                                        nextBtn.hidden = !(cards.length > visible && index < maxIndex());
-                                    }
+                                function setupSectionSlider() {
+                                    document.querySelectorAll('[data-section-slider]').forEach(function (slider) {
+                                        var windowEl = slider.querySelector('.aa-section-slider-window');
+                                        var track = slider.querySelector('.aa-section-slider-track');
+                                        var cards = Array.prototype.slice.call(slider.querySelectorAll('.aa-section-slide'));
+                                        var prevBtn = slider.querySelector('[data-section-prev]');
+                                        var nextBtn = slider.querySelector('[data-section-next]');
+                                        var currentStep = 0;
+                                        var snapPoints = [];
 
-                                    prevBtn.addEventListener('click', function () {
-                                        if (index > 0) {
-                                            index -= 1;
-                                            update();
+                                        if (!windowEl || !track || !cards.length) {
+                                            return;
                                         }
-                                    });
 
-                                    nextBtn.addEventListener('click', function () {
-                                        if (index < maxIndex()) {
-                                            index += 1;
-                                            update();
+                                        function buildSnapPoints() {
+                                            track.style.transform = 'translateX(0px)';
+
+                                            var maxMove = Math.max(0, track.scrollWidth - windowEl.clientWidth);
+                                            var points = cards.map(function (card) {
+                                                return Math.max(0, Math.min(card.offsetLeft - track.offsetLeft, maxMove));
+                                            });
+
+                                            if (maxMove > 0) {
+                                                points.push(maxMove);
+                                            }
+
+                                            points.sort(function (a, b) { return a - b; });
+
+                                            var unique = [];
+                                            points.forEach(function (point) {
+                                                if (!unique.length || Math.abs(unique[unique.length - 1] - point) > 2) {
+                                                    unique.push(point);
+                                                }
+                                            });
+
+                                            snapPoints = unique.length ? unique : [0];
                                         }
-                                    });
 
-                                    window.addEventListener('resize', update);
-                                    update();
+                                        function updateButtons() {
+                                            if (!prevBtn || !nextBtn) return;
+                                            prevBtn.hidden = currentStep <= 0;
+                                            nextBtn.hidden = currentStep >= snapPoints.length - 1 || snapPoints.length <= 1;
+                                        }
+
+                                        function goToStep(step, animate) {
+                                            currentStep = Math.max(0, Math.min(step, snapPoints.length - 1));
+                                            if (!animate) {
+                                                var previousTransition = track.style.transition;
+                                                track.style.transition = 'none';
+                                                track.style.transform = 'translateX(-' + (snapPoints[currentStep] || 0) + 'px)';
+                                                track.offsetHeight;
+                                                track.style.transition = previousTransition || 'transform .38s ease';
+                                            } else {
+                                                track.style.transform = 'translateX(-' + (snapPoints[currentStep] || 0) + 'px)';
+                                            }
+                                            updateButtons();
+                                        }
+
+                                        if (prevBtn) {
+                                            prevBtn.addEventListener('click', function () {
+                                                goToStep(currentStep - 1, true);
+                                            });
+                                        }
+
+                                        if (nextBtn) {
+                                            nextBtn.addEventListener('click', function () {
+                                                goToStep(currentStep + 1, true);
+                                            });
+                                        }
+
+                                        window.addEventListener('resize', function () {
+                                            buildSnapPoints();
+                                            goToStep(Math.min(currentStep, snapPoints.length - 1), false);
+                                        });
+
+                                        buildSnapPoints();
+                                        goToStep(0, false);
+                                    });
+                                }
+
+                                setupSectionSlider();
+
+                                window.addEventListener('load', function () {
+                                    setupSectionSlider();
                                 });
                             })();
                         </script>
@@ -1265,6 +1516,87 @@ include('header.php');
                 }
             }
         </style>
+        <style>
+        .form-cover{
+            width:100%;
+        }
+        .form-cover form{
+            width:100% !important;
+            max-width:580px;
+            color:#44506a !important;
+            font-size:100%;
+            background:linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(245,247,255,0.88) 100%) !important;
+            padding:24px !important;
+            border-radius:24px !important;
+            box-sizing:border-box;
+            border:1px solid rgba(255,255,255,0.72);
+            box-shadow:0 18px 42px rgba(18,38,89,.14);
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+            position:relative;
+            overflow:hidden;
+        }
+        .form-cover form:before{
+            content:"";
+            position:absolute;
+            inset:auto -60px -60px auto;
+            width:160px;
+            height:160px;
+            border-radius:50%;
+            background:rgba(124,58,237,.08);
+            pointer-events:none;
+        }
+        .form-cover label{
+            color:#1f2d4d;
+            font-weight:700 !important;
+        }
+        .form-cover input[type="text"],
+        .form-cover input[type="email"],
+        .form-cover input[type="tel"]{
+            min-height:48px;
+            border:1px solid #dbe3f4 !important;
+            border-radius:14px !important;
+            background:rgba(255,255,255,0.82) !important;
+            box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
+        }
+        .form-cover input[type="text"]:focus,
+        .form-cover input[type="email"]:focus,
+        .form-cover input[type="tel"]:focus{
+            outline:none;
+            border-color:#7c3aed !important;
+            box-shadow:0 0 0 3px rgba(124,58,237,.12);
+        }
+        .form-cover button[type="submit"]{
+            min-height:48px;
+            padding:12px 24px !important;
+            border-radius:14px !important;
+            background:linear-gradient(135deg, #7c3aed 0%, #2c75e4 100%) !important;
+            box-shadow:0 12px 24px rgba(44,117,228,.22);
+            font-weight:700;
+        }
+        .form-cover button[type="submit"]:hover{
+            transform:translateY(-1px);
+        }
+        @media (max-width: 767px){
+            .form-cover form{
+                max-width:100%;
+                padding:18px !important;
+                border-radius:20px !important;
+            }
+            .form-cover form > .form-page > .form-page-content > div[style*="display:flex"]{
+                margin:0 !important;
+            }
+            .form-cover form > .form-page > .form-page-content > div[style*="display:flex"] > div{
+                width:100% !important;
+                padding:0 !important;
+            }
+            .form-cover input[type="text"],
+            .form-cover input[type="email"],
+            .form-cover input[type="tel"]{
+                font-size:16px !important;
+            }
+        }
+        </style>
         <div class="form-cover">
     <form method="post" action="" novalidate style="width: 580px; color: #666666; font-size: 100%; background: white; padding: 22px; border-radius: 10px; box-sizing: border-box;">
         <div class="form-page form-page-0 active" data-index="0">
@@ -1310,10 +1642,240 @@ include('header.php');
 <div class="vc_row-full-width vc_clearfix"></div>
 
 <div class="vc_row-full-width vc_clearfix"></div>
+
+<style id="aa-glossy-content-sliders">
+.aa-section-slider-shell{
+    position:relative;
+    padding:0 48px;
+}
+.aa-section-slider-window{
+    overflow:hidden;
+    position:relative;
+}
+.aa-section-slider-track{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:24px;
+    align-items:stretch;
+    transition:transform .38s ease;
+    will-change:transform;
+}
+.aa-section-slide{
+    flex:0 0 calc((100% - 48px) / 3);
+    min-width:0;
+}
+.aa-overseas-wrap .aa-section-slide{
+    flex:0 0 calc((100% - 96px) / 5);
+}
+.aa-blog-slider .aa-section-slide,
+.aa-testimonial-slider .aa-section-slide,
+.aa-overseas-slider .aa-section-slide{
+    scroll-snap-align:start;
+}
+.aa-title-center{
+    text-align:center;
+    margin-bottom:28px;
+}
+.aa-title-center .testimonials_main_title{
+    float:none !important;
+    display:inline-block;
+    margin:0 auto;
+}
+.aa-section-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:44px;
+    height:44px;
+    border:none;
+    border-radius:50%;
+    background:rgba(44,117,228,0.92);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(18,38,89,.22);
+    z-index:4;
+    border:1px solid rgba(255,255,255,.22);
+}
+.aa-section-nav:hover{
+    background:#7c3aed;
+}
+.aa-section-nav-left{left:0;}
+.aa-section-nav-right{right:0;}
+.aa-section-nav[hidden]{display:none !important;}
+
+.aa-glass-card{
+    height:100%;
+    border-radius:24px;
+    padding:18px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(245,247,255,0.88) 100%);
+    border:1px solid rgba(255,255,255,0.72);
+    box-shadow:0 18px 42px rgba(18,38,89,.12);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    position:relative;
+    overflow:hidden;
+}
+.aa-glass-card:before{
+    content:"";
+    position:absolute;
+    inset:auto -50px -50px auto;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:rgba(124,58,237,.08);
+    pointer-events:none;
+}
+.aa-blog-card{
+    padding:0;
+}
+.aa-blog-media{
+    display:block;
+    aspect-ratio:16 / 9;
+    overflow:hidden;
+    border-radius:22px 22px 0 0;
+}
+.aa-blog-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.aa-blog-body{
+    padding:18px 18px 8px;
+}
+.aa-blog-date{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 12px;
+    border-radius:999px;
+    background:#eef2ff;
+    color:#5b4ae6;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+.aa-blog-title{
+    display:block;
+    color:#161f33;
+    font-size:22px;
+    line-height:1.35;
+    font-weight:800;
+    margin:0 0 12px;
+    text-decoration:none;
+}
+.aa-blog-title:hover{color:#2c75e4;}
+.aa-blog-desc{
+    color:#536079;
+    font-size:14px;
+    line-height:1.7;
+    min-height:98px;
+}
+.aa-blog-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+    color:#2c75e4;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.aa-testimonial-card .testimonials-inner-title{
+    font-size:22px;
+    margin:0 0 6px;
+}
+.aa-testimonial-card .testimonial_sphere{
+    color:#6b7280;
+    font-size:14px;
+    margin-bottom:12px;
+}
+.aa-testimonial-quote{
+    font-size:42px;
+    line-height:1;
+    color:#7c3aed;
+    margin-bottom:10px;
+    font-weight:800;
+}
+.aa-testimonial-text{
+    color:#3d4960;
+    line-height:1.7;
+    font-size:15px;
+    min-height:24em;
+    max-height:24em;
+    overflow:hidden;
+}
+.aa-testimonial-card .short_separator{
+    margin:0 0 14px;
+}
+
+.aa-logo-card{
+    min-height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:22px;
+}
+.aa-logo-card img{
+    max-width:100%;
+    max-height:120px;
+    object-fit:contain;
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.06));
+}
+.aa-overseas-wrap{
+    margin:0 auto 30px;
+    max-width:1480px;
+}
+.aa-overseas-slider .aa-section-slide{
+    flex:0 0 calc((100% - 96px) / 5);
+}
+@media (max-width: 1199px){
+    .aa-section-slide{flex-basis:calc((100% - 24px) / 2);}
+    .aa-testimonial-slider .aa-section-slide{flex-basis:calc((100% - 24px) / 2);}
+    .aa-overseas-wrap .aa-section-slide,
+    .aa-overseas-slider .aa-section-slide{flex-basis:calc((100% - 48px) / 3);}
+}
+@media (max-width: 767px){
+    .aa-section-slider-shell{padding:0 28px;}
+    .aa-section-slide{flex:0 0 100%; width:100%;}
+    .aa-blog-slider .aa-section-slide,
+    .aa-testimonial-slider .aa-section-slide{flex:0 0 100%; width:100%;}
+    .aa-overseas-wrap .aa-section-slide,
+    .aa-overseas-slider .aa-section-slide{flex-basis:100%;}
+    .aa-glass-card{
+        border-radius:20px;
+        padding:16px;
+    }
+    .aa-blog-card{
+        padding:0;
+    }
+    .aa-blog-media{
+        aspect-ratio:16 / 10;
+        border-radius:20px 20px 0 0;
+    }
+    .aa-blog-body{
+        padding:16px 16px 8px;
+    }
+    .aa-blog-title{font-size:20px;}
+    .aa-blog-desc{min-height:auto;}
+    .aa-testimonial-card{
+        padding:18px 16px !important;
+    }
+    .aa-testimonial-text{
+        min-height:auto;
+        max-height:none;
+    }
+}
+</style>
+
+
 <div class="vc_row wpb_row vc_row-fluid vc_custom_1436164243861">
         <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
-                <div class="wpb_wrapper" style="padding:100px">
+                <div class="wpb_wrapper" style="margin-top:100px">
                     <div class="vc_custom_heading vc_custom_1579416932851 text_align_center wow fadeInUp" data-wow-offset="80"><h2 style="text-align: center" class="masterstudy-custom-title">Our Blogs</h2></div>
 
                     <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1536751636857">
@@ -1321,7 +1883,7 @@ include('header.php');
                             <div class="vc_column-inner">
                                 <div class="wpb_wrapper">
                                     <div class="stm_colored_separatormasterstudy_color_separator_ module__cafc4ce9f11bc27b53b4b6553925c990">
-                                        <div class="triangled_colored_separator"><div class="triangle"></div></div>
+                                       </div>
                                     </div>
                                 </div>
                             </div>
@@ -1333,47 +1895,41 @@ include('header.php');
                             <div class="vc_column-inner">
                                 <div class="wpb_wrapper">
 
-                                    <div class="post_list_main_section_wrapper post_list_1983">
-                                        <div class="row">
-                                            <?php if ($blogsRes && mysqli_num_rows($blogsRes) > 0): ?>
-                                                <?php while ($blog = mysqli_fetch_assoc($blogsRes)): ?>
-                                                    <?php
-                                                    $day = !empty($blog['blog_date']) ? date('d', strtotime($blog['blog_date'])) : '';
-                                                    $month = !empty($blog['blog_date']) ? date('M', strtotime($blog['blog_date'])) : '';
-                                                    ?>
-                                                    <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-offset="60">
-                                                        <div class="post_list_content_unit">
-                                                            <div class="post_list_featured_image">
-                                                                <a href="blog-details.php?id=<?php echo $blog['id']; ?>" title="View post details">
-                                                                    <img width="370" height="193" class="img-responsive wp-post-image" alt="<?php echo e($blog['title'] ?? 'Blog'); ?>" src="<?php echo $blog['image']; ?>">
+                                    
+                                    <div class="aa-section-slider-shell aa-blog-slider" data-section-slider>
+                                        <button type="button" class="aa-section-nav aa-section-nav-left" data-section-prev hidden aria-label="Previous blogs">
+                                            <i class="fa fa-angle-left"></i>
+                                        </button>
+
+                                        <div class="aa-section-slider-window">
+                                            <div class="aa-section-slider-track">
+                                                <?php if ($blogsRes && mysqli_num_rows($blogsRes) > 0): ?>
+                                                    <?php while ($blog = mysqli_fetch_assoc($blogsRes)): ?>
+                                                        <?php
+                                                        $day = !empty($blog['blog_date']) ? date('d', strtotime($blog['blog_date'])) : '';
+                                                        $month = !empty($blog['blog_date']) ? date('M', strtotime($blog['blog_date'])) : '';
+                                                        ?>
+                                                        <div class="aa-section-slide wow fadeInUp" data-wow-offset="60">
+                                                            <div class="aa-glass-card aa-blog-card">
+                                                                <a href="blog-details.php?id=<?php echo $blog['id']; ?>" class="aa-blog-media" title="View post details">
+                                                                    <img alt="<?php echo e($blog['title'] ?? 'Blog'); ?>" src="<?php echo e($blog['image'] ?? ''); ?>">
                                                                 </a>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-3 col-sm-4 col-xs-12">
-                                                                    <div class="post_list_meta_unit">
-                                                                        <div class="date-d"><?php echo e($day); ?></div>
-                                                                        <div class="date-m"><?php echo e($month); ?></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-9 col-sm-8 col-xs-12 ">
-                                                                    <div class="post_list_inner_content_unit post_list_inner_content_unit_left">
-                                                                        <a href="blog-details.php?id=<?php echo $blog['id']; ?>" class="post_list_item_title h3"><?php echo e($blog['title'] ?? 'Untitled Blog'); ?></a>
-                                                                        <div class="post_list_item_excerpt">
-                                                                            <p><?php echo e(excerpt_text($blog['description'] ?? '', 260)); ?></p>
-                                                                        </div>
-                                                                        <div class="short_separator"></div>
-                                                                        <div class="post_list_cats">
-                                                                            <a href="">Ayan's Academy</a><span class="post_list_divider">,</span>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="aa-blog-body">
+                                                                    <div class="aa-blog-date"><i class="fa fa-calendar"></i> <?php echo e(trim($day . ' ' . $month)); ?></div>
+                                                                    <a href="blog-details.php?id=<?php echo $blog['id']; ?>" class="aa-blog-title"><?php echo e($blog['title'] ?? 'Untitled Blog'); ?></a>
+                                                                    <div class="aa-blog-desc"><?php echo e(excerpt_text($blog['description'] ?? '', 220)); ?></div>
+                                                                    <a href="blog-details.php?id=<?php echo $blog['id']; ?>" class="aa-blog-link">Read More <i class="fa fa-arrow-right"></i></a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                <?php endwhile; ?>
-                                            <?php endif; ?>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
-                                        <div class="row"></div>
+
+                                        <button type="button" class="aa-section-nav aa-section-nav-right" data-section-next hidden aria-label="Next blogs">
+                                            <i class="fa fa-angle-right"></i>
+                                        </button>
                                     </div>
                                     <!--
                                     <div class="vc_btn3-container wpb_animate_when_almost_visible wpb_bounceIn bounceIn vc_btn3-inline wpb_start_animation animated">
@@ -1391,50 +1947,45 @@ include('header.php');
     </div>
 
     <div class="vc_row wpb_row vc_row-fluid">
-        <div class="wpb_column vc_column_container vc_col-sm-8">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
-                <div class="wpb_wrapper" style="padding: 0px 0px 0px 100px;">
+                <div class="wpb_wrapper">
+                    
                     <div class="testimonials_main_wrapper simple_carousel_wrapper">
-                        <div class="clearfix testimonials_control_bar_top">
-                            <div class="pull-left">
-                                <h2 class="testimonials_main_title wow fadeInUp" data-wow-offset="80">Testimonials</h2>
-                            </div>
-                            <div class="pull-right testimonials_control_bar">
-                                <div class="clearfix"></div>
-                            </div>
+                        <div class="clearfix testimonials_control_bar_top aa-title-center" style="border-bottom: none">
+                            <h2 class="testimonials_main_title masterstudy-custom-title wow fadeInUp" data-wow-offset="80">Testimonials</h2>
                         </div>
 
-                        <div class="testimonials-carousel-unit">
-                            <div class="testimonials-carousel-init simple_carousel_init clearfix owl-carousel stm_owl-theme" data-items="2">
-                                <?php if ($testimonialsRes && mysqli_num_rows($testimonialsRes) > 0): ?>
-                                    <?php while ($testimonial = mysqli_fetch_assoc($testimonialsRes)): ?>
-                                        <div class="col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-offset="60">
-                                            <div class="testimonial_inner_wrapper">
-                                                <div class="media">
-                                                    
-                                                    <div class="media-body">
-                                                        <h4 class="testimonials-inner-title"><?php echo e($testimonial['name'] ?? 'Student'); ?></h4>
-                                                        <div class="testimonial_sphere"><?php echo e($testimonial['location_details'] ?? ''); ?></div>
-                                                        <div class="short_separator"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial_inner_content" style="color:#aaaaaa">
-                                                    <p><?php echo nl2br(e($testimonial['testimonial_details'] ?? '')); ?></p>
+                        <div class="aa-section-slider-shell aa-testimonial-slider" data-section-slider>
+                            <button type="button" class="aa-section-nav aa-section-nav-left" data-section-prev hidden aria-label="Previous testimonials">
+                                <i class="fa fa-angle-left"></i>
+                            </button>
+
+                            <div class="aa-section-slider-window">
+                                <div class="aa-section-slider-track">
+                                    <?php if ($testimonialsRes && mysqli_num_rows($testimonialsRes) > 0): ?>
+                                        <?php while ($testimonial = mysqli_fetch_assoc($testimonialsRes)): ?>
+                                            <div class="aa-section-slide wow fadeInUp" data-wow-offset="60">
+                                                <div class="aa-glass-card aa-testimonial-card testimonial_inner_wrapper">
+                                                    <div class="aa-testimonial-quote">“</div>
+                                                    <h4 class="testimonials-inner-title"><?php echo e($testimonial['name'] ?? 'Student'); ?></h4>
+                                                    <div class="testimonial_sphere"><?php echo e($testimonial['location_details'] ?? ''); ?></div>
+                                                    <div class="short_separator"></div>
+                                                    <div class="aa-testimonial-text"><?php echo nl2br(e($testimonial['testimonial_details'] ?? '')); ?></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
+
+                            <button type="button" class="aa-section-nav aa-section-nav-right" data-section-next hidden aria-label="Next testimonials">
+                                <i class="fa fa-angle-right"></i>
+                            </button>
                         </div>
                     </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="wpb_column vc_column_container vc_col-sm-4">
-            <div class="vc_column-inner">
-                <div class="wpb_wrapper"></div>
             </div>
         </div>
     </div>
@@ -1445,69 +1996,59 @@ include('header.php');
 
 </div>
 <div class="vc_custom_heading text_align_center wow fadeInUp" data-wow-offset="80">
-    <h1 style="text-align: center" class="masterstudy-custom-title">
-        Representing Overseas Universities
-    </h1>
+    <h2 style="text-align: center" class="masterstudy-custom-title">Representing Overseas Universities</h2>
 </div>
 
-<div class="multiseparator"></div>
-
-<style>
-.overseas-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.overseas-item {
-    width: 160px;
-    height: 160px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 10px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-}
-
-.overseas-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transform: translateY(-3px);
-}
-
-.overseas-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-</style>
-
-<div class="overseas-grid wow fadeInUp" data-wow-offset="60">
-
-    <?php 
-    $overseasUniversitiesRes = mysqli_query($conn, "SELECT * FROM overseas_universities ORDER BY id DESC");
-    if ($overseasUniversitiesRes && mysqli_num_rows($overseasUniversitiesRes) > 0): ?>
-        
-        <?php while ($university = mysqli_fetch_assoc($overseasUniversitiesRes)): ?>
-            
-            <?php $universityLogo = 'admin/dist/' . $university['logo_image']; ?>
-
-            <div class="overseas-item wow zoomIn" data-wow-offset="60">
-                <img
-                    src="<?php echo e($universityLogo); ?>"
-                    alt="Overseas University"
-                    title="Overseas University"
-                >
+<div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1536751636857">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner">
+            <div class="wpb_wrapper">
+                <div class="stm_colored_separatormasterstudy_color_separator_ module__cafc4ce9f11bc27b53b4b6553925c990">
+                    </div>
+                </div>
             </div>
-
-        <?php endwhile; ?>
-
-    <?php endif; ?>
-
+        </div>
+    </div>
 </div>
+
+<div class="aa-overseas-wrap">
+    <div class="aa-section-slider-shell aa-overseas-slider" data-section-slider>
+        <button type="button" class="aa-section-nav aa-section-nav-left" data-section-prev hidden aria-label="Previous universities">
+            <i class="fa fa-angle-left"></i>
+        </button>
+
+        <div class="aa-section-slider-window">
+            <div class="aa-section-slider-track">
+                <?php 
+                $overseasUniversitiesRes = mysqli_query($conn, "SELECT * FROM overseas_universities ORDER BY id DESC");
+                if ($overseasUniversitiesRes && mysqli_num_rows($overseasUniversitiesRes) > 0): ?>
+
+                    <?php while ($university = mysqli_fetch_assoc($overseasUniversitiesRes)): ?>
+
+                        <?php $universityLogo = 'admin/dist/' . $university['logo_image']; ?>
+
+                        <div class="aa-section-slide wow zoomIn" data-wow-offset="60">
+                            <div class="aa-glass-card aa-logo-card">
+                                <img
+                                    src="<?php echo e($universityLogo); ?>"
+                                    alt="Overseas University"
+                                    title="Overseas University"
+                                >
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>
+
+                <?php endif; ?>
+            </div>
+        </div>
+
+        <button type="button" class="aa-section-nav aa-section-nav-right" data-section-next hidden aria-label="Next universities">
+            <i class="fa fa-angle-right"></i>
+        </button>
+    </div>
+</div>
+
 
         <div class="clearfix">
                     </div>
@@ -1518,6 +2059,23 @@ include('header.php');
 </div>
         
 <style id="aa-mobile-fixes">
+
+@media (max-width: 767px){
+    .wow,
+    .wow.fadeInUp,
+    .wow.zoomIn,
+    .wpb_animate_when_almost_visible{
+        visibility:visible !important;
+        opacity:1 !important;
+        animation:none !important;
+        -webkit-animation:none !important;
+        transform:none !important
+    }
+    html, body{
+        overflow-x:hidden;
+    }
+}
+
 @media (max-width: 767px){
     .header_top_bar,
     .header_top_bar .container,
@@ -1622,6 +2180,6 @@ if (typeof WOW !== "undefined") { new WOW({ mobile: true }).init(); }
 
 
 
-        <div id="footer_bottom" style="background-color: black;">
+        <div id="footer_bottom" style="background-color: black;padding: 10px 0px 0px 0px;" >
             <div class="footer_widgets_wrapper kek text-upper">
 <?php include('footer.php') ?>
